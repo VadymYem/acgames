@@ -105,4 +105,4 @@ Pull Requests вітаються! Якщо ви хочете:
 
 **Vadym Yemelianov** (AuthorChe)  
 🌐 [authorche.top](https://authorche.top)  
-📬 Telegram: [@authorche](https://t.me/authorche)
+📬 Telegram: [@wsinfo](https://t.me/wsinfo)
