@@ -1,0 +1,23 @@
+{
+  "name": "slyth.io",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "High-performance web-based Slyth.io arena running entirely client-side with zero network usage after initial load",
+  "main": "index.html",
+  "scripts": {
+    "build": "npx esbuild js/game.js --bundle --outfile=js/bundle.js --format=iife",
+    "serve": "python -m http.server 8080"
+  },
+  "keywords": [
+    "game",
+    "slyth",
+    "slyth.io",
+    "browser-game",
+    "canvas",
+    "web-audio",
+    "client-side",
+    "zero-latency"
+  ],
+  "author": "",
+  "license": "MIT"
+}
