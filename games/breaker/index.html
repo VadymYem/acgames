@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<base target="_parent">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6LN7QL6SP2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-6LN7QL6SP2');
+</script>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>Neon Breaker: Ultimate | AuthorChe</title>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background-color: #050505;
+            overflow: hidden;
+            font-family: 'Rajdhani', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            touch-action: none;
+        }
+
+        /* Ефект старого монітора */
+        .scanlines {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%);
+            background-size: 100% 4px;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        /* Інтерфейс */
+        #game-container {
+            position: relative;
+            box-shadow: 0 0 50px rgba(0, 243, 255, 0.1);
+        }
+
+        canvas {
+            display: block;
+            background: #0a0a10;
+            border: 2px solid #333;
+        }
+
+        .hud {
+            position: absolute;
+            top: 0; left: 0; width: 100%;
+            padding: 15px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            color: #fff;
+            font-size: 20px;
+            text-shadow: 0 0 10px #00f3ff;
+            z-index: 5;
+            pointer-events: none;
+        }
+
+        /* Екрани (Меню) */
+        .screen {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(8px);
+            display: flex; flex-direction: column;
+            justify-content: center; align-items: center;
+            z-index: 20;
+        }
+
+        h1 {
+            font-size: 48px; margin: 0 0 10px 0;
+            color: #fff; text-transform: uppercase;
+            text-shadow: 0 0 20px #bc13fe;
+            letter-spacing: 5px;
+        }
+
+        p { color: #aaa; font-size: 18px; margin-bottom: 30px; }
+
+        button {
+            padding: 15px 50px;
+            font-size: 24px;
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: bold;
+            color: #00f3ff;
+            background: transparent;
+            border: 2px solid #00f3ff;
+            cursor: pointer;
+            text-transform: uppercase;
+            box-shadow: 0 0 15px rgba(0, 243, 255, 0.2);
+            transition: 0.2s;
+        }
+
+        button:hover {
+            background: #00f3ff; color: #000;
+            box-shadow: 0 0 40px #00f3ff; transform: scale(1.05);
+        }
+
+        /* Навігація */
+        .nav-btn {
+            position: absolute;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            z-index: 30;
+        }
+        
+        .donate-btn { 
+            top: 60px; left: 15px; 
+            color: #ff0055; border: 1px solid #ff0055; 
+            background: rgba(255, 0, 85, 0.1);
+        }
+        
+        .exit-btn { 
+            bottom: 15px; right: 15px; 
+            color: #fff; border: 1px solid #fff; 
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+    </style>
+<link href="https://authorche.top/games/breaker" rel="canonical"/><meta content="Play Neon Breaker: Ultimate online on AuthorChe Games. Browser-based gameplay for desktop and mobile with no download required." name="description"/><meta content="noindex, follow" name="robots"/><meta content="Vadym Yemelianov (AuthorChe)" name="author"/><meta content="#030712" name="theme-color"/><meta content="website" property="og:type"/><meta content="AuthorChe" property="og:site_name"/><meta content="en_US" property="og:locale"/><meta content="Neon Breaker: Ultimate | AuthorChe" property="og:title"/><meta content="Play Neon Breaker: Ultimate online on AuthorChe Games. Browser-based gameplay for desktop and mobile with no download required." property="og:description"/><meta content="https://authorche.top/games/breaker" property="og:url"/><meta content="https://authorche.top/assets/img/authorche-social-card.png" property="og:image"/><meta content="Neon Breaker: Ultimate | AuthorChe" property="og:image:alt"/><meta content="summary_large_image" name="twitter:card"/><meta content="@author_che" name="twitter:site"/><meta content="Neon Breaker: Ultimate | AuthorChe" name="twitter:title"/><meta content="Play Neon Breaker: Ultimate online on AuthorChe Games. Browser-based gameplay for desktop and mobile with no download required." name="twitter:description"/><meta content="https://authorche.top/assets/img/authorche-social-card.png" name="twitter:image"/><meta content="Neon Breaker: Ultimate | AuthorChe" name="twitter:image:alt"/>
+<!-- Universal Responsive Game Fix -->
+<style id="ac-universal-responsive">
+  html, body {
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    overscroll-behavior: none !important;
+  }
+  canvas {
+    max-width: 100vw !important;
+    max-height: 100vh !important;
+    object-fit: contain !important;
+    height: auto !important;
+    width: auto !important;
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  table, .container, #game-container, #board, #grid, .game-box, #app, main {
+    max-width: 100vw !important;
+    box-sizing: border-box !important;
+  }
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+</style>
+
+</head><body>
+<div class="scanlines"></div>
+<div id="game-container">
+<div class="hud">
+<div>SCORE: <span id="score">0</span></div>
+<div>BEST: <span id="best">0</span></div>
+</div>
+<canvas id="gameCanvas"></canvas>
+<div class="screen" id="start-screen">
+<h1>Neon Breaker</h1>
+<p>Ultimate Edition</p>
+<button onclick="Game.start()">INITIALIZE</button>
+</div>
+<div class="screen" id="game-over" style="display: none;">
+<h1 style="color: #ff0055; text-shadow: 0 0 20px #ff0055;">SYSTEM FAILURE</h1>
+<p>Score: <span id="final-score">0</span></p>
+<button onclick="Game.start()">REBOOT</button>
+</div>
+<a class="nav-btn donate-btn" href="https://authorche.top/donate" target="_blank" rel="noopener noreferrer">Donate</a>
+<a class="nav-btn exit-btn" href="/games/list.html">Exit</a>
+</div>
+<script>
+/**
+ * AUDIO ENGINE (Синтезатор звуків)
+ */
+const AudioEngine = {
+    ctx: new (window.AudioContext || window.webkitAudioContext)(),
+    
+    play(type) {
+        if(this.ctx.state === 'suspended') this.ctx.resume();
+        const osc = this.ctx.createOscillator();
+        const gain = this.ctx.createGain();
+        osc.connect(gain);
+        gain.connect(this.ctx.destination);
+        const now = this.ctx.currentTime;
+
+        if (type === 'hit') {
+            osc.type = 'triangle';
+            osc.frequency.setValueAtTime(300, now);
+            osc.frequency.exponentialRampToValueAtTime(100, now + 0.1);
+            gain.gain.setValueAtTime(0.2, now);
+            gain.gain.linearRampToValueAtTime(0, now + 0.1);
+            osc.start(now); osc.stop(now + 0.1);
+        } else if (type === 'paddle') {
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(150, now);
+            osc.frequency.linearRampToValueAtTime(300, now + 0.1);
+            gain.gain.setValueAtTime(0.2, now);
+            gain.gain.linearRampToValueAtTime(0, now + 0.1);
+            osc.start(now); osc.stop(now + 0.1);
+        } else if (type === 'powerup') {
+            osc.type = 'square';
+            osc.frequency.setValueAtTime(400, now);
+            osc.frequency.linearRampToValueAtTime(800, now + 0.2);
+            gain.gain.setValueAtTime(0.1, now);
+            gain.gain.linearRampToValueAtTime(0, now + 0.2);
+            osc.start(now); osc.stop(now + 0.2);
+        } else if (type === 'loss') {
+            osc.type = 'sawtooth';
+            osc.frequency.setValueAtTime(100, now);
+            osc.frequency.linearRampToValueAtTime(50, now + 0.5);
+            gain.gain.setValueAtTime(0.3, now);
+            gain.gain.linearRampToValueAtTime(0, now + 0.5);
+            osc.start(now); osc.stop(now + 0.5);
+        }
+    }
+};
+
+/**
+ * GAME LOGIC
+ */
+const Game = {
+    canvas: document.getElementById("gameCanvas"),
+    ctx: document.getElementById("gameCanvas").getContext("2d"),
+    
+    width: 0, height: 0,
+    score: 0,
+    highScore: localStorage.getItem('nb_ult_score') || 0,
+    level: 1,
+    isRunning: false,
+    
+    // Physics Config
+    MAX_SPEED: 12, // Жорсткий ліміт швидкості
+    BASE_SPEED: 6,
+    
+    paddle: { w: 120, h: 15, x: 0, color: '#00f3ff' },
+    balls: [],
+    bricks: [],
+    particles: [],
+    drops: [],
+    
+    init() {
+        this.resize();
+        window.addEventListener('resize', () => this.resize());
+        
+        // Input
+        this.canvas.addEventListener('mousemove', e => this.movePaddle(e.clientX));
+        this.canvas.addEventListener('touchmove', e => {
+            e.preventDefault();
+            this.movePaddle(e.touches[0].clientX);
+        }, {passive: false});
+        
+        this.canvas.addEventListener('click', () => this.launch());
+        this.canvas.addEventListener('touchstart', () => this.launch(), {passive: false});
+
+        document.getElementById('best').innerText = this.highScore;
+        this.loop();
+    },
+
+    resize() {
+        // Робимо гру адаптивною, але не на весь екран, щоб було зручно
+        const maxWidth = 800;
+        const aspect = window.innerWidth / window.innerHeight;
+        
+        this.width = Math.min(window.innerWidth - 20, maxWidth);
+        this.height = window.innerHeight - 40;
+        
+        this.canvas.width = this.width;
+        this.canvas.height = this.height;
+        
+        this.paddle.y = this.height - 50;
+        this.paddle.x = (this.width - this.paddle.w) / 2;
+    },
+
+    start() {
+        document.getElementById('start-screen').style.display = 'none';
+        document.getElementById('game-over').style.display = 'none';
+        this.score = 0;
+        this.level = 1;
+        this.resetLevel();
+        this.isRunning = true;
+    },
+
+    resetLevel() {
+        // Reset paddle
+        this.paddle.w = 120;
+        
+        // Reset balls - СТВОРИМО ЧИСТИЙ ОБ'ЄКТ
+        this.balls = [{
+            x: this.width / 2,
+            y: this.paddle.y - 20,
+            r: 6,
+            dx: 0, dy: 0,
+            speed: this.BASE_SPEED + (this.level * 0.5),
+            stuck: true,
+            trail: []
+        }];
+        
+        // Якщо рівень високий, швидкість не має перевищувати максимум
+        if(this.balls[0].speed > 10) this.balls[0].speed = 10;
+
+        this.drops = [];
+        this.particles = [];
+        this.generateBricks();
+        this.updateUI();
+    },
+
+    generateBricks() {
+        this.bricks = [];
+        const rows = 5 + Math.min(this.level, 4);
+        const cols = 7;
+        const padding = 10;
+        const brickW = (this.width - (padding * (cols + 1))) / cols;
+        const brickH = 25;
+
+        for(let r=0; r<rows; r++) {
+            for(let c=0; c<cols; c++) {
+                if(Math.random() > 0.15) {
+                    // Types: 1-Normal, 2-Hard(Yellow), 3-Explosive(Red)
+                    let type = 1;
+                    let hp = 1;
+                    
+                    if(this.level >= 2 && Math.random() > 0.7) { type = 2; hp = 2; }
+                    if(this.level >= 3 && Math.random() > 0.9) { type = 3; hp = 1; }
+
+                    this.bricks.push({
+                        x: padding + c*(brickW+padding),
+                        y: 60 + r*(brickH+padding),
+                        w: brickW, h: brickH,
+                        type: type, hp: hp,
+                        color: this.getColor(type)
+                    });
+                }
+            }
+        }
+    },
+
+    getColor(type) {
+        if(type === 1) return '#00f3ff'; // Cyan
+        if(type === 2) return '#ffd700'; // Gold
+        if(type === 3) return '#ff0055'; // Red
+        return '#fff';
+    },
+
+    movePaddle(clientX) {
+        const rect = this.canvas.getBoundingClientRect();
+        let relativeX = clientX - rect.left;
+        
+        this.paddle.x = relativeX - this.paddle.w / 2;
+        
+        // Clamp
+        if(this.paddle.x < 0) this.paddle.x = 0;
+        if(this.paddle.x + this.paddle.w > this.width) this.paddle.x = this.width - this.paddle.w;
+        
+        // Move stuck ball
+        this.balls.forEach(b => {
+            if(b.stuck) b.x = this.paddle.x + this.paddle.w / 2;
+        });
+    },
+
+    launch() {
+        if(!this.isRunning) return;
+        this.balls.forEach(b => {
+            if(b.stuck) {
+                b.stuck = false;
+                // Нормалізація вектору запуску
+                let angle = (Math.random() * 0.4) - 0.2; // Трохи випадковості
+                b.dy = -b.speed;
+                b.dx = b.speed * angle;
+            }
+        });
+    },
+
+    update() {
+        if(!this.isRunning) return;
+
+        // Balls
+        for(let i = this.balls.length - 1; i >= 0; i--) {
+            let b = this.balls[i];
+            
+            if(b.stuck) {
+                b.x = this.paddle.x + this.paddle.w / 2;
+                b.y = this.paddle.y - b.r - 2;
+                continue;
+            }
+
+            // Trail logic
+            b.trail.push({x: b.x, y: b.y, a: 0.8});
+            if(b.trail.length > 8) b.trail.shift();
+            b.trail.forEach(t => t.a -= 0.1);
+
+            // Position update
+            b.x += b.dx;
+            b.y += b.dy;
+
+            // Walls
+            if(b.x + b.r > this.width || b.x - b.r < 0) b.dx = -b.dx;
+            if(b.y - b.r < 0) b.dy = -b.dy;
+
+            // Paddle Collision (FIXED LOGIC)
+            if(b.dy > 0 && b.y + b.r >= this.paddle.y && b.y - b.r < this.paddle.y + this.paddle.h &&
+               b.x > this.paddle.x && b.x < this.paddle.x + this.paddle.w) {
+                
+                AudioEngine.play('paddle');
+                
+                // 1. ВИШТОВХУВАННЯ (Anti-sticking fix)
+                b.y = this.paddle.y - b.r - 2;
+                
+                // 2. Розрахунок кута
+                let hitPoint = (b.x - (this.paddle.x + this.paddle.w/2)) / (this.paddle.w/2);
+                let angle = hitPoint * (Math.PI / 3); // Max 60 degrees
+                
+                // 3. Прискорення (м'яке)
+                b.speed = Math.min(b.speed + 0.2, this.MAX_SPEED);
+                
+                // 4. Застосування вектору
+                b.dx = b.speed * Math.sin(angle);
+                b.dy = -b.speed * Math.cos(angle);
+                
+                this.createParticles(b.x, b.y, '#00f3ff');
+            }
+
+            // Bricks Collision
+            let hit = false;
+            for(let j=0; j<this.bricks.length; j++) {
+                let br = this.bricks[j];
+                if(b.x > br.x && b.x < br.x + br.w && b.y > br.y && b.y < br.y + br.h) {
+                    b.dy = -b.dy;
+                    hit = true;
+                    this.hitBrick(j);
+                    break; // Лише одна цеглина за кадр
+                }
+            }
+
+            // Death
+            if(b.y - b.r > this.height) {
+                this.balls.splice(i, 1);
+            }
+        }
+
+        // Drops
+        for(let i = this.drops.length - 1; i >= 0; i--) {
+            let d = this.drops[i];
+            d.y += 3;
+            d.rot += 0.1;
+            
+            if(d.y > this.paddle.y && d.y < this.paddle.y + this.paddle.h &&
+               d.x > this.paddle.x && d.x < this.paddle.x + this.paddle.w) {
+                this.activatePowerup(d.type);
+                this.drops.splice(i, 1);
+            } else if(d.y > this.height) {
+                this.drops.splice(i, 1);
+            }
+        }
+
+        // Particles
+        for(let i = this.particles.length - 1; i >= 0; i--) {
+            let p = this.particles[i];
+            p.x += p.vx; p.y += p.vy; p.life -= 0.05;
+            if(p.life <= 0) this.particles.splice(i, 1);
+        }
+
+        // Game Over Check
+        if(this.balls.length === 0 && this.isRunning) {
+            this.gameOver();
+        }
+
+        // Level Complete Check
+        if(this.bricks.length === 0 && this.isRunning) {
+            this.level++;
+            this.resetLevel();
+        }
+    },
+
+    hitBrick(index) {
+        let br = this.bricks[index];
+        br.hp--;
+        AudioEngine.play('hit');
+        this.createParticles(br.x + br.w/2, br.y + br.h/2, br.color);
+
+        if(br.hp <= 0) {
+            this.score += 10 * this.level;
+            this.updateUI();
+            
+            // Explosive
+            if(br.type === 3) {
+                // Destroy neighbors logic could go here
+            }
+            
+            // Drop chance
+            if(Math.random() < 0.15) {
+                this.spawnDrop(br.x + br.w/2, br.y);
+            }
+            
+            this.bricks.splice(index, 1);
+        } else {
+            // Change color to show damage
+            br.color = '#aa8800'; 
+        }
+    },
+
+    spawnDrop(x, y) {
+        const types = ['MULTI', 'WIDE'];
+        const type = types[Math.floor(Math.random()*types.length)];
+        this.drops.push({ x:x, y:y, type:type, rot:0, color: type==='MULTI'?'#00f3ff':'#00ff00' });
+    },
+
+    activatePowerup(type) {
+        AudioEngine.play('powerup');
+        if(type === 'WIDE') {
+            this.paddle.w = 180;
+            setTimeout(() => this.paddle.w = 120, 8000);
+        } else if (type === 'MULTI') {
+            if(this.balls.length > 0) {
+                let b = this.balls[0];
+                // Clone logic
+                this.balls.push({
+                    ...b, dx: -3, dy: -Math.abs(b.dy), stuck: false, trail: []
+                });
+                this.balls.push({
+                    ...b, dx: 3, dy: -Math.abs(b.dy), stuck: false, trail: []
+                });
+            }
+        }
+    },
+
+    createParticles(x, y, color) {
+        for(let i=0; i<8; i++) {
+            this.particles.push({
+                x:x, y:y, 
+                vx: (Math.random()-0.5)*5, 
+                vy: (Math.random()-0.5)*5,
+                life: 1, color: color
+            });
+        }
+    },
+
+    draw() {
+        // Clear with slight trail effect? No, clean clear for crisp look
+        this.ctx.fillStyle = '#0a0a10';
+        this.ctx.fillRect(0, 0, this.width, this.height);
+
+        // Bricks
+        this.bricks.forEach(b => {
+            this.ctx.fillStyle = b.color;
+            this.ctx.shadowBlur = 10;
+            this.ctx.shadowColor = b.color;
+            this.ctx.fillRect(b.x, b.y, b.w-2, b.h-2);
+            this.ctx.shadowBlur = 0;
+        });
+
+        // Paddle
+        this.ctx.fillStyle = this.paddle.color;
+        this.ctx.shadowBlur = 15;
+        this.ctx.shadowColor = this.paddle.color;
+        this.ctx.fillRect(this.paddle.x, this.paddle.y, this.paddle.w, this.paddle.h);
+        this.ctx.shadowBlur = 0;
+
+        // Balls
+        this.balls.forEach(b => {
+            // Draw trail
+            b.trail.forEach(t => {
+                this.ctx.beginPath();
+                this.ctx.arc(t.x, t.y, b.r * t.a, 0, Math.PI*2);
+                this.ctx.fillStyle = `rgba(255, 255, 255, ${t.a * 0.5})`;
+                this.ctx.fill();
+            });
+
+            this.ctx.beginPath();
+            this.ctx.arc(b.x, b.y, b.r, 0, Math.PI*2);
+            this.ctx.fillStyle = '#fff';
+            this.ctx.shadowBlur = 10;
+            this.ctx.shadowColor = '#fff';
+            this.ctx.fill();
+            this.ctx.shadowBlur = 0;
+        });
+
+        // Drops
+        this.drops.forEach(d => {
+            this.ctx.save();
+            this.ctx.translate(d.x, d.y);
+            this.ctx.rotate(d.rot);
+            this.ctx.fillStyle = d.color;
+            this.ctx.fillRect(-10, -10, 20, 20);
+            this.ctx.fillStyle = '#000';
+            this.ctx.font = '12px Arial';
+            this.ctx.fillText(d.type[0], -4, 4);
+            this.ctx.restore();
+        });
+
+        // Particles
+        this.particles.forEach(p => {
+            this.ctx.globalAlpha = p.life;
+            this.ctx.fillStyle = p.color;
+            this.ctx.fillRect(p.x, p.y, 3, 3);
+            this.ctx.globalAlpha = 1;
+        });
+
+        if(!this.isRunning && this.balls.length > 0 && this.balls[0].stuck) {
+            this.ctx.fillStyle = '#aaa';
+            this.ctx.font = '20px Rajdhani';
+            this.ctx.textAlign = 'center';
+            this.ctx.fillText("TAP TO LAUNCH", this.width/2, this.height/2 + 50);
+        }
+    },
+
+    loop() {
+        requestAnimationFrame(() => this.loop());
+        this.update();
+        this.draw();
+    },
+
+    updateUI() {
+        document.getElementById('score').innerText = this.score;
+    },
+
+    gameOver() {
+        this.isRunning = false;
+        AudioEngine.play('loss');
+        if(this.score > this.highScore) {
+            this.highScore = this.score;
+            localStorage.setItem('nb_ult_score', this.highScore);
+            document.getElementById('best').innerText = this.highScore;
+        }
+        document.getElementById('final-score').innerText = this.score;
+        document.getElementById('game-over').style.display = 'flex';
+    }
+};
+
+// Start
+Game.init();
+
+</script>
+</body></html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<base target="_parent">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6LN7QL6SP2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-6LN7QL6SP2');
+</script>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>Cyber Hack: Terminal | AuthorChe</title>
+<style id="ac-universal-responsive">
+  html, body {
+    margin: 0; padding: 0;
+    max-width: 100vw !important; overflow: hidden !important;
+    background-color: #000; color: #0f0;
+    font-family: 'Courier New', Courier, monospace;
+    touch-action: manipulation;
+  }
+  #matrix-bg {
+    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+    z-index: 0; opacity: 0.3; pointer-events: none;
+  }
+  .ui-layer {
+    position: relative; z-index: 10;
+    display: flex; flex-direction: column; height: 100vh;
+    padding: 10px; box-sizing: border-box;
+  }
+  header {
+    text-align: center; border-bottom: 2px solid #0f0; padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+  header h1 { margin: 0; font-size: 1.5rem; text-shadow: 0 0 5px #0f0; }
+  .stats { display: flex; justify-content: space-around; font-size: 1.2rem; margin: 10px 0; }
+  .stats span { font-weight: bold; font-size: 1.5rem; color: #fff; }
+  .main-area {
+    display: flex; flex: 1; overflow: hidden; gap: 10px;
+  }
+  @media (max-width: 768px) {
+    .main-area { flex-direction: column; }
+  }
+  .terminal {
+    flex: 2; border: 1px solid #0f0; background: rgba(0,20,0,0.8);
+    padding: 10px; overflow-y: auto; overflow-x: hidden;
+    font-size: 0.9rem; line-height: 1.2; word-wrap: break-word;
+    display: flex; flex-direction: column-reverse;
+  }
+  .upgrades {
+    flex: 1; border: 1px solid #0f0; background: rgba(0,20,0,0.8);
+    padding: 10px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px;
+  }
+  .hack-btn {
+    width: 100%; padding: 20px; font-size: 1.5rem; font-family: inherit; font-weight: bold;
+    background: #002200; color: #0f0; border: 2px solid #0f0; cursor: pointer;
+    text-transform: uppercase; transition: 0.1s;
+    box-shadow: 0 0 10px #0f0 inset;
+  }
+  .hack-btn:active { background: #0f0; color: #000; transform: scale(0.98); }
+  
+  .upgrade-btn {
+    padding: 10px; background: #001100; border: 1px solid #0f0; color: #0f0;
+    cursor: pointer; font-family: inherit; text-align: left; transition: 0.2s;
+  }
+  .upgrade-btn:hover { background: #003300; }
+  .upgrade-btn:disabled { border-color: #333; color: #555; background: #000; cursor: not-allowed; }
+  .upgrade-title { font-weight: bold; font-size: 1.1rem; }
+  .upgrade-cost { float: right; color: #fff; }
+  
+  .code-line { margin: 2px 0; }
+  .code-keyword { color: #f0f; }
+  .code-string { color: #ff0; }
+  
+  /* Alerts */
+  #alert-box {
+    position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
+    background: #f00; color: #fff; padding: 10px 20px; font-weight: bold;
+    border: 2px solid #fff; z-index: 100; display: none; text-align: center;
+  }
+</style>
+</head>
+<body>
+  <canvas id="matrix-bg"></canvas>
+  
+  <div id="alert-box">WARNING: TRACE DETECTED!</div>
+
+  <div class="ui-layer">
+    <header>
+      <h1><i class="fas fa-terminal"></i> CYBER HACK: TERMINAL</h1>
+      <div class="stats">
+        <div>DATA: <span id="data-count">0</span> KB</div>
+        <div>SPEED: <span id="data-rate">0</span> KB/s</div>
+      </div>
+    </header>
+    
+    <button class="hack-btn" id="hack-btn">HACK THE MAINFRAME (TAP/TYPE)</button>
+
+    <div class="main-area">
+      <div class="terminal" id="terminal">
+        <!-- Lines added dynamically -->
+      </div>
+      
+      <div class="upgrades" id="upgrades">
+        <h3 style="margin-top:0; border-bottom:1px solid #0f0; padding-bottom:5px;">UPGRADES</h3>
+        <!-- Upgrades injected by JS -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // MATRIX RAIN BACKGROUND
+    const canvas = document.getElementById('matrix-bg');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    const letters = '01ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const fontSize = 16;
+    const columns = canvas.width / fontSize;
+    const drops = [];
+    for(let x = 0; x < columns; x++) drops[x] = 1;
+    
+    function drawMatrix() {
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = '#0F0';
+      ctx.font = fontSize + 'px monospace';
+      for(let i = 0; i < drops.length; i++) {
+        const text = letters.charAt(Math.floor(Math.random() * letters.length));
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+        if(drops[i] * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
+        drops[i]++;
+      }
+    }
+    setInterval(drawMatrix, 50);
+
+    // GAME LOGIC
+    let data = 0;
+    let autoDataRate = 0;
+    let clickPower = 1;
+    
+    const fakeCode = [
+      "Connecting to proxy...",
+      "Bypassing firewall...",
+      "let <span class='code-keyword'>admin</span> = <span class='code-string'>'root'</span>;",
+      "Decrypting hashes...",
+      "Injecting payload...",
+      "ACCESS GRANTED.",
+      "Downloading encrypted files...",
+      "system.override(true);"
+    ];
+
+    const upgrades = [
+      { id: 'u1', name: 'Auto-Script', cost: 15, power: 1, type: 'auto' },
+      { id: 'u2', name: 'Better Keyboard', cost: 50, power: 2, type: 'click' },
+      { id: 'u3', name: 'Botnet Node', cost: 200, power: 10, type: 'auto' },
+      { id: 'u4', name: 'Quantum CPU', cost: 1000, power: 50, type: 'click' },
+      { id: 'u5', name: 'AI Hacker', cost: 5000, power: 250, type: 'auto' }
+    ];
+
+    const terminal = document.getElementById('terminal');
+    const dataCountEl = document.getElementById('data-count');
+    const dataRateEl = document.getElementById('data-rate');
+    const upgradesContainer = document.getElementById('upgrades');
+
+    function updateUI() {
+      dataCountEl.innerText = Math.floor(data);
+      dataRateEl.innerText = autoDataRate;
+      
+      upgrades.forEach(upg => {
+        const btn = document.getElementById(upg.id);
+        if(btn) btn.disabled = data < upg.cost;
+      });
+    }
+
+    function addTerminalLine() {
+      const line = document.createElement('div');
+      line.className = 'code-line';
+      line.innerHTML = "> " + fakeCode[Math.floor(Math.random() * fakeCode.length)];
+      terminal.prepend(line);
+      if(terminal.children.length > 50) terminal.lastChild.remove();
+    }
+
+    function doHack() {
+      data += clickPower;
+      addTerminalLine();
+      updateUI();
+    }
+
+    function buyUpgrade(index) {
+      const upg = upgrades[index];
+      if (data >= upg.cost) {
+        data -= upg.cost;
+        upg.cost = Math.floor(upg.cost * 1.5);
+        if (upg.type === 'auto') autoDataRate += upg.power;
+        else clickPower += upg.power;
+        renderUpgrades();
+        updateUI();
+      }
+    }
+
+    function renderUpgrades() {
+      upgradesContainer.innerHTML = '<h3 style="margin-top:0; border-bottom:1px solid #0f0; padding-bottom:5px;">UPGRADES</h3>';
+      upgrades.forEach((upg, index) => {
+        const btn = document.createElement('button');
+        btn.className = 'upgrade-btn';
+        btn.id = upg.id;
+        btn.innerHTML = `
+          <span class="upgrade-title">${upg.name}</span>
+          <span class="upgrade-cost">${upg.cost} KB</span><br>
+          <small>+${upg.power} ${upg.type === 'auto' ? 'KB/s (Auto)' : 'KB/click'}</small>
+        `;
+        btn.onclick = () => buyUpgrade(index);
+        upgradesContainer.appendChild(btn);
+      });
+    }
+
+    // Input handlers
+    document.getElementById('hack-btn').addEventListener('mousedown', doHack);
+    document.getElementById('hack-btn').addEventListener('touchstart', (e) => { e.preventDefault(); doHack(); });
+    
+    // Type to hack!
+    document.addEventListener('keydown', (e) => {
+      // ignore F5, F12, etc.
+      if(e.key.length === 1 || e.key === 'Enter' || e.key === 'Backspace') {
+        doHack();
+      }
+    });
+
+    // Auto income loop
+    setInterval(() => {
+      if (autoDataRate > 0) {
+        data += autoDataRate / 10; // 10 ticks per second for smoothness
+        if(Math.random() > 0.8) addTerminalLine();
+        updateUI();
+      }
+    }, 100);
+
+    // Random alerts
+    setInterval(() => {
+      if(data > 500 && Math.random() > 0.7) {
+        const alertBox = document.getElementById('alert-box');
+        alertBox.style.display = 'block';
+        setTimeout(() => alertBox.style.display = 'none', 2000);
+      }
+    }, 15000);
+
+    renderUpgrades();
+    updateUI();
+  </script>
+</body>
+</html>

@@ -1,0 +1,446 @@
+<html lang="en"><head>
+<base target="_parent">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6LN7QL6SP2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-6LN7QL6SP2');
+</script><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><base href="AuthorChe.top/games"/>
+<title>GIF Maker | AuthorChe</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+
+  body {
+    font-family: 'Comic Neue', cursive;
+    background-image: url('https://t3.ftcdn.net/jpg/03/00/19/26/360_F_300192645_GXTZUFJf27QZ7e9fJTO9r6GaR9GNxOg4.webp');
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-shadow: 
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000;
+  }
+  h1 {
+    color: white;
+    text-align: center;
+    font-size: 2.5em;
+    text-shadow: 
+      -2px -2px 0 #000,
+      2px -2px 0 #000,
+      -2px 2px 0 #000,
+      2px 2px 0 #000;
+  }
+  #canvas-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .frame-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  canvas {
+    border: 3px solid #4ecdc4;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  }
+  .frame-number {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 12px;
+  }
+  .frame-checkbox {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    transform: scale(1.5);
+  }
+  #controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    background-color: rgba(0,0,0,0.6);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  }
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-family: 'Comic Neue', cursive;
+    transition: all 0.3s ease;
+    text-shadow: none;
+  }
+  button:hover {
+    background-color: #ff8e8e;
+    transform: scale(1.05);
+  }
+  #color-picker {
+    margin-bottom: 10px;
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  #result {
+    text-align: center;
+    background-color: rgba(0,0,0,0.6);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  }
+  #loading {
+    display: none;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ff6b6b;
+  }
+  #frame-rate-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  #frame-rate-value {
+    min-width: 30px;
+    font-weight: bold;
+    color: #ff6b6b;
+  }
+  input[type="range"] {
+    -webkit-appearance: none;
+    width: 200px;
+    height: 10px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+    border-radius: 5px;
+  }
+  input[type="range"]:hover {
+    opacity: 1;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #4ecdc4;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #4ecdc4;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  a {
+    color: #4ecdc4;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  #tools {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .tool {
+    padding: 5px 10px;
+    background-color: #4ecdc4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+.donate-button {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #353d4a; /* Червоний колір кнопки */
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000; /* Зробити так, щоб кнопка була поверх іншого контенту */
+}
+
+.donate-button:hover {
+    background-color: #e04040; /* Темно-червоний колір при наведенні */
+}
+.homepage-button {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    background-color: #007bff; /* Синій колір кнопки */
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.homepage-button:hover {
+    background-color: #0056b3; /* Темно-синій колір при наведенні */
+}
+  .tool.active {
+    background-color: #ff6b6b;
+  }
+  #footer {
+    margin-top: 20px;
+    font-size: 0.9em;
+    text-align: center;
+  }
+</style>
+<link href="https://authorche.top/games/gif" rel="canonical"/><meta content="Play GIF Maker online on AuthorChe Games. Browser-based gameplay for desktop and mobile with no download required." name="description"/><meta content="noindex, follow" name="robots"/><meta content="Vadym Yemelianov (AuthorChe)" name="author"/><meta content="#030712" name="theme-color"/><meta content="website" property="og:type"/><meta content="AuthorChe" property="og:site_name"/><meta content="en_US" property="og:locale"/><meta content="GIF Maker | AuthorChe" property="og:title"/><meta content="Play GIF Maker online on AuthorChe Games. Browser-based gameplay for desktop and mobile with no download required." property="og:description"/><meta content="https://authorche.top/games/gif" property="og:url"/><meta content="https://authorche.top/assets/img/authorche-social-card.png" property="og:image"/><meta content="GIF Maker | AuthorChe" property="og:image:alt"/><meta content="summary_large_image" name="twitter:card"/><meta content="@author_che" name="twitter:site"/><meta content="GIF Maker | AuthorChe" name="twitter:title"/><meta content="Play GIF Maker online on AuthorChe Games. Browser-based gameplay for desktop and mobile with no download required." name="twitter:description"/><meta content="https://authorche.top/assets/img/authorche-social-card.png" name="twitter:image"/><meta content="GIF Maker | AuthorChe" name="twitter:image:alt"/>  <style>canvas { touch-action: none; } body { overscroll-behavior: none; }</style>
+
+<!-- Universal Responsive Game Fix -->
+<style id="ac-universal-responsive">
+  html, body {
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    overscroll-behavior: none !important;
+  }
+  canvas {
+    max-width: 100vw !important;
+    max-height: 100vh !important;
+    object-fit: contain !important;
+    height: auto !important;
+    width: auto !important;
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  table, .container, #game-container, #board, #grid, .game-box, #app, main {
+    max-width: 100vw !important;
+    box-sizing: border-box !important;
+  }
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+</style>
+
+</head><body>
+<h1>Draw Your Own Gif</h1>
+<div id="canvas-container"></div>
+<div id="controls">
+<div id="tools">
+<button class="tool active" id="brush">Brush</button>
+<button class="tool" id="eraser">Eraser</button>
+</div>
+<input id="color-picker" type="color" value="#000000"/>
+<button id="add-frame">Add Frame</button>
+<div id="frame-rate-container">
+<label for="frame-rate">Frame Rate (fps):</label>
+<input id="frame-rate" max="30" min="1" step="1" type="range" value="2"/>
+<span id="frame-rate-value">2</span>
+</div>
+<button id="create-gif">Create GIF</button>
+</div>
+<div id="loading">Creating GIF... Please wait.</div>
+<div id="result"></div>
+<div id="footer"><a href="/games">AC-GAMES.GREAT-SITE.NET</a></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gif.js/0.2.0/gif.js"></script>
+<script src="https://rawgit.com/antimatter15/jsgif/master/LZWEncoder.js"></script>
+<script src="https://rawgit.com/antimatter15/jsgif/master/NeuQuant.js"></script>
+<script src="https://rawgit.com/antimatter15/jsgif/master/GIFEncoder.js"></script>
+<script>
+    const canvasContainer = document.getElementById('canvas-container');
+    const addFrameButton = document.getElementById('add-frame');
+    const createGifButton = document.getElementById('create-gif');
+    const colorPicker = document.getElementById('color-picker');
+    const result = document.getElementById('result');
+    const loading = document.getElementById('loading');
+    const frameRateSlider = document.getElementById('frame-rate');
+    const frameRateValue = document.getElementById('frame-rate-value');
+    const brushTool = document.getElementById('brush');
+    const eraserTool = document.getElementById('eraser');
+
+    let frames = [];
+    let currentCanvas;
+    let isDrawing = false;
+    let lastX, lastY;
+    let currentTool = 'brush';
+
+    function createCanvas() {
+      const frameWrapper = document.createElement('div');
+      frameWrapper.className = 'frame-wrapper';
+      
+      const canvas = document.createElement('canvas');
+      canvas.width = 200;
+      canvas.height = 200;
+      
+      const frameNumber = document.createElement('div');
+      frameNumber.className = 'frame-number';
+      frameNumber.textContent = `Frame ${frames.length + 1}`;
+      
+      const frameCheckbox = document.createElement('input');
+      frameCheckbox.type = 'checkbox';
+      frameCheckbox.className = 'frame-checkbox';
+      frameCheckbox.addEventListener('change', () => {
+        if (frameCheckbox.checked) {
+          currentCanvas = canvas;
+          highlightCurrentFrame();
+        }
+      });
+      
+      frameWrapper.appendChild(canvas);
+      frameWrapper.appendChild(frameNumber);
+      frameWrapper.appendChild(frameCheckbox);
+      canvasContainer.appendChild(frameWrapper);
+      
+      const ctx = canvas.getContext('2d');
+      ctx.fillStyle = '#ffffff';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      
+      canvas.addEventListener('mousedown', startDrawing);
+      canvas.addEventListener('mousemove', draw);
+      canvas.addEventListener('mouseup', stopDrawing);
+      canvas.addEventListener('mouseout', stopDrawing);
+      
+      frames.push(canvas);
+      currentCanvas = canvas;
+      highlightCurrentFrame();
+    }
+
+    function highlightCurrentFrame() {
+      frames.forEach((canvas, index) => {
+        const checkbox = canvas.parentElement.querySelector('.frame-checkbox');
+        if (canvas === currentCanvas) {
+          canvas.parentElement.style.border = '3px solid #ff6b6b';
+          checkbox.checked = true;
+        } else {
+          canvas.parentElement.style.border = '3px solid #4ecdc4';
+          checkbox.checked = false;
+        }
+      });
+    }
+
+    function startDrawing(e) {
+      isDrawing = true;
+      [lastX, lastY] = [e.offsetX, e.offsetY];
+    }
+
+    function draw(e) {
+      if (!isDrawing) return;
+      const ctx = currentCanvas.getContext('2d');
+      if (currentTool === 'brush') {
+        ctx.strokeStyle = colorPicker.value;
+        ctx.lineWidth = 3;
+      } else if (currentTool === 'eraser') {
+        ctx.strokeStyle = '#ffffff';
+        ctx.lineWidth = 10;
+      }
+      ctx.lineCap = 'round';
+      ctx.beginPath();
+      ctx.moveTo(lastX, lastY);
+      ctx.lineTo(e.offsetX, e.offsetY);
+      ctx.stroke();
+      [lastX, lastY] = [e.offsetX, e.offsetY];
+    }
+
+    function stopDrawing() {
+      isDrawing = false;
+    }
+
+    addFrameButton.addEventListener('click', createCanvas);
+
+    frameRateSlider.addEventListener('input', () => {
+      frameRateValue.textContent = frameRateSlider.value;
+    });
+
+    createGifButton.addEventListener('click', () => {
+      if (frames.length === 0) {
+        alert("Please add at least one frame before creating a GIF.");
+        return;
+      }
+
+      loading.style.display = 'block';
+      result.innerHTML = '';
+
+      const frameDelay = Math.round(1000 / frameRateSlider.value);
+
+      const encoder = new GIFEncoder();
+      encoder.setRepeat(0);
+      encoder.setDelay(frameDelay);
+      encoder.setSize(200, 200);
+      encoder.start();
+
+      frames.forEach(canvas => {
+        encoder.addFrame(canvas.getContext('2d'));
+      });
+
+      encoder.finish();
+
+      const binary_gif = encoder.stream().getData();
+      const data_url = 'data:image/gif;base64,' + btoa(binary_gif);
+
+      loading.style.display = 'none';
+      const img = document.createElement('img');
+      img.src = data_url;
+      result.appendChild(img);
+      
+      const downloadLink = document.createElement('a');
+      downloadLink.href = data_url;
+      downloadLink.download = 'websim-animation.gif';
+      downloadLink.textContent = 'Download GIF';
+      result.appendChild(document.createElement('br'));
+      result.appendChild(downloadLink);
+    });
+
+    brushTool.addEventListener('click', () => {
+      currentTool = 'brush';
+      brushTool.classList.add('active');
+      eraserTool.classList.remove('active');
+    });
+
+    eraserTool.addEventListener('click', () => {
+      currentTool = 'eraser';
+      eraserTool.classList.add('active');
+      brushTool.classList.remove('active');
+    });
+
+    createCanvas();
+  </script>
+<a class="donate-button" href="/donate.html">Donate❤️</a>
+<a class="homepage-button" href="/games/list.html">Exit</a>
+</body></html>

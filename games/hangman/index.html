@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<base target="_parent">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6LN7QL6SP2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-6LN7QL6SP2');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Hangman Game | AuthorChe</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts/word-list.js" defer></script>
+    <script src="scripts/script.js" defer></script>
+  <style>canvas { touch-action: none; } body { overscroll-behavior: none; }</style>
+
+<!-- Universal Responsive Game Fix -->
+<style id="ac-universal-responsive">
+  html, body {
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    overscroll-behavior: none !important;
+  }
+  canvas {
+    max-width: 100vw !important;
+    max-height: 100vh !important;
+    object-fit: contain !important;
+    height: auto !important;
+    width: auto !important;
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  table, .container, #game-container, #board, #grid, .game-box, #app, main {
+    max-width: 100vw !important;
+    box-sizing: border-box !important;
+  }
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+</style>
+
+</head>
+<body>
+    <div class="game-modal">
+        <div class="content">
+            <img src="#" alt="gif">
+            <h4>Game Over!</h4>
+            <p>The correct word was: <b>rainbow</b></p>
+            <button class="play-again">Play Again</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="hangman-box">
+            <img src="#" draggable="false" alt="hangman-img">
+            <h1>Hangman Game</h1>
+        </div>
+        <div class="game-box">
+            <ul class="word-display"></ul>
+            <h4 class="hint-text">Hint: <b></b></h4>
+            <h4 class="guesses-text">Incorrect guesses: <b></b></h4>
+            <div class="keyboard"></div>
+        </div>
+    </div>
+    <a href="/donate.html" class="donate-button">Donate❤️</a>
+<a href="/games/list.html" class="homepage-button">Exit</a>
+</body>
+</html>

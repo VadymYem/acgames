@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+<base target="_parent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6LN7QL6SP2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-6LN7QL6SP2');
+</script>
+      <title>Minesweeper</title>
+      <meta charset="utf-8">
+    <style>canvas { touch-action: none; } body { overscroll-behavior: none; }</style>
+
+<!-- Universal Responsive Game Fix -->
+<style id="ac-universal-responsive">
+  html, body {
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    overscroll-behavior: none !important;
+  }
+  canvas {
+    max-width: 100vw !important;
+    max-height: 100vh !important;
+    object-fit: contain !important;
+    height: auto !important;
+    width: auto !important;
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  table, .container, #game-container, #board, #grid, .game-box, #app, main {
+    max-width: 100vw !important;
+    box-sizing: border-box !important;
+  }
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+</style>
+
+</head>
+  <body style="background-color:#008080;">
+<div class="minesweeper-game" data-preset="beginner" data-name="game1"></div>
+<div class="minesweeper-controller" data-name="game1"></div>
+<script src="../a70de4b14c0109772a9dc7a4d43a2657210cc7d1.js"></script>
+<div style="text-align: center;">
+  <a href="../beginner">Beginner</a> |
+  <a href="../intermediate">Intermediate</a> |
+  <a href="..">Expert</a> |
+  <a href="../all">All</a>
+  <br><br>Original made by <a href="https://github.com/alisterscott">Alister Scott</a>
+  <br>Ported with ♥ by <a href="https://github.com/u4pak">shady</a>
+  <br><a href="https://joshxd07.github.io/games-site">Homepage</a>
+</div>
+</body>
+</html>
+

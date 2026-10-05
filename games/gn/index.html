@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<base target="_parent">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6LN7QL6SP2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-6LN7QL6SP2');
+</script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Guess the number | AuthorChe</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>canvas { touch-action: none; } body { overscroll-behavior: none; }</style>
+
+<!-- Universal Responsive Game Fix -->
+<style id="ac-universal-responsive">
+  html, body {
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    overscroll-behavior: none !important;
+  }
+  canvas {
+    max-width: 100vw !important;
+    max-height: 100vh !important;
+    object-fit: contain !important;
+    height: auto !important;
+    width: auto !important;
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  table, .container, #game-container, #board, #grid, .game-box, #app, main {
+    max-width: 100vw !important;
+    box-sizing: border-box !important;
+  }
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+</style>
+
+</head>
+  <body>
+    <div class="wrapper">
+      <header>Guess a number from 1 to 100</header>
+      <p class="guess"></p>
+      <div class="input-field">
+        <input type="number" />
+        <button>Check</button>
+      </div>
+      <p>You have <span class="chances">10</span> chances</p>
+    </div>
+<a href="/donate.html" class="donate-button">Donate❤️</a>
+<a href="/games/list.html" class="homepage-button">Exit</a>
+    <script src="script.js" defer></script>
+  </body>
+</html>
