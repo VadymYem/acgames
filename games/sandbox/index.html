@@ -1,16 +1,46 @@
 <!DOCTYPE html>
 
 <html lang="en"><head>
+<script>
+// AuthorChe Clean Game Wrapper - Ad & Tracker Blocker
+window.PokiSDK = {
+  init: function(){ return Promise.resolve(); },
+  initWithVideoback: function(){ return Promise.resolve(); },
+  customEvent: function(){},
+  gameplayStart: function(){},
+  gameplayStop: function(){},
+  commercialBreak: function(){ return Promise.resolve(); },
+  rewardedBreak: function(){ return Promise.resolve(true); },
+  displayAd: function(){},
+  destroyAd: function(){},
+  setDebugTouchOverlayController: function(){},
+  isAdBlocked: function(){ return false; }
+};
+window.CrazyGames = {
+  SDK: {
+    ad: {
+      requestAd: function(type, callbacks){ if(callbacks && callbacks.adFinished) callbacks.adFinished(); },
+      hasAdblock: function(){ return Promise.resolve(false); }
+    },
+    game: {
+      gameplayStart: function(){},
+      gameplayStop: function(){},
+      happytime: function(){},
+      loadingStart: function(){},
+      loadingStop: function(){}
+    },
+    user: { isUserAccountAvailable: false }
+  }
+};
+window.adsbygoogle = { push: function(){} };
+window.open = function(url){ console.log("Blocked popup:", url); return null; };
+</script>
+
 <base target="_parent">
 
 <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6LN7QL6SP2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-6LN7QL6SP2');
-</script>
+
+
 <link href="styles.css" media="screen" rel="stylesheet" type="text/css"/>
 <title>Sandbox | AuthorChe</title>
 <meta content="sand, falling, game" name="keywords"/>

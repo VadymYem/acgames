@@ -1,15 +1,45 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
+<script>
+// AuthorChe Clean Game Wrapper - Ad & Tracker Blocker
+window.PokiSDK = {
+  init: function(){ return Promise.resolve(); },
+  initWithVideoback: function(){ return Promise.resolve(); },
+  customEvent: function(){},
+  gameplayStart: function(){},
+  gameplayStop: function(){},
+  commercialBreak: function(){ return Promise.resolve(); },
+  rewardedBreak: function(){ return Promise.resolve(true); },
+  displayAd: function(){},
+  destroyAd: function(){},
+  setDebugTouchOverlayController: function(){},
+  isAdBlocked: function(){ return false; }
+};
+window.CrazyGames = {
+  SDK: {
+    ad: {
+      requestAd: function(type, callbacks){ if(callbacks && callbacks.adFinished) callbacks.adFinished(); },
+      hasAdblock: function(){ return Promise.resolve(false); }
+    },
+    game: {
+      gameplayStart: function(){},
+      gameplayStop: function(){},
+      happytime: function(){},
+      loadingStart: function(){},
+      loadingStop: function(){}
+    },
+    user: { isUserAccountAvailable: false }
+  }
+};
+window.adsbygoogle = { push: function(){} };
+window.open = function(url){ console.log("Blocked popup:", url); return null; };
+</script>
+
 <base target="_parent">
 <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6LN7QL6SP2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-6LN7QL6SP2');
-</script>
+
+
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <title>Cyber Hack: Terminal | AuthorChe</title>
@@ -110,145 +140,6 @@
     </div>
   </div>
 
-  <script>
-    // MATRIX RAIN BACKGROUND
-    const canvas = document.getElementById('matrix-bg');
-    const ctx = canvas.getContext('2d');
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    const letters = '01ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    const fontSize = 16;
-    const columns = canvas.width / fontSize;
-    const drops = [];
-    for(let x = 0; x < columns; x++) drops[x] = 1;
-    
-    function drawMatrix() {
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = '#0F0';
-      ctx.font = fontSize + 'px monospace';
-      for(let i = 0; i < drops.length; i++) {
-        const text = letters.charAt(Math.floor(Math.random() * letters.length));
-        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-        if(drops[i] * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
-        drops[i]++;
-      }
-    }
-    setInterval(drawMatrix, 50);
-
-    // GAME LOGIC
-    let data = 0;
-    let autoDataRate = 0;
-    let clickPower = 1;
-    
-    const fakeCode = [
-      "Connecting to proxy...",
-      "Bypassing firewall...",
-      "let <span class='code-keyword'>admin</span> = <span class='code-string'>'root'</span>;",
-      "Decrypting hashes...",
-      "Injecting payload...",
-      "ACCESS GRANTED.",
-      "Downloading encrypted files...",
-      "system.override(true);"
-    ];
-
-    const upgrades = [
-      { id: 'u1', name: 'Auto-Script', cost: 15, power: 1, type: 'auto' },
-      { id: 'u2', name: 'Better Keyboard', cost: 50, power: 2, type: 'click' },
-      { id: 'u3', name: 'Botnet Node', cost: 200, power: 10, type: 'auto' },
-      { id: 'u4', name: 'Quantum CPU', cost: 1000, power: 50, type: 'click' },
-      { id: 'u5', name: 'AI Hacker', cost: 5000, power: 250, type: 'auto' }
-    ];
-
-    const terminal = document.getElementById('terminal');
-    const dataCountEl = document.getElementById('data-count');
-    const dataRateEl = document.getElementById('data-rate');
-    const upgradesContainer = document.getElementById('upgrades');
-
-    function updateUI() {
-      dataCountEl.innerText = Math.floor(data);
-      dataRateEl.innerText = autoDataRate;
-      
-      upgrades.forEach(upg => {
-        const btn = document.getElementById(upg.id);
-        if(btn) btn.disabled = data < upg.cost;
-      });
-    }
-
-    function addTerminalLine() {
-      const line = document.createElement('div');
-      line.className = 'code-line';
-      line.innerHTML = "> " + fakeCode[Math.floor(Math.random() * fakeCode.length)];
-      terminal.prepend(line);
-      if(terminal.children.length > 50) terminal.lastChild.remove();
-    }
-
-    function doHack() {
-      data += clickPower;
-      addTerminalLine();
-      updateUI();
-    }
-
-    function buyUpgrade(index) {
-      const upg = upgrades[index];
-      if (data >= upg.cost) {
-        data -= upg.cost;
-        upg.cost = Math.floor(upg.cost * 1.5);
-        if (upg.type === 'auto') autoDataRate += upg.power;
-        else clickPower += upg.power;
-        renderUpgrades();
-        updateUI();
-      }
-    }
-
-    function renderUpgrades() {
-      upgradesContainer.innerHTML = '<h3 style="margin-top:0; border-bottom:1px solid #0f0; padding-bottom:5px;">UPGRADES</h3>';
-      upgrades.forEach((upg, index) => {
-        const btn = document.createElement('button');
-        btn.className = 'upgrade-btn';
-        btn.id = upg.id;
-        btn.innerHTML = `
-          <span class="upgrade-title">${upg.name}</span>
-          <span class="upgrade-cost">${upg.cost} KB</span><br>
-          <small>+${upg.power} ${upg.type === 'auto' ? 'KB/s (Auto)' : 'KB/click'}</small>
-        `;
-        btn.onclick = () => buyUpgrade(index);
-        upgradesContainer.appendChild(btn);
-      });
-    }
-
-    // Input handlers
-    document.getElementById('hack-btn').addEventListener('mousedown', doHack);
-    document.getElementById('hack-btn').addEventListener('touchstart', (e) => { e.preventDefault(); doHack(); });
-    
-    // Type to hack!
-    document.addEventListener('keydown', (e) => {
-      // ignore F5, F12, etc.
-      if(e.key.length === 1 || e.key === 'Enter' || e.key === 'Backspace') {
-        doHack();
-      }
-    });
-
-    // Auto income loop
-    setInterval(() => {
-      if (autoDataRate > 0) {
-        data += autoDataRate / 10; // 10 ticks per second for smoothness
-        if(Math.random() > 0.8) addTerminalLine();
-        updateUI();
-      }
-    }, 100);
-
-    // Random alerts
-    setInterval(() => {
-      if(data > 500 && Math.random() > 0.7) {
-        const alertBox = document.getElementById('alert-box');
-        alertBox.style.display = 'block';
-        setTimeout(() => alertBox.style.display = 'none', 2000);
-      }
-    }, 15000);
-
-    renderUpgrades();
-    updateUI();
-  </script>
+  
 </body>
 </html>

@@ -1,3 +1,38 @@
+
+<script>
+// AuthorChe Clean Game Wrapper - Ad & Tracker Blocker
+window.PokiSDK = {
+  init: function(){ return Promise.resolve(); },
+  initWithVideoback: function(){ return Promise.resolve(); },
+  customEvent: function(){},
+  gameplayStart: function(){},
+  gameplayStop: function(){},
+  commercialBreak: function(){ return Promise.resolve(); },
+  rewardedBreak: function(){ return Promise.resolve(true); },
+  displayAd: function(){},
+  destroyAd: function(){},
+  setDebugTouchOverlayController: function(){},
+  isAdBlocked: function(){ return false; }
+};
+window.CrazyGames = {
+  SDK: {
+    ad: {
+      requestAd: function(type, callbacks){ if(callbacks && callbacks.adFinished) callbacks.adFinished(); },
+      hasAdblock: function(){ return Promise.resolve(false); }
+    },
+    game: {
+      gameplayStart: function(){},
+      gameplayStop: function(){},
+      happytime: function(){},
+      loadingStart: function(){},
+      loadingStop: function(){}
+    },
+    user: { isUserAccountAvailable: false }
+  }
+};
+window.adsbygoogle = { push: function(){} };
+window.open = function(url){ console.log("Blocked popup:", url); return null; };
+</script>
 <script>window.open = function() { console.log("Blocked popup"); return null; };</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <!doctype html><title>konnekt</title><meta charset=utf-8><link rel=stylesheet href=./style.css><div id=main><svg></svg><div class=menul></div><div class=menur></div></div><script src=./min.js></script>

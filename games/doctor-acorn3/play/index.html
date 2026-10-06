@@ -1,11 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script>window.open = function() { console.log("Blocked popup"); return null; };</script>
+<script>
+// AuthorChe Clean Game Wrapper - Ad & Tracker Blocker
+window.PokiSDK = {
+  init: function(){ return Promise.resolve(); },
+  initWithVideoback: function(){ return Promise.resolve(); },
+  customEvent: function(){},
+  gameplayStart: function(){},
+  gameplayStop: function(){},
+  commercialBreak: function(){ return Promise.resolve(); },
+  rewardedBreak: function(){ return Promise.resolve(true); },
+  displayAd: function(){},
+  destroyAd: function(){},
+  setDebugTouchOverlayController: function(){},
+  isAdBlocked: function(){ return false; }
+};
+window.CrazyGames = {
+  SDK: {
+    ad: {
+      requestAd: function(type, callbacks){ if(callbacks && callbacks.adFinished) callbacks.adFinished(); },
+      hasAdblock: function(){ return Promise.resolve(false); }
+    },
+    game: {
+      gameplayStart: function(){},
+      gameplayStop: function(){},
+      happytime: function(){},
+      loadingStart: function(){},
+      loadingStop: function(){}
+    },
+    user: { isUserAccountAvailable: false }
+  }
+};
+window.adsbygoogle = { push: function(){} };
+window.open = function(url){ console.log("Blocked popup:", url); return null; };
+</script>
 
 
-<base target="_parent">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6LN7QL6SP2"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-6LN7QL6SP2');</script>
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <title>Doctor Acorn 3</title>
