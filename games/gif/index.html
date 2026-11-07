@@ -1,45 +1,14 @@
 <html lang="en"><head>
-<script>
-// AuthorChe Clean Game Wrapper - Ad & Tracker Blocker
-window.PokiSDK = {
-  init: function(){ return Promise.resolve(); },
-  initWithVideoback: function(){ return Promise.resolve(); },
-  customEvent: function(){},
-  gameplayStart: function(){},
-  gameplayStop: function(){},
-  commercialBreak: function(){ return Promise.resolve(); },
-  rewardedBreak: function(){ return Promise.resolve(true); },
-  displayAd: function(){},
-  destroyAd: function(){},
-  setDebugTouchOverlayController: function(){},
-  isAdBlocked: function(){ return false; }
-};
-window.CrazyGames = {
-  SDK: {
-    ad: {
-      requestAd: function(type, callbacks){ if(callbacks && callbacks.adFinished) callbacks.adFinished(); },
-      hasAdblock: function(){ return Promise.resolve(false); }
-    },
-    game: {
-      gameplayStart: function(){},
-      gameplayStop: function(){},
-      happytime: function(){},
-      loadingStart: function(){},
-      loadingStop: function(){}
-    },
-    user: { isUserAccountAvailable: false }
-  }
-};
-window.adsbygoogle = { push: function(){} };
-window.open = function(url){ console.log("Blocked popup:", url); return null; };
-</script>
+<meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'self' data: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob:; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' data: blob:; worker-src 'self' blob:; frame-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'none'"><meta name="robots" content="noindex,follow"><script src="../../shared/platform.js"></script><link rel="stylesheet" href="../../shared/game.css">
 
-<base target="_parent">
+
+
+
 
 <!-- Google Analytics -->
 
 <meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><base href="AuthorChe.top/games"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <title>GIF Maker | AuthorChe</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
@@ -260,7 +229,7 @@ window.open = function(url){ console.log("Blocked popup:", url); return null; };
     text-align: center;
   }
 </style>
-<link href="https://authorche.top/games/gif" rel="canonical"/><meta content="Play GIF Maker online on AuthorChe Games. Browser-based gameplay for desktop and mobile with no download required." name="description"/><meta content="noindex, follow" name="robots"/><meta content="Vadym Yemelianov (AuthorChe)" name="author"/><meta content="#030712" name="theme-color"/><meta content="website" property="og:type"/><meta content="AuthorChe" property="og:site_name"/><meta content="en_US" property="og:locale"/><meta content="GIF Maker | AuthorChe" property="og:title"/><meta content="Play GIF Maker online on AuthorChe Games. Browser-based gameplay for desktop and mobile with no download required." property="og:description"/><meta content="https://authorche.top/games/gif" property="og:url"/><meta content="https://authorche.top/assets/img/authorche-social-card.png" property="og:image"/><meta content="GIF Maker | AuthorChe" property="og:image:alt"/><meta content="summary_large_image" name="twitter:card"/><meta content="@author_che" name="twitter:site"/><meta content="GIF Maker | AuthorChe" name="twitter:title"/><meta content="Play GIF Maker online on AuthorChe Games. Browser-based gameplay for desktop and mobile with no download required." name="twitter:description"/><meta content="https://authorche.top/assets/img/authorche-social-card.png" name="twitter:image"/><meta content="GIF Maker | AuthorChe" name="twitter:image:alt"/>  <style>canvas { touch-action: none; } body { overscroll-behavior: none; }</style>
+<link href="https://authorche.top/games/gif" rel="canonical"/><meta content="Play GIF Maker online on AuthorChe Games. Browser-based gameplay for desktop and mobile with no download required." name="description"/><meta content="Vadym Yemelianov (AuthorChe)" name="author"/><meta content="#030712" name="theme-color"/><meta content="website" property="og:type"/><meta content="AuthorChe" property="og:site_name"/><meta content="en_US" property="og:locale"/><meta content="GIF Maker | AuthorChe" property="og:title"/><meta content="Play GIF Maker online on AuthorChe Games. Browser-based gameplay for desktop and mobile with no download required." property="og:description"/><meta content="https://authorche.top/games/gif" property="og:url"/><meta content="https://authorche.top/assets/img/authorche-social-card.png" property="og:image"/><meta content="GIF Maker | AuthorChe" property="og:image:alt"/><meta content="summary_large_image" name="twitter:card"/><meta content="@author_che" name="twitter:site"/><meta content="GIF Maker | AuthorChe" name="twitter:title"/><meta content="Play GIF Maker online on AuthorChe Games. Browser-based gameplay for desktop and mobile with no download required." name="twitter:description"/><meta content="https://authorche.top/assets/img/authorche-social-card.png" name="twitter:image"/><meta content="GIF Maker | AuthorChe" name="twitter:image:alt"/>  <style>canvas { touch-action: none; } body { overscroll-behavior: none; }</style>
 
 <!-- Universal Responsive Game Fix -->
 <style id="ac-universal-responsive">
@@ -309,10 +278,10 @@ window.open = function(url){ console.log("Blocked popup:", url); return null; };
 <div id="loading">Creating GIF... Please wait.</div>
 <div id="result"></div>
 <div id="footer"><a href="/games">AC-GAMES.GREAT-SITE.NET</a></div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gif.js/0.2.0/gif.js"></script>
-<script src="https://rawgit.com/antimatter15/jsgif/master/LZWEncoder.js"></script>
-<script src="https://rawgit.com/antimatter15/jsgif/master/NeuQuant.js"></script>
-<script src="https://rawgit.com/antimatter15/jsgif/master/GIFEncoder.js"></script>
+
+
+
+
 <script>
     const canvasContainer = document.getElementById('canvas-container');
     const addFrameButton = document.getElementById('add-frame');

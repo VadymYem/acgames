@@ -1,45 +1,12 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'self' data: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob:; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' data: blob:; worker-src 'self' blob:; frame-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'none'"><meta name="robots" content="noindex,follow"><script src="../../shared/platform.js"></script><link rel="stylesheet" href="../../shared/game.css"></head><body>
 
-<script>
-// AuthorChe Clean Game Wrapper - Ad & Tracker Blocker
-window.PokiSDK = {
-  init: function(){ return Promise.resolve(); },
-  initWithVideoback: function(){ return Promise.resolve(); },
-  customEvent: function(){},
-  gameplayStart: function(){},
-  gameplayStop: function(){},
-  commercialBreak: function(){ return Promise.resolve(); },
-  rewardedBreak: function(){ return Promise.resolve(true); },
-  displayAd: function(){},
-  destroyAd: function(){},
-  setDebugTouchOverlayController: function(){},
-  isAdBlocked: function(){ return false; }
-};
-window.CrazyGames = {
-  SDK: {
-    ad: {
-      requestAd: function(type, callbacks){ if(callbacks && callbacks.adFinished) callbacks.adFinished(); },
-      hasAdblock: function(){ return Promise.resolve(false); }
-    },
-    game: {
-      gameplayStart: function(){},
-      gameplayStop: function(){},
-      happytime: function(){},
-      loadingStart: function(){},
-      loadingStop: function(){}
-    },
-    user: { isUserAccountAvailable: false }
-  }
-};
-window.adsbygoogle = { push: function(){} };
-window.open = function(url){ console.log("Blocked popup:", url); return null; };
-</script>
 
 <div id="navbar">
 </div>
 
 <h1 style="text-align:center; position:relative; top: 10%; left: 0%;">Cut The Rope Time Travel</h1>
 
-<p id="rcorners" style="width: 50%; height: 50%; margin: 0; position: absolute; top: 50%; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%);"><a href="play/"><img alt="Game content" src="../../../assets/img/playbutton.png" style="width: 310px; height: 310px; margin: 0; position: absolute; top: 50%; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%);"></img></a></p>
+<p id="rcorners" style="width: 50%; height: 50%; margin: 0; position: absolute; top: 50%; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%);"><a href="play/"></img></a></p>
 
 <h1 style="text-align:center; position:relative; top: 70%; left: 0%;">Instructions/Compatibility:</h1>
 <p style="text-align:center; position:relative; top: 70%; left: 0%;">WORKS ON MOBILE!</p>
@@ -60,4 +27,4 @@ window.open = function(url){ console.log("Blocked popup:", url); return null; };
     
     </body>
   </head>
-</html>
+</html></body></html>

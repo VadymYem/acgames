@@ -1,0 +1,2949 @@
+{
+  "version": 2,
+  "games": [
+    {
+      "id": "1on1soccer",
+      "title": "1 on 1 Soccer",
+      "category": "arcade",
+      "entry": "games/1on1soccer/index.html",
+      "cover": "shared/covers/1on1soccer.webp",
+      "kind": "flash",
+      "controls": "keyboard",
+      "instructions": "Миша й клавіатура. Натисніть на гру для активації керування.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "2048",
+      "title": "2048",
+      "category": "puzzle",
+      "entry": "games/2048/index.html",
+      "cover": "shared/covers/2048.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "2drocketleague",
+      "title": "Rocket League 2D",
+      "category": "racing",
+      "entry": "games/2drocketleague/index.html",
+      "cover": "shared/covers/2drocketleague.webp",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "60sburgerrun",
+      "title": "60 Seconds Burger Run",
+      "category": "arcade",
+      "entry": "games/60sburgerrun/index.html",
+      "cover": "shared/covers/60sburgerrun.webp",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "achieveunlocked",
+      "title": "Achievement Unlocked",
+      "category": "arcade",
+      "entry": "games/achieveunlocked/index.html",
+      "cover": "shared/covers/achieveunlocked.webp",
+      "kind": "flash",
+      "controls": "keyboard",
+      "instructions": "Миша й клавіатура. Натисніть на гру для активації керування.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "achieveunlocked2",
+      "title": "Achievement Unlocked 2",
+      "category": "arcade",
+      "entry": "games/achieveunlocked2/index.html",
+      "cover": "shared/covers/achieveunlocked2.webp",
+      "kind": "flash",
+      "controls": "keyboard",
+      "instructions": "Миша й клавіатура. Натисніть на гру для активації керування.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "adarkroom",
+      "title": "A Dark Room",
+      "category": "strategy",
+      "entry": "games/adarkroom/index.html",
+      "cover": "shared/covers/adarkroom.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "adofai",
+      "title": "A Dance of Fire and Ice",
+      "category": "arcade",
+      "entry": "games/adofai/index.html",
+      "cover": "shared/covers/adofai.webp",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "agario-offline",
+      "title": "Agar Arena Offline",
+      "category": "arcade",
+      "entry": "games/agario-offline/index.html",
+      "cover": "shared/covers/agario-offline.svg",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "ageofwar",
+      "title": "Age of War",
+      "category": "strategy",
+      "entry": "games/ageofwar/index.html",
+      "cover": "shared/covers/ageofwar.webp",
+      "kind": "flash",
+      "controls": "keyboard",
+      "instructions": "Миша й клавіатура. Натисніть на гру для активації керування.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "amongus",
+      "title": "Among Us",
+      "category": "arcade",
+      "entry": "games/amongus/index.html",
+      "cover": "shared/covers/amongus.webp",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "asciispace",
+      "title": "ASCII Space",
+      "category": "action",
+      "entry": "games/asciispace/index.html",
+      "cover": "shared/covers/asciispace.svg",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "asteroids",
+      "title": "Asteroids",
+      "category": "action",
+      "entry": "games/asteroids/index.html",
+      "cover": "shared/covers/asteroids.svg",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "astray",
+      "title": "Astray",
+      "category": "arcade",
+      "entry": "games/astray/index.html",
+      "cover": "shared/covers/astray.webp",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "audio-game",
+      "title": "Audio Game",
+      "category": "arcade",
+      "entry": "games/audio-game/index.html",
+      "cover": "shared/covers/audio-game.svg",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "avalanche",
+      "title": "Avalanche",
+      "category": "arcade",
+      "entry": "games/avalanche/index.html",
+      "cover": "shared/covers/avalanche.webp",
+      "kind": "flash",
+      "controls": "keyboard",
+      "instructions": "Миша й клавіатура. Натисніть на гру для активації керування.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "ayun",
+      "title": "ayuncraft",
+      "category": "arcade",
+      "entry": "games/ayun/index.html",
+      "cover": "shared/covers/ayun.svg",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "backcountry",
+      "title": "Backcountry",
+      "category": "arcade",
+      "entry": "games/backcountry/index.html",
+      "cover": "shared/covers/backcountry.svg",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "badicecream",
+      "title": "Bad Ice Cream",
+      "category": "arcade",
+      "entry": "games/badicecream/index.html",
+      "cover": "shared/covers/badicecream.webp",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "badicecream2",
+      "title": "Bad Ice Cream 2",
+      "category": "arcade",
+      "entry": "games/badicecream2/index.html",
+      "cover": "shared/covers/badicecream2.webp",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "badicecream3",
+      "title": "Bad Ice Cream 3",
+      "category": "arcade",
+      "entry": "games/badicecream3/index.html",
+      "cover": "shared/covers/badicecream3.webp",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "badpiggies",
+      "title": "Bad Piggies",
+      "category": "arcade",
+      "entry": "games/badpiggies/index.html",
+      "cover": "shared/covers/badpiggies.webp",
+      "kind": "flash",
+      "controls": "keyboard",
+      "instructions": "Миша й клавіатура. Натисніть на гру для активації керування.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "badtimesimulator",
+      "title": "Bad Time Simulator",
+      "category": "arcade",
+      "entry": "games/badtimesimulator/index.html",
+      "cover": "shared/covers/badtimesimulator.webp",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "ball-shooting",
+      "title": "Shoot the ball",
+      "category": "arcade",
+      "entry": "games/ball-shooting/index.html",
+      "cover": "shared/covers/ball-shooting.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "basketballstars",
+      "title": "Basketball Stars",
+      "category": "arcade",
+      "entry": "games/basketballstars/index.html",
+      "cover": "shared/covers/basketballstars.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "basketbros",
+      "title": "Basket Bros",
+      "category": "arcade",
+      "entry": "games/basketbros/index.html",
+      "cover": "shared/covers/basketbros.webp",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "basketrandom",
+      "title": "Basket Random",
+      "category": "arcade",
+      "entry": "games/basketrandom/index.html",
+      "cover": "shared/covers/basketrandom.webp",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "bitlife",
+      "title": "BitLife",
+      "category": "arcade",
+      "entry": "games/bitlife/index.html",
+      "cover": "shared/covers/bitlife.webp",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "blackholesquare",
+      "title": "Black Hole Square",
+      "category": "puzzle",
+      "entry": "games/blackholesquare/index.html",
+      "cover": "shared/covers/blackholesquare.webp",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "bobtherobber2",
+      "title": "Bob the Robber 2",
+      "category": "arcade",
+      "entry": "games/bobtherobber2/index.html",
+      "cover": "shared/covers/bobtherobber2.webp",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "bounceback",
+      "title": "Bounce Back",
+      "category": "action",
+      "entry": "games/bounceback/index.html",
+      "cover": "shared/covers/bounceback.webp",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "box2d-car-game",
+      "title": "Box2D Car Game",
+      "category": "racing",
+      "entry": "games/box2d-car-game/index.html",
+      "cover": "shared/covers/box2d-car-game.svg",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "boxingrandom",
+      "title": "Boxing Random",
+      "category": "arcade",
+      "entry": "games/boxingrandom/index.html",
+      "cover": "shared/covers/boxingrandom.webp",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "bp",
+      "title": "Block the Pig",
+      "category": "puzzle",
+      "entry": "games/bp/index.html",
+      "cover": "shared/covers/bp.webp",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "breaker",
+      "title": "Neon Breaker",
+      "category": "arcade",
+      "entry": "games/breaker/index.html",
+      "cover": "shared/covers/breaker.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "breakingthebank",
+      "title": "Henry Stickmin - Breaking the Bank",
+      "category": "arcade",
+      "entry": "games/breakingthebank/index.html",
+      "cover": "shared/covers/breakingthebank.svg",
+      "kind": "flash",
+      "controls": "keyboard",
+      "instructions": "Миша й клавіатура. Натисніть на гру для активації керування.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "breaklock",
+      "title": "BreakLock",
+      "category": "puzzle",
+      "entry": "games/breaklock/index.html",
+      "cover": "shared/covers/breaklock.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "breakout",
+      "title": "LittleJS Breakout Game",
+      "category": "arcade",
+      "entry": "games/breakout/index.html",
+      "cover": "shared/covers/breakout.webp",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "btd",
+      "title": "Bloons Tower Defense",
+      "category": "strategy",
+      "entry": "games/btd/index.html",
+      "cover": "shared/covers/btd.webp",
+      "kind": "flash",
+      "controls": "keyboard",
+      "instructions": "Миша й клавіатура. Натисніть на гру для активації керування.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "btd2",
+      "title": "Bloons Tower Defense 2",
+      "category": "strategy",
+      "entry": "games/btd2/index.html",
+      "cover": "shared/covers/btd2.webp",
+      "kind": "flash",
+      "controls": "keyboard",
+      "instructions": "Миша й клавіатура. Натисніть на гру для активації керування.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "btd3",
+      "title": "Bloons Tower Defense 3",
+      "category": "strategy",
+      "entry": "games/btd3/index.html",
+      "cover": "shared/covers/btd3.webp",
+      "kind": "flash",
+      "controls": "keyboard",
+      "instructions": "Миша й клавіатура. Натисніть на гру для активації керування.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "btd4",
+      "title": "Bloons Tower Defense 4",
+      "category": "strategy",
+      "entry": "games/btd4/index.html",
+      "cover": "shared/covers/btd4.webp",
+      "kind": "flash",
+      "controls": "keyboard",
+      "instructions": "Миша й клавіатура. Натисніть на гру для активації керування.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "btd5",
+      "title": "Bloons Tower Defense 5",
+      "category": "strategy",
+      "entry": "games/btd5/index.html",
+      "cover": "shared/covers/btd5.webp",
+      "kind": "flash",
+      "controls": "keyboard",
+      "instructions": "Миша й клавіатура. Натисніть на гру для активації керування.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "canvas-untangle-game",
+      "title": "Untangle",
+      "category": "puzzle",
+      "entry": "games/canvas-untangle-game/index.html",
+      "cover": "shared/covers/canvas-untangle-game.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "captaincallisto",
+      "title": "Captain Callisto",
+      "category": "action",
+      "entry": "games/captaincallisto/index.html",
+      "cover": "shared/covers/captaincallisto.svg",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "celeste",
+      "title": "Celeste",
+      "category": "arcade",
+      "entry": "games/celeste/index.html",
+      "cover": "shared/covers/celeste.svg",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "chess",
+      "title": "Chess",
+      "category": "puzzle",
+      "entry": "games/chess/index.html",
+      "cover": "shared/covers/chess.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "chromaincident",
+      "title": "Chroma Incident",
+      "category": "arcade",
+      "entry": "games/chromaincident/index.html",
+      "cover": "shared/covers/chromaincident.svg",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "clicker",
+      "title": "Cyber Hack",
+      "category": "strategy",
+      "entry": "games/clicker/index.html",
+      "cover": "shared/covers/clicker.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "clickerheroes",
+      "title": "Clicker Heroes",
+      "category": "strategy",
+      "entry": "games/clickerheroes/index.html",
+      "cover": "shared/covers/clickerheroes.webp",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "coloron",
+      "title": "COLORON GAME",
+      "category": "arcade",
+      "entry": "games/coloron/index.html",
+      "cover": "shared/covers/coloron.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "connect3",
+      "title": "Connect 3",
+      "category": "puzzle",
+      "entry": "games/connect3/index.html",
+      "cover": "shared/covers/connect3.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "cookieclicker",
+      "title": "Cookie Clicker",
+      "category": "strategy",
+      "entry": "games/cookieclicker/index.html",
+      "cover": "shared/covers/cookieclicker.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "count-99",
+      "title": "Count 99 Game",
+      "category": "puzzle",
+      "entry": "games/count-99/index.html",
+      "cover": "shared/covers/count-99.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "crossyroad",
+      "title": "Crossy Road",
+      "category": "arcade",
+      "entry": "games/crossyroad/index.html",
+      "cover": "shared/covers/crossyroad.svg",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "css3-matching-game",
+      "title": "Memory Match",
+      "category": "puzzle",
+      "entry": "games/css3-matching-game/index.html",
+      "cover": "shared/covers/css3-matching-game.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "cube",
+      "title": "Cube",
+      "category": "puzzle",
+      "entry": "games/cube/index.html",
+      "cover": "shared/covers/cube.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "cubefield",
+      "title": "Cubefield in JS",
+      "category": "arcade",
+      "entry": "games/cubefield/index.html",
+      "cover": "shared/covers/cubefield.svg",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "cuttheropeholiday",
+      "title": "Cut the Rope: Holiday",
+      "category": "arcade",
+      "entry": "games/cuttheropeholiday/play/index.html",
+      "cover": "shared/covers/cuttheropeholiday.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "cuttheropetimetravel",
+      "title": "Cut the Rope: Time Travel",
+      "category": "arcade",
+      "entry": "games/cuttheropetimetravel/play/index.html",
+      "cover": "shared/covers/cuttheropetimetravel.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "dino",
+      "title": "Dino Runner",
+      "category": "arcade",
+      "entry": "games/dino/index.html",
+      "cover": "shared/covers/dino.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "dj",
+      "title": "Doodle Jump",
+      "category": "arcade",
+      "entry": "games/dj/index.html",
+      "cover": "shared/covers/dj.webp",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "doctor-acorn2",
+      "title": "Doctor Acorn 2",
+      "category": "arcade",
+      "entry": "games/doctor-acorn2/play/index.html",
+      "cover": "shared/covers/doctor-acorn2.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "doctor-acorn3",
+      "title": "Doctor Acorn 3",
+      "category": "arcade",
+      "entry": "games/doctor-acorn3/play/index.html",
+      "cover": "shared/covers/doctor-acorn3.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "doge2048",
+      "title": "Doge 2048",
+      "category": "puzzle",
+      "entry": "games/doge2048/play/index.html",
+      "cover": "shared/covers/doge2048.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "dogeminer",
+      "title": "Dogeminer: The Dogecoin Mining Simulator",
+      "category": "strategy",
+      "entry": "games/dogeminer/index.html",
+      "cover": "shared/covers/dogeminer.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "drift-boss",
+      "title": "Drift Boss",
+      "category": "racing",
+      "entry": "games/drift-boss/index.html",
+      "cover": "shared/covers/drift-boss.webp",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "drivemad",
+      "title": "Drive Mad",
+      "category": "racing",
+      "entry": "games/drivemad/index.html",
+      "cover": "shared/covers/drivemad.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "ducklife",
+      "title": "Duck Life",
+      "category": "arcade",
+      "entry": "games/ducklife/index.html",
+      "cover": "shared/covers/ducklife.svg",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "ducklife2",
+      "title": "Duck Life 2",
+      "category": "arcade",
+      "entry": "games/ducklife2/index.html",
+      "cover": "shared/covers/ducklife2.svg",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "ducklife3",
+      "title": "Duck Life 3",
+      "category": "arcade",
+      "entry": "games/ducklife3/index.html",
+      "cover": "shared/covers/ducklife3.svg",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "edge-surf",
+      "title": "Edge Surf",
+      "category": "arcade",
+      "entry": "games/edge-surf/index.html",
+      "cover": "shared/covers/edge-surf.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "edgenotfound",
+      "title": "Edge Not Found",
+      "category": "arcade",
+      "entry": "games/edgenotfound/index.html",
+      "cover": "shared/covers/edgenotfound.svg",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "escapingtheprison",
+      "title": "Escaping the Prison",
+      "category": "arcade",
+      "entry": "games/escapingtheprison/index.html",
+      "cover": "shared/covers/escapingtheprison.svg",
+      "kind": "flash",
+      "controls": "keyboard",
+      "instructions": "Миша й клавіатура. Натисніть на гру для активації керування.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "evilglitch",
+      "title": "Evil Glitch",
+      "category": "arcade",
+      "entry": "games/evilglitch/index.html",
+      "cover": "shared/covers/evilglitch.svg",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "factoryballsforever",
+      "title": "Factory Balls Forever",
+      "category": "puzzle",
+      "entry": "games/factoryballsforever/index.html",
+      "cover": "shared/covers/factoryballsforever.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "fireboy-and-watergirl-1",
+      "title": "Fireboy & Watergirl: Forest Temple",
+      "category": "arcade",
+      "entry": "games/fireboy-and-watergirl-1/play/index.html",
+      "cover": "shared/covers/fireboy-and-watergirl-1.svg",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "fireboy-and-watergirl-2",
+      "title": "Fireboy & Watergirl: Light Temple",
+      "category": "arcade",
+      "entry": "games/fireboy-and-watergirl-2/play/index.html",
+      "cover": "shared/covers/fireboy-and-watergirl-2.svg",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "fireboy-and-watergirl-3",
+      "title": "Fireboy & Watergirl: Ice Temple",
+      "category": "arcade",
+      "entry": "games/fireboy-and-watergirl-3/play/index.html",
+      "cover": "shared/covers/fireboy-and-watergirl-3.svg",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "fireboy-and-watergirl-4",
+      "title": "Fireboy & Watergirl: Crystal Temple",
+      "category": "arcade",
+      "entry": "games/fireboy-and-watergirl-4/play/index.html",
+      "cover": "shared/covers/fireboy-and-watergirl-4.svg",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "flappy-2048",
+      "title": "Flappy 2048",
+      "category": "puzzle",
+      "entry": "games/flappy-2048/play/index.html",
+      "cover": "shared/covers/flappy-2048.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "flappybird",
+      "title": "Flappy Bird",
+      "category": "arcade",
+      "entry": "games/flappybird/index.html",
+      "cover": "shared/covers/flappybird.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "flappybird-retro",
+      "title": "Flappy Bird 3D",
+      "category": "arcade",
+      "entry": "games/flappybird-retro/index.html",
+      "cover": "shared/covers/flappybird-retro.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "flappydot",
+      "title": "Flappy Dot",
+      "category": "arcade",
+      "entry": "games/flappydot/index.html",
+      "cover": "shared/covers/flappydot.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "friendlyfire",
+      "title": "Friendly Fire",
+      "category": "arcade",
+      "entry": "games/friendlyfire/index.html",
+      "cover": "shared/covers/friendlyfire.svg",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "geometry",
+      "title": "Geometry",
+      "category": "arcade",
+      "entry": "games/geometry/play/index.html",
+      "cover": "shared/covers/geometry.svg",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "geometrydash",
+      "title": "Geometry Dash",
+      "category": "arcade",
+      "entry": "games/geometrydash/index.html",
+      "cover": "shared/covers/geometrydash.svg",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "gh",
+      "title": "Ghost Hunt",
+      "category": "action",
+      "entry": "games/gh/index.html",
+      "cover": "shared/covers/gh.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "gn",
+      "title": "Guess the Number",
+      "category": "puzzle",
+      "entry": "games/gn/index.html",
+      "cover": "shared/covers/gn.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "gopher",
+      "title": "Gopher Kart",
+      "category": "racing",
+      "entry": "games/gopher/index.html",
+      "cover": "shared/covers/gopher.svg",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "gorilla",
+      "title": "Gorillas",
+      "category": "arcade",
+      "entry": "games/gorilla/index.html",
+      "cover": "shared/covers/gorilla.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "gunmayhem2",
+      "title": "Gun Mayhem 2",
+      "category": "action",
+      "entry": "games/gunmayhem2/index.html",
+      "cover": "shared/covers/gunmayhem2.webp",
+      "kind": "flash",
+      "controls": "keyboard",
+      "instructions": "Миша й клавіатура. Натисніть на гру для активації керування.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "halloween",
+      "title": "Halloween",
+      "category": "arcade",
+      "entry": "games/halloween/index.html",
+      "cover": "shared/covers/halloween.svg",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "hangman",
+      "title": "Hangman Game",
+      "category": "puzzle",
+      "entry": "games/hangman/index.html",
+      "cover": "shared/covers/hangman.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "happywheels",
+      "title": "Happy Wheels",
+      "category": "arcade",
+      "entry": "games/happywheels/index.html",
+      "cover": "shared/covers/happywheels.svg",
+      "kind": "flash",
+      "controls": "keyboard",
+      "instructions": "Миша й клавіатура. Натисніть на гру для активації керування.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "hextris",
+      "title": "Hextris",
+      "category": "puzzle",
+      "entry": "games/hextris/index.html",
+      "cover": "shared/covers/hextris.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "holeio",
+      "title": "Hole.io",
+      "category": "arcade",
+      "entry": "games/holeio/index.html",
+      "cover": "shared/covers/holeio.webp",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "icypurplehead2",
+      "title": "Icy Purple Head 2",
+      "category": "arcade",
+      "entry": "games/icypurplehead2/play/index.html",
+      "cover": "shared/covers/icypurplehead2.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "icypurplehead3",
+      "title": "Icy Purple Head 3",
+      "category": "arcade",
+      "entry": "games/icypurplehead3/play/index.html",
+      "cover": "shared/covers/icypurplehead3.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "jetpackjoyride",
+      "title": "Jetpack Joyride",
+      "category": "arcade",
+      "entry": "games/jetpackjoyride/index.html",
+      "cover": "shared/covers/jetpackjoyride.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "konnekt",
+      "title": "konnekt",
+      "category": "puzzle",
+      "entry": "games/konnekt/index.html",
+      "cover": "shared/covers/konnekt.svg",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "learntofly",
+      "title": "Learn to Fly",
+      "category": "arcade",
+      "entry": "games/learntofly/index.html",
+      "cover": "shared/covers/learntofly.webp",
+      "kind": "flash",
+      "controls": "keyboard",
+      "instructions": "Миша й клавіатура. Натисніть на гру для активації керування.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "maze",
+      "title": "Cyber Maze: Infinite",
+      "category": "puzzle",
+      "entry": "games/maze/index.html",
+      "cover": "shared/covers/maze.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "mc",
+      "title": "Memory Cards",
+      "category": "puzzle",
+      "entry": "games/mc/index.html",
+      "cover": "shared/covers/mc.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "mcbeta1.3",
+      "title": "Eaglercraft Beta",
+      "category": "arcade",
+      "entry": "games/mcbeta1.3/index.html",
+      "cover": "shared/covers/mcbeta1.3.svg",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "menja",
+      "title": "Menja",
+      "category": "action",
+      "entry": "games/menja/index.html",
+      "cover": "shared/covers/menja.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "minecraft",
+      "title": "Block World",
+      "category": "arcade",
+      "entry": "games/minecraft/index.html",
+      "cover": "shared/covers/minecraft.svg",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "minesweeper",
+      "title": "Minesweeper",
+      "category": "puzzle",
+      "entry": "games/minesweeper/index.html",
+      "cover": "shared/covers/minesweeper.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "motox3m",
+      "title": "Moto X3M",
+      "category": "racing",
+      "entry": "games/motox3m/play/index.html",
+      "cover": "shared/covers/motox3m.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "multiply-defense",
+      "title": "Multiply Defense",
+      "category": "action",
+      "entry": "games/multiply-defense/index.html",
+      "cover": "shared/covers/multiply-defense.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "ninjavsevilcorp",
+      "title": "Ninja vs Evilcorp",
+      "category": "arcade",
+      "entry": "games/ninjavsevilcorp/index.html",
+      "cover": "shared/covers/ninjavsevilcorp.svg",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "packabunchas",
+      "title": "PACKABUNCHAS",
+      "category": "puzzle",
+      "entry": "games/packabunchas/index.html",
+      "cover": "shared/covers/packabunchas.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "pacman",
+      "title": "jsPacman",
+      "category": "arcade",
+      "entry": "games/pacman/index.html",
+      "cover": "shared/covers/pacman.webp",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "paperio",
+      "title": "Paper.io 2",
+      "category": "arcade",
+      "entry": "games/paperio/index.html",
+      "cover": "shared/covers/paperio.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "particleclicker",
+      "title": "Particle Clicker",
+      "category": "strategy",
+      "entry": "games/particleclicker/index.html",
+      "cover": "shared/covers/particleclicker.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "physicsplayground",
+      "title": "Physics Playground",
+      "category": "arcade",
+      "entry": "games/physicsplayground/index.html",
+      "cover": "shared/covers/physicsplayground.webp",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "pingpoing",
+      "title": "Ping Pong",
+      "category": "arcade",
+      "entry": "games/pingpoing/index.html",
+      "cover": "shared/covers/pingpoing.svg",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "poker",
+      "title": "Poker",
+      "category": "puzzle",
+      "entry": "games/poker/index.html",
+      "cover": "shared/covers/poker.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "pushback",
+      "title": "Pushback",
+      "category": "arcade",
+      "entry": "games/pushback/index.html",
+      "cover": "shared/covers/pushback.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "q1k3",
+      "title": "Q1K3",
+      "category": "action",
+      "entry": "games/q1k3/index.html",
+      "cover": "shared/covers/q1k3.svg",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "racer",
+      "title": "Javascript Racer",
+      "category": "racing",
+      "entry": "games/racer/index.html",
+      "cover": "shared/covers/racer.svg",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "radiusraid",
+      "title": "Radius Raid",
+      "category": "action",
+      "entry": "games/radiusraid/index.html",
+      "cover": "shared/covers/radiusraid.svg",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "rb",
+      "title": "Rocket Battles",
+      "category": "action",
+      "entry": "games/rb/index.html",
+      "cover": "shared/covers/rb.svg",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "rcs",
+      "title": "Rock Paper Scissors",
+      "category": "puzzle",
+      "entry": "games/rcs/index.html",
+      "cover": "shared/covers/rcs.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "retrobowl",
+      "title": "Retro Bowl",
+      "category": "arcade",
+      "entry": "games/retrobowl/index.html",
+      "cover": "shared/covers/retrobowl.svg",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "retrohaunt",
+      "title": "Retrohaunt",
+      "category": "arcade",
+      "entry": "games/retrohaunt/index.html",
+      "cover": "shared/covers/retrohaunt.svg",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "roadblocks",
+      "title": "Roadblocks",
+      "category": "puzzle",
+      "entry": "games/roadblocks/index.html",
+      "cover": "shared/covers/roadblocks.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "rooftopsniper",
+      "title": "Rooftop Snipers",
+      "category": "arcade",
+      "entry": "games/rooftopsniper/play/index.html",
+      "cover": "shared/covers/rooftopsniper.svg",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "run3",
+      "title": "Run 3",
+      "category": "arcade",
+      "entry": "games/run3/index.html",
+      "cover": "shared/covers/run3.webp",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "rush",
+      "title": "Rush Game",
+      "category": "arcade",
+      "entry": "games/rush/index.html",
+      "cover": "shared/covers/rush.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "sandbox",
+      "title": "Sandbox",
+      "category": "arcade",
+      "entry": "games/sandbox/index.html",
+      "cover": "shared/covers/sandbox.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "sh",
+      "title": "Stickman Hero",
+      "category": "arcade",
+      "entry": "games/sh/index.html",
+      "cover": "shared/covers/sh.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "shuttledeck",
+      "title": "Shuttledeck",
+      "category": "arcade",
+      "entry": "games/shuttledeck/index.html",
+      "cover": "shared/covers/shuttledeck.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "skibiditoilet",
+      "title": "Skibidi Toilet 1v100",
+      "category": "action",
+      "entry": "games/skibiditoilet/index.html",
+      "cover": "shared/covers/skibiditoilet.webp",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "skibiditoiletattack",
+      "title": "Skibidi Toilet Attack",
+      "category": "action",
+      "entry": "games/skibiditoiletattack/index.html",
+      "cover": "shared/covers/skibiditoiletattack.webp",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "sleepingbeauty",
+      "title": "Sleeping Beauty – a 7-day roguelike",
+      "category": "arcade",
+      "entry": "games/sleepingbeauty/index.html",
+      "cover": "shared/covers/sleepingbeauty.webp",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "slitherio-offline",
+      "title": "Snake Arena Offline",
+      "category": "arcade",
+      "entry": "games/slitherio-offline/index.html",
+      "cover": "shared/covers/slitherio-offline.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "slope2",
+      "title": "Slope 2",
+      "category": "arcade",
+      "entry": "games/slope2/index.html",
+      "cover": "shared/covers/slope2.webp",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "slope3",
+      "title": "SlopeGame",
+      "category": "arcade",
+      "entry": "games/slope3/index.html",
+      "cover": "shared/covers/slope3.svg",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "sm64",
+      "title": "Super Mario 64",
+      "category": "arcade",
+      "entry": "games/sm64/index.html",
+      "cover": "shared/covers/sm64.svg",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "snake-retro",
+      "title": "Neon Snake: Final",
+      "category": "arcade",
+      "entry": "games/snake-retro/index.html",
+      "cover": "shared/covers/snake-retro.svg",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "snowrider3d",
+      "title": "Snow Rider 3D",
+      "category": "racing",
+      "entry": "games/snowrider3d/index.html",
+      "cover": "shared/covers/snowrider3d.webp",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "spacecompany",
+      "title": "Space Company",
+      "category": "strategy",
+      "entry": "games/spacecompany/index.html",
+      "cover": "shared/covers/spacecompany.webp",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "spacegarden",
+      "title": "Space Garden",
+      "category": "arcade",
+      "entry": "games/spacegarden/index.html",
+      "cover": "shared/covers/spacegarden.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "spacehuggers",
+      "title": "Space Huggers",
+      "category": "action",
+      "entry": "games/spacehuggers/index.html",
+      "cover": "shared/covers/spacehuggers.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "spaceinvaders",
+      "title": "Space Invaders",
+      "category": "action",
+      "entry": "games/spaceinvaders/play/index.html",
+      "cover": "shared/covers/spaceinvaders.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "stack",
+      "title": "Stack",
+      "category": "arcade",
+      "entry": "games/stack/play/index.html",
+      "cover": "shared/covers/stack.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "stacktower",
+      "title": "Stack Tower",
+      "category": "arcade",
+      "entry": "games/stacktower/play/index.html",
+      "cover": "shared/covers/stacktower.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "subway-surfers",
+      "title": "Subway Surfers",
+      "category": "racing",
+      "entry": "games/subway-surfers/index.html",
+      "cover": "shared/covers/subway-surfers.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "subway-surfers-ny",
+      "title": "Subway Surfers: New York",
+      "category": "racing",
+      "entry": "games/subway-surfers-ny/index.html",
+      "cover": "shared/covers/subway-surfers-ny.webp",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "superhot",
+      "title": "SUPERHOT",
+      "category": "arcade",
+      "entry": "games/superhot/index.html",
+      "cover": "shared/covers/superhot.webp",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "supermeatboy",
+      "title": "Super Meat Boy",
+      "category": "arcade",
+      "entry": "games/supermeatboy/index.html",
+      "cover": "shared/covers/supermeatboy.webp",
+      "kind": "flash",
+      "controls": "keyboard",
+      "instructions": "Миша й клавіатура. Натисніть на гру для активації керування.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "supersmashflash",
+      "title": "Super Smash Flash",
+      "category": "arcade",
+      "entry": "games/supersmashflash/index.html",
+      "cover": "shared/covers/supersmashflash.webp",
+      "kind": "flash",
+      "controls": "keyboard",
+      "instructions": "Миша й клавіатура. Натисніть на гру для активації керування.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "sw",
+      "title": "Alien Invasion",
+      "category": "action",
+      "entry": "games/sw/index.html",
+      "cover": "shared/covers/sw.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "tabs",
+      "title": "Battle Simulator",
+      "category": "arcade",
+      "entry": "games/tabs/index.html",
+      "cover": "shared/covers/tabs.webp",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "tetris-retro",
+      "title": "Tamatris",
+      "category": "arcade",
+      "entry": "games/tetris-retro/index.html",
+      "cover": "shared/covers/tetris-retro.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "theimpossiblegame",
+      "title": "The Impossible Game",
+      "category": "arcade",
+      "entry": "games/theimpossiblegame/index.html",
+      "cover": "shared/covers/theimpossiblegame.webp",
+      "kind": "flash",
+      "controls": "keyboard",
+      "instructions": "Миша й клавіатура. Натисніть на гру для активації керування.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "thereisnogame",
+      "title": "There Is No Game",
+      "category": "arcade",
+      "entry": "games/thereisnogame/index.html",
+      "cover": "shared/covers/thereisnogame.webp",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "thisistheonlylevel",
+      "title": "This Is the Only Level",
+      "category": "arcade",
+      "entry": "games/thisistheonlylevel/index.html",
+      "cover": "shared/covers/thisistheonlylevel.webp",
+      "kind": "flash",
+      "controls": "keyboard",
+      "instructions": "Миша й клавіатура. Натисніть на гру для активації керування.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "thisistheonlylevel2",
+      "title": "This Is the Only Level 2",
+      "category": "arcade",
+      "entry": "games/thisistheonlylevel2/index.html",
+      "cover": "shared/covers/thisistheonlylevel2.webp",
+      "kind": "flash",
+      "controls": "keyboard",
+      "instructions": "Миша й клавіатура. Натисніть на гру для активації керування.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "tictactoe-retro",
+      "title": "Tic Tac Toe",
+      "category": "puzzle",
+      "entry": "games/tictactoe-retro/index.html",
+      "cover": "shared/covers/tictactoe-retro.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "timeshooter1",
+      "title": "Time Shooter",
+      "category": "action",
+      "entry": "games/timeshooter1/index.html",
+      "cover": "shared/covers/timeshooter1.webp",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "tinyfishing",
+      "title": "Tiny Fishing",
+      "category": "arcade",
+      "entry": "games/tinyfishing/index.html",
+      "cover": "shared/covers/tinyfishing.webp",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "towermaster",
+      "title": "Tower Master",
+      "category": "arcade",
+      "entry": "games/towermaster/index.html",
+      "cover": "shared/covers/towermaster.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "tron",
+      "title": "Tron",
+      "category": "arcade",
+      "entry": "games/tron/index.html",
+      "cover": "shared/covers/tron.webp",
+      "kind": "flash",
+      "controls": "keyboard",
+      "instructions": "Миша й клавіатура. Натисніть на гру для активації керування.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "ts",
+      "title": "Typing Speed",
+      "category": "arcade",
+      "entry": "games/ts/index.html",
+      "cover": "shared/covers/ts.svg",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "tube-jumpers",
+      "title": "Tube Jumpers",
+      "category": "arcade",
+      "entry": "games/tube-jumpers/index.html",
+      "cover": "shared/covers/tube-jumpers.svg",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "tunnelrush",
+      "title": "Tunnel Rush",
+      "category": "arcade",
+      "entry": "games/tunnelrush/index.html",
+      "cover": "shared/covers/tunnelrush.webp",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "underrun",
+      "title": "UNDERRUN",
+      "category": "action",
+      "entry": "games/underrun/index.html",
+      "cover": "shared/covers/underrun.svg",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "universal-paperclips",
+      "title": "Universal Paperclips",
+      "category": "strategy",
+      "entry": "games/universal-paperclips/index.html",
+      "cover": "shared/covers/universal-paperclips.webp",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "vex3",
+      "title": "Vex 3",
+      "category": "arcade",
+      "entry": "games/vex3/index.html",
+      "cover": "shared/covers/vex3.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "vex4",
+      "title": "Vex 4",
+      "category": "arcade",
+      "entry": "games/vex4/index.html",
+      "cover": "shared/covers/vex4.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "vex5",
+      "title": "Vex 5",
+      "category": "arcade",
+      "entry": "games/vex5/index.html",
+      "cover": "shared/covers/vex5.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "vex6",
+      "title": "Vex 6",
+      "category": "arcade",
+      "entry": "games/vex6/index.html",
+      "cover": "shared/covers/vex6.svg",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "walls",
+      "title": "Gamedev Canvas Workshop",
+      "category": "arcade",
+      "entry": "games/walls/index.html",
+      "cover": "shared/covers/walls.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "wbwwb",
+      "title": "We Become What We Behold",
+      "category": "arcade",
+      "entry": "games/wbwwb/index.html",
+      "cover": "shared/covers/wbwwb.webp",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "weavesilk",
+      "title": "Weavesilk",
+      "category": "arcade",
+      "entry": "games/weavesilk/index.html",
+      "cover": "shared/covers/weavesilk.webp",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "wg",
+      "title": "Guess the Word",
+      "category": "puzzle",
+      "entry": "games/wg/index.html",
+      "cover": "shared/covers/wg.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "wordle",
+      "title": "wordle",
+      "category": "puzzle",
+      "entry": "games/wordle/index.html",
+      "cover": "shared/covers/wordle.webp",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "worldshardestgame",
+      "title": "The World’s Hardest Game",
+      "category": "arcade",
+      "entry": "games/worldshardestgame/index.html",
+      "cover": "shared/covers/worldshardestgame.webp",
+      "kind": "flash",
+      "controls": "keyboard",
+      "instructions": "Миша й клавіатура. Натисніть на гру для активації керування.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "xx142-b2exe",
+      "title": "xx142-b2.exe",
+      "category": "action",
+      "entry": "games/xx142-b2exe/index.html",
+      "cover": "shared/covers/xx142-b2exe.svg",
+      "kind": "html5",
+      "controls": "keyboard",
+      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "zombocalypse",
+      "title": "zombocalypse",
+      "category": "arcade",
+      "entry": "games/zombocalypse/index.html",
+      "cover": "shared/covers/zombocalypse.webp",
+      "kind": "flash",
+      "controls": "keyboard",
+      "instructions": "Миша й клавіатура. Натисніть на гру для активації керування.",
+      "devices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "candidate"
+    }
+  ],
+  "excluded": {
+    "avatar": "Shared poker artwork, not a game.",
+    "1v1lol": "Empty AlgebraHelper page; no game runtime.",
+    "8ball": "Missing proxy endpoint; no local pool game.",
+    "bloonstd4": "Broken proxy duplicate of Bloons TD 4.",
+    "awesometanks": "Incomplete TurboWarp export: engine and project data are missing.",
+    "cuttherope": "Remote GamePix loader without local game assets.",
+    "cuttherope2": "Remote GamePix loader without local game assets.",
+    "fnaf": "Empty proxy page without game files.",
+    "fnaf2": "Empty proxy page without game files.",
+    "fnaf3": "Empty proxy page without game files.",
+    "fnaf4": "Empty proxy page without game files.",
+    "elasticmorty": "Empty proxy page without game files.",
+    "survivio": "Empty proxy page without game files.",
+    "pvz": "Third-party iframe; no self-hosted runtime.",
+    "webretro": "Emulator requiring external ROMs, not a standalone game.",
+    "supersmashbros": "Missing emulator runtime.",
+    "slope": "Unity assets are Git LFS pointers, not playable binaries.",
+    "yohoho": "Entry HTML is missing the game interface and initialization.",
+    "gif": "GIF utility, not a game.",
+    "basketball-stars": "Duplicate of basketballstars.",
+    "driftboss": "Duplicate of drift-boss.",
+    "firewater": "Duplicate of fireboy-and-watergirl-1.",
+    "chrome-dino": "Duplicate dinosaur runner; use dino.",
+    "dinosaur": "Duplicate dinosaur runner; use dino.",
+    "doodle-jump": "Duplicate of dj.",
+    "doodlejump": "Duplicate of dj.",
+    "flappy_bird": "Duplicate flappy game; use flappybird.",
+    "snake": "Duplicate of snake-retro.",
+    "tetris": "Duplicate of tetris-retro.",
+    "tictactoe": "Duplicate of tictactoe-retro."
+  }
+}

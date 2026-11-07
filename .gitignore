@@ -8,3 +8,11 @@ node_modules/
 # Ignore temporary files
 *.tmp
 *.log
+
+dist/
+shared/vendor/*
+!shared/vendor/playcanvas.min.js.gz
+
+games/slope3/Build/
+games/slope3/loading.png
+games/slope3/favicon.ico

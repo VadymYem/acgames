@@ -1,24 +1,24 @@
-function UnityProgress(gameInstance, progress) {
-  if (!gameInstance.Module)
-    return;
-  if (!gameInstance.logo) {
-    gameInstance.logo = document.createElement("div");
-    gameInstance.logo.className = "logo " + gameInstance.Module.splashScreenStyle;
-    gameInstance.container.appendChild(gameInstance.logo);
+/* AuthorChe loading UI for runtimes exposing Unity/Nitrome progress hooks. */
+(function (w, d) {
+  'use strict';
+  let panel;
+  function mount() {
+    if (panel || !d.body) return;
+    panel = d.createElement('div');
+    panel.id = 'ac-runtime-loader';
+    panel.setAttribute('role', 'status');
+    panel.style.cssText = 'position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;background:#0b101b;color:#e8d5b2;z-index:999;font:22px Georgia,serif;pointer-events:none';
+    panel.innerHTML = '<span>AuthorChe</span><progress max="1" value="0" aria-label="Завантаження гри" style="width:180px;accent-color:#c8a96e"></progress>';
+    d.body.appendChild(panel);
   }
-  if (!gameInstance.progress) {
-    gameInstance.progress = document.createElement("div");
-    gameInstance.progress.className = "progress " + gameInstance.Module.splashScreenStyle;
-    gameInstance.progress.empty = document.createElement("div");
-    gameInstance.progress.empty.className = "empty";
-    gameInstance.progress.appendChild(gameInstance.progress.empty);
-    gameInstance.progress.full = document.createElement("div");
-    gameInstance.progress.full.className = "full";
-    gameInstance.progress.appendChild(gameInstance.progress.full);
-    gameInstance.container.appendChild(gameInstance.progress);
+  function progress(value) {
+    mount();
+    if (!panel) return;
+    panel.querySelector('progress').value = Number(value) || 0;
+    if (value >= 1 || value === 'complete') { panel.remove(); panel = null; }
   }
-  gameInstance.progress.full.style.width = (100 * progress) + "%";
-  gameInstance.progress.empty.style.width = (100 * (1 - progress)) + "%";
-  if (progress == 1)
-    gameInstance.logo.style.display = gameInstance.progress.style.display = "none";
-}
+  w.UnityProgress = function (_, value) { progress(value); };
+  w.nitromePreloaderInit = mount;
+  w.nitromePreloaderSetProgress = progress;
+  w.nitromePreloaderSetComplete = function () { progress(1); };
+})(window, document);

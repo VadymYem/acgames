@@ -1,6 +1,6 @@
 var analytics =
 {
-    enabled: true,
+    enabled: false,
 
     screens:
     {
@@ -21,39 +21,7 @@ var analytics =
         actionBuy: 'Buy'
     },
     
-    init: function()
-    {
-        if (typeof Helpers.analytics === 'undefined' || Helpers.analytics == '') {
-            analytics.enabled = false;
-            return;
-        }
-        
-        ga('create', Helpers.analytics);
-        ga('set', { 'appName': 'Particle Clicker', 'appId': 'ch.cern.particle-clicker', 'appVersion': '0.9' });
-        ga('set', 'anonymizeIp', true);
-
-
-        $('#myModal').on('show.bs.modal', function (e) {
-            analytics.sendScreen(analytics.screens.about);
-        });
-        $('#myModal').on('hide.bs.modal', function (e) {
-            analytics.sendScreen(analytics.screens.main);
-        });
-
-        $('#achievements-modal').on('show.bs.modal', function (e) {
-            analytics.sendScreen(analytics.screens.achievements);
-        });
-        $('#achievements-modal').on('hide.bs.modal', function (e) {
-            analytics.sendScreen(analytics.screens.main);
-        });
-
-        $('#infoBox').on('show.bs.modal', function (e) {
-            analytics.sendScreen(analytics.screens.info);
-        });
-        $('#infoBox').on('hide.bs.modal', function (e) {
-            analytics.sendScreen(analytics.screens.main);
-        });
-    },
+    init: function() {},
     
     sendScreen: function(type)
     {
@@ -61,7 +29,7 @@ var analytics =
             return;
         }
         
-        ga('send', 'screenview', { 'screenName': type });
+        void('send', 'screenview', { 'screenName': type });
     },
     
     sendEvent: function(category, action, label, value)
@@ -70,6 +38,6 @@ var analytics =
             return;
         }
         
-        //ga('send', 'event', category, action, label, value, {'screenName': analytics.screens.main });
+        //void('send', 'event', category, action, label, value, {'screenName': analytics.screens.main });
     }
 };

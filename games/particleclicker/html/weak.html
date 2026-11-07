@@ -1,43 +1,10 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'self' data: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob:; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' data: blob:; worker-src 'self' blob:; frame-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'none'"><meta name="robots" content="noindex,follow"><script src="../../../shared/platform.js"></script><link rel="stylesheet" href="../../../shared/game.css"></head><body>
 
-<script>
-// AuthorChe Clean Game Wrapper - Ad & Tracker Blocker
-window.PokiSDK = {
-  init: function(){ return Promise.resolve(); },
-  initWithVideoback: function(){ return Promise.resolve(); },
-  customEvent: function(){},
-  gameplayStart: function(){},
-  gameplayStop: function(){},
-  commercialBreak: function(){ return Promise.resolve(); },
-  rewardedBreak: function(){ return Promise.resolve(true); },
-  displayAd: function(){},
-  destroyAd: function(){},
-  setDebugTouchOverlayController: function(){},
-  isAdBlocked: function(){ return false; }
-};
-window.CrazyGames = {
-  SDK: {
-    ad: {
-      requestAd: function(type, callbacks){ if(callbacks && callbacks.adFinished) callbacks.adFinished(); },
-      hasAdblock: function(){ return Promise.resolve(false); }
-    },
-    game: {
-      gameplayStart: function(){},
-      gameplayStop: function(){},
-      happytime: function(){},
-      loadingStart: function(){},
-      loadingStop: function(){}
-    },
-    user: { isUserAccountAvailable: false }
-  }
-};
-window.adsbygoogle = { push: function(){} };
-window.open = function(url){ console.log("Blocked popup:", url); return null; };
-</script>
-<script>window.open = function() { console.log("Blocked popup"); return null; };</script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <p class="lead">You discovered the W and Z bosons!</p>
 <h5><b>The weak force</b></h5>
-<img class="img-responsive" src="assets/info/w.png" alt="A W&minus; boson produced in the transformation of a neutron into a proton" align="center">
+<img class="img-responsive" src="../assets/info/w.png" alt="A W&minus; boson produced in the transformation of a neutron into a proton" align="center">
 <p>
 The weak interaction is a nuclear process that is responsible, among other things, for &beta; (beta) decay the transformation of neutrons into protons. The weak force is mediated by two bosons called the W and the Z. The W comes in two types: W<sup>+</sup> and W</sup>&minus;</sup>. The Z is neutral and is sometimes represented as Z<sup>0</sup>.
 </p>
@@ -54,3 +21,4 @@ The W and Z bosons are quite massive and so require powerful accelerators in ord
   <li></li>
   <li></li>
 </ul>
+</body></html>

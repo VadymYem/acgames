@@ -1,41 +1,63 @@
-name: Game source and dependency audit
+name: AuthorChe game quality
 on:
   push:
     branches: [main]
-    paths:
-      - '.github/workflows/game-quality.yml'
-      - 'tools/**'
-      - 'games/**'
   workflow_dispatch:
 permissions:
   contents: read
+concurrency:
+  group: games-quality-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
-  inventory:
+  static:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
-      - name: Archive runtime for reproducible local checks
-        run: tar --exclude=.git --exclude=node_modules -czf /tmp/acgames-runtime.tar.gz .
-      - name: Split runtime archive
-        run: split -b 300M /tmp/acgames-runtime.tar.gz /tmp/acgames-part-
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - run: npm run build
+      - run: npm run audit
+      - run: npm test
       - uses: actions/upload-artifact@v4
         with:
-          name: acgames-runtime-aa
-          path: /tmp/acgames-part-aa
-          compression-level: 0
-          retention-days: 2
-      - uses: actions/upload-artifact@v4
+          name: game-static-reports
+          path: reports/*.json
+          retention-days: 7
+  browser:
+    needs: static
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    strategy:
+      fail-fast: false
+      matrix:
+        device: [desktop, android, ios]
+    steps:
+      - uses: actions/checkout@v4
         with:
-          name: acgames-runtime-ab
-          path: /tmp/acgames-part-ab
-          compression-level: 0
-          retention-days: 2
-      - uses: actions/upload-artifact@v4
+          persist-credentials: false
+      - uses: actions/setup-node@v4
         with:
-          name: acgames-runtime-ac
-          path: /tmp/acgames-part-ac
-          compression-level: 0
-          retention-days: 2
+          node-version: '22'
+          cache: npm
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - run: npm install --no-save --package-lock=false playwright@1.64.1
+      - run: npx playwright install --with-deps chromium webkit
+      - run: npm run build
+      - name: Run every supported game with load and input checks
+        env:
+          GAME_DEVICE: ${{ matrix.device }}
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 --directory dist >/tmp/games-http.log 2>&1 &
+          node tests/browser.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: games-browser-${{ matrix.device }}
+          path: reports/browser/${{ matrix.device }}/
+          retention-days: 7

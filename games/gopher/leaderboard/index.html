@@ -1,39 +1,6 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'self' data: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob:; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' data: blob:; worker-src 'self' blob:; frame-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'none'"><meta name="robots" content="noindex,follow"><script src="../../../shared/platform.js"></script><link rel="stylesheet" href="../../../shared/game.css"></head><body>
 
-<script>
-// AuthorChe Clean Game Wrapper - Ad & Tracker Blocker
-window.PokiSDK = {
-  init: function(){ return Promise.resolve(); },
-  initWithVideoback: function(){ return Promise.resolve(); },
-  customEvent: function(){},
-  gameplayStart: function(){},
-  gameplayStop: function(){},
-  commercialBreak: function(){ return Promise.resolve(); },
-  rewardedBreak: function(){ return Promise.resolve(true); },
-  displayAd: function(){},
-  destroyAd: function(){},
-  setDebugTouchOverlayController: function(){},
-  isAdBlocked: function(){ return false; }
-};
-window.CrazyGames = {
-  SDK: {
-    ad: {
-      requestAd: function(type, callbacks){ if(callbacks && callbacks.adFinished) callbacks.adFinished(); },
-      hasAdblock: function(){ return Promise.resolve(false); }
-    },
-    game: {
-      gameplayStart: function(){},
-      gameplayStop: function(){},
-      happytime: function(){},
-      loadingStart: function(){},
-      loadingStop: function(){}
-    },
-    user: { isUserAccountAvailable: false }
-  }
-};
-window.adsbygoogle = { push: function(){} };
-window.open = function(url){ console.log("Blocked popup:", url); return null; };
-</script>
-<script>window.open = function() { console.log("Blocked popup"); return null; };</script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
  <meta property="og:type" content="http://gopher.kart.warnerbros.mu/leaderboard/">
     <meta property="og:title" content="Gopher Kart leaderboard" />
@@ -41,8 +8,9 @@ window.open = function(url){ console.log("Blocked popup:", url); return null; };
     <meta property="og:url" content="http://gopher.kart.warnerbros.mu/leaderboard/" />
     <meta property="og:image" content="/assets/gopherkartlogo.png" />
     <meta name="theme-color" content="#6ad7e5">
-<link rel="icon" type="image/png" href="/assets/gopherkartlogo.png" sizes="32x32">
+
 <script>
 fetch("https://kart.vc.mu/board").then(response => response.text()).then(html => document.documentElement.innerHTML = html.replaceAll("\"css/", "\"https://kart.vc.mu/css/"));
 </script>
 
+</body></html>

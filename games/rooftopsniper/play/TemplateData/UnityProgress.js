@@ -1,1 +1,24 @@
-function UnityProgress(e,s){e.Module&&(e.logo||(e.logo=document.createElement("div"),e.logo.className="logo "+e.Module.splashScreenStyle,e.container.appendChild(e.logo)),e.progress||(e.progress=document.createElement("div"),e.progress.className="progress "+e.Module.splashScreenStyle,e.progress.empty=document.createElement("div"),e.progress.empty.className="empty",e.progress.appendChild(e.progress.empty),e.progress.full=document.createElement("div"),e.progress.full.className="full",e.progress.appendChild(e.progress.full),e.container.appendChild(e.progress)),e.progress.full.style.width=100*s+"%",e.progress.empty.style.width=100*(1-s)+"%",1==s&&(e.logo.style.display=e.progress.style.display="none"))}
+/* AuthorChe loading UI for runtimes exposing Unity/Nitrome progress hooks. */
+(function (w, d) {
+  'use strict';
+  let panel;
+  function mount() {
+    if (panel || !d.body) return;
+    panel = d.createElement('div');
+    panel.id = 'ac-runtime-loader';
+    panel.setAttribute('role', 'status');
+    panel.style.cssText = 'position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;background:#0b101b;color:#e8d5b2;z-index:999;font:22px Georgia,serif;pointer-events:none';
+    panel.innerHTML = '<span>AuthorChe</span><progress max="1" value="0" aria-label="Завантаження гри" style="width:180px;accent-color:#c8a96e"></progress>';
+    d.body.appendChild(panel);
+  }
+  function progress(value) {
+    mount();
+    if (!panel) return;
+    panel.querySelector('progress').value = Number(value) || 0;
+    if (value >= 1 || value === 'complete') { panel.remove(); panel = null; }
+  }
+  w.UnityProgress = function (_, value) { progress(value); };
+  w.nitromePreloaderInit = mount;
+  w.nitromePreloaderSetProgress = progress;
+  w.nitromePreloaderSetComplete = function () { progress(1); };
+})(window, document);

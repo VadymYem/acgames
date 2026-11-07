@@ -1,127 +1,82 @@
-! function(e) {
-    var n = {};
-
-    function t(o) {
-        if (n[o]) return n[o].exports;
-        var r = n[o] = {
-            i: o,
-            l: !1,
-            exports: {}
-        };
-        return e[o].call(r.exports, r, r.exports, t), r.l = !0, r.exports
+/* AuthorChe game platform. Games run locally without advertising or telemetry. */
+(function (w, d) {
+  'use strict';
+  const noop = function () {};
+  const ready = function () { return Promise.resolve(); };
+  const rewarded = function (callback) {
+    if (typeof callback === 'function') callback();
+    return Promise.resolve(true);
+  };
+  const finish = function (callbacks) {
+    if (callbacks && typeof callbacks.adFinished === 'function') callbacks.adFinished();
+  };
+  w.PokiSDK = {
+    init: ready, initWithVideoback: ready, setDebug: noop, setDebugTouchOverlayController: noop,
+    gameLoadingStart: noop, gameLoadingProgress: noop, gameLoadingFinished: noop,
+    gameplayStart: noop, gameplayStop: noop, happyTime: noop, customEvent: noop,
+    commercialBreak: ready, rewardedBreak: rewarded, displayAd: noop, destroyAd: noop,
+    isAdBlocked: function () { return false; }, getURLParam: function () { return ''; },
+    shareableURL: function () { return Promise.resolve(w.location.href); },
+    getLanguage: function () { return (navigator.language || 'en').split('-')[0]; },
+    muteAd: noop, setPlayerAge: noop, adBlocked: false
+  };
+  const crazy = {
+    init: ready,
+    ad: {requestAd: function (_, callbacks) { finish(callbacks); return Promise.resolve(); }, hasAdblock: function () { return Promise.resolve(false); }},
+    game: {gameplayStart: noop, gameplayStop: noop, happytime: noop, loadingStart: noop, loadingStop: noop, inviteLink: function () { return w.location.href; }},
+    user: {isUserAccountAvailable: false, getUser: function () { return Promise.resolve(null); }}
+  };
+  w.CrazyGames = {SDK: crazy, CrazySDK: {getInstance: function () { return crazy; }}};
+  function gdEvent(name) {
+    const options = w.GD_OPTIONS;
+    if (options && typeof options.onEvent === 'function') options.onEvent({name: name});
+  }
+  w.gdsdk = {
+    showAd: function () { gdEvent('SDK_GAME_START'); return Promise.resolve(); },
+    preloadAd: ready, openConsole: noop, cancelAd: noop,
+    showBanner: ready, getSession: function () { return Promise.resolve({}); }
+  };
+  w.GameDistribution = w.gdsdk;
+  w.adsbygoogle = {push: noop};
+  w.ga = noop;
+  w.gtag = noop;
+  w.GameAnalytics = new Proxy(function () {}, {get: function () { return noop; }, apply: noop});
+  w.GameAnalyticsSDK = {GameAnalytics: w.GameAnalytics};
+  w.cmgAdBreak = function () {
+    if (typeof w.cmgAdBreakCallBack === 'function') w.cmgAdBreakCallBack();
+    return Promise.resolve();
+  };
+  w.adBreak = function (options) {
+    if (!options) return;
+    if (typeof options.beforeAd === 'function') options.beforeAd();
+    if (typeof options.adViewed === 'function') options.adViewed();
+    if (typeof options.afterAd === 'function') options.afterAd();
+    if (typeof options.adBreakDone === 'function') options.adBreakDone({breakStatus: 'notReady'});
+  };
+  w.adConfig = noop;
+  w.gmsoft = {showInterstitial: ready, showReward: rewarded};
+  w.sdk = w.sdk || {showBanner: noop, showInterstitial: ready, showReward: rewarded};
+  w.open = function () { return null; };
+  d.addEventListener('click', function (event) {
+    const link = event.target.closest && event.target.closest('a[href]');
+    if (!link) return;
+    try {
+      const url = new URL(link.href, w.location.href);
+      if (url.origin !== w.location.origin) event.preventDefault();
+    } catch (_) { event.preventDefault(); }
+  }, true);
+  function announce(type) {
+    if (w.parent !== w) w.parent.postMessage({type: type, source: 'authorche-game'}, '*');
+  }
+  w.addEventListener('load', function () { gdEvent('SDK_READY'); announce('ac-game-loaded'); });
+  w.addEventListener('error', function (event) {
+    if (event.message) announce('ac-game-error');
+  });
+  d.addEventListener('visibilitychange', function () {
+    // Browser runtimes pause their animation callbacks in background tabs.
+    if (d.hidden) {
+      d.querySelectorAll('audio,video').forEach(function (media) { media.pause(); });
+      w.dispatchEvent(new Event('blur'));
     }
-    t.m = e, t.c = n, t.d = function(e, n, o) {
-        t.o(e, n) || Object.defineProperty(e, n, {
-            enumerable: !0,
-            get: o
-        })
-    }, t.r = function(e) {
-        "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
-            value: "Module"
-        }), Object.defineProperty(e, "__esModule", {
-            value: !0
-        })
-    }, t.t = function(e, n) {
-        if (1 & n && (e = t(e)), 8 & n) return e;
-        if (4 & n && "object" == typeof e && e && e.__esModule) return e;
-        var o = Object.create(null);
-        if (t.r(o), Object.defineProperty(o, "default", {
-                enumerable: !0,
-                value: e
-            }), 2 & n && "string" != typeof e)
-            for (var r in e) t.d(o, r, function(n) {
-                return e[n]
-            }.bind(null, r));
-        return o
-    }, t.n = function(e) {
-        var n = e && e.__esModule ? function() {
-            return e.default
-        } : function() {
-            return e
-        };
-        return t.d(n, "a", n), n
-    }, t.o = function(e, n) {
-        return Object.prototype.hasOwnProperty.call(e, n)
-    }, t.p = "", t(t.s = 68)
-}({
-    68: function(e, n, t) {
-        var o = new(function() {
-            function e() {
-                var e = this;
-                this.queue = [], this.init = function(n) {
-                    return void 0 === n && (n = {}), new Promise((function(t, o) {
-                        e.enqueue("init", n, t, o)
-                    }))
-                }, this.rewardedBreak = function() {
-                    return new Promise((function(e) {
-                        e(!1)
-                    }))
-                }, this.noArguments = function(n) {
-                    return function() {
-                        e.enqueue(n)
-                    }
-                }, this.oneArgument = function(n) {
-                    return function(t) {
-                        e.enqueue(n, t)
-                    }
-                }, this.handleAutoResolvePromise = function() {
-                    return new Promise((function(e) {
-                        e()
-                    }))
-                }, this.handleAutoResolvePromiseObj = function() {
-                    return new Promise((function(e) {
-                        e()
-                    }))
-                }, this.throwNotLoaded = function() {
-                    console.debug("PokiSDK is not loaded yet. Not all methods are available.")
-                }
-            }
-            return e.prototype.enqueue = function(e, n, t, o) {
-                var r = {
-                    fn: e,
-                    options: n,
-                    resolveFn: t,
-                    rejectFn: o
-                };
-                this.queue.push(r)
-            }, e.prototype.dequeue = function() {
-                for (var e = function() {
-                        var e = n.queue.shift(),
-                            t = e,
-                            o = t.fn,
-                            r = t.options;
-                        "function" == typeof window.PokiSDK[o] ? (null == e ? void 0 : e.resolveFn) || (null == e ? void 0 : e.rejectFn) ? window.PokiSDK[o](r).then((function() {
-                            for (var n = [], t = 0; t < arguments.length; t++) n[t] = arguments[t];
-                            "function" == typeof e.resolveFn && e.resolveFn.apply(e, n)
-                        })).catch((function() {
-                            for (var n = [], t = 0; t < arguments.length; t++) n[t] = arguments[t];
-                            "function" == typeof e.rejectFn && e.rejectFn.apply(e, n)
-                        })) : void 0 !== (null == e ? void 0 : e.fn) && window.PokiSDK[o](r) : console.error("Cannot execute " + e.fn)
-                    }, n = this; this.queue.length > 0;) e()
-            }, e
-        }());
-        window.PokiSDK = {
-            init: o.init,
-            initWithVideoHB: o.init,
-            customEvent: o.throwNotLoaded,
-            commercialBreak: o.handleAutoResolvePromise,
-            rewardedBreak: o.rewardedBreak,
-            displayAd: o.throwNotLoaded,
-            destroyAd: o.throwNotLoaded,
-            getLeaderboard: o.handleAutoResolvePromiseObj
-        }, ["disableProgrammatic", "gameLoadingStart", "gameLoadingFinished", "gameInteractive", "roundStart", "roundEnd", "muteAd"].forEach((function(e) {
-            window.PokiSDK[e] = o.noArguments(e)
-        })), ["setDebug", "gameplayStart", "gameplayStop", "gameLoadingProgress", "happyTime", "setPlayerAge", "togglePlayerAdvertisingConsent", "toggleNonPersonalized", "setConsentString", "logError", "sendHighscore", "setDebugTouchOverlayController"].forEach((function(e) {
-            window.PokiSDK[e] = o.oneArgument(e)
-        }));
-        var r = function() {
-                var e, n = window.pokiSDKVersion;
-                n || (n = (e = RegExp("[?&]" + "ab" + "=([^&]*)").exec(window.location.search)) && decodeURIComponent(e[1].replace(/\+/g, " ")) || "v2");
-                return "game-cdn.poki.com/scripts/" + n + "/poki-sdk-core.js"
-            }(),
-            i = document.createElement("script");
-        i.setAttribute("src", r), i.setAttribute("type", "text/javascript"), i.onload = function() {
-            return o.dequeue()
-        }, document.head.appendChild(i)
-    }
-});
+  });
+})(window, document);

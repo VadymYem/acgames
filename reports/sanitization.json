@@ -1,0 +1,114 @@
+[
+  {
+    "path": "games/gif.html",
+    "removed": "https://cdnjs.cloudflare.com/ajax/libs/gif.js/0.2.0/gif.js"
+  },
+  {
+    "path": "games/gif.html",
+    "removed": "https://rawgit.com/antimatter15/jsgif/master/LZWEncoder.js"
+  },
+  {
+    "path": "games/gif.html",
+    "removed": "https://rawgit.com/antimatter15/jsgif/master/NeuQuant.js"
+  },
+  {
+    "path": "games/gif.html",
+    "removed": "https://rawgit.com/antimatter15/jsgif/master/GIFEncoder.js"
+  },
+  {
+    "path": "games/gif/index.html",
+    "removed": "https://cdnjs.cloudflare.com/ajax/libs/gif.js/0.2.0/gif.js"
+  },
+  {
+    "path": "games/gif/index.html",
+    "removed": "https://rawgit.com/antimatter15/jsgif/master/LZWEncoder.js"
+  },
+  {
+    "path": "games/gif/index.html",
+    "removed": "https://rawgit.com/antimatter15/jsgif/master/NeuQuant.js"
+  },
+  {
+    "path": "games/gif/index.html",
+    "removed": "https://rawgit.com/antimatter15/jsgif/master/GIFEncoder.js"
+  },
+  {
+    "path": "games/holeio/games235.html",
+    "removed": "js/analytics_games235.js"
+  },
+  {
+    "path": "games/basketballstars/index.html",
+    "removed": "https://imasdk.googleapis.com/js/sdkloader/ima3.js"
+  },
+  {
+    "path": "games/drift-boss/index.html",
+    "removed": "https://static.cloudflareinsights.com/beacon.min.js/v2b4487d741ca48dcbadcaf954e159fc61680799950996"
+  },
+  {
+    "path": "games/minesweeper/index.html",
+    "removed": "/js/main.js"
+  },
+  {
+    "path": "games/basketbros/index.html",
+    "removed": "cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+  },
+  {
+    "path": "games/paperio/index.html",
+    "removed": "https://3kh0.github.io/js/main.js"
+  },
+  {
+    "path": "games/basketball-stars/index.html",
+    "removed": "https://imasdk.googleapis.com/js/sdkloader/ima3.js"
+  },
+  {
+    "path": "games/tube-jumpers/index.html",
+    "removed": "https://ven0myt.github.io/js/main.js"
+  },
+  {
+    "path": "games/doodle-jump/index.html",
+    "removed": "/assets/js/prefixfree.min.js"
+  },
+  {
+    "path": "games/clickerheroes/index.html",
+    "removed": "js/analytics_ubg_v1_4.js"
+  },
+  {
+    "path": "games/rb/index.html",
+    "removed": "https://codepen.io/demaine/pen/XWrddVO.js"
+  },
+  {
+    "path": "games/bp/index.html",
+    "removed": "js/analytics_ubg_v1_4.js"
+  },
+  {
+    "path": "games/cuttheropeholiday/play/index.html",
+    "removed": "/js/main.js"
+  },
+  {
+    "path": "games/motox3m/play/index.html",
+    "removed": "https://imasdk.googleapis.com/js/sdkloader/ima3.js"
+  },
+  {
+    "path": "games/gopher/css/milligram/examples/index.html",
+    "removed": "https://milligram.github.io/scripts/main.js"
+  },
+  {
+    "path": "games/driftboss/play/index.html",
+    "removed": "/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js"
+  },
+  {
+    "path": "games/cuttheropetimetravel/play/index.html",
+    "removed": "/js/main.js"
+  },
+  {
+    "path": "games/stacktower/play/index.html",
+    "removed": "/js/main.js"
+  },
+  {
+    "path": "games/stack/play/index.html",
+    "removed": "/js/main.js"
+  },
+  {
+    "path": "games/stack/play/index.html",
+    "removed": "/js/main.js"
+  }
+]

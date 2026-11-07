@@ -2,42 +2,11 @@
 <html lang="en">
 
 <head>
-<script>
-// AuthorChe Clean Game Wrapper - Ad & Tracker Blocker
-window.PokiSDK = {
-  init: function(){ return Promise.resolve(); },
-  initWithVideoback: function(){ return Promise.resolve(); },
-  customEvent: function(){},
-  gameplayStart: function(){},
-  gameplayStop: function(){},
-  commercialBreak: function(){ return Promise.resolve(); },
-  rewardedBreak: function(){ return Promise.resolve(true); },
-  displayAd: function(){},
-  destroyAd: function(){},
-  setDebugTouchOverlayController: function(){},
-  isAdBlocked: function(){ return false; }
-};
-window.CrazyGames = {
-  SDK: {
-    ad: {
-      requestAd: function(type, callbacks){ if(callbacks && callbacks.adFinished) callbacks.adFinished(); },
-      hasAdblock: function(){ return Promise.resolve(false); }
-    },
-    game: {
-      gameplayStart: function(){},
-      gameplayStop: function(){},
-      happytime: function(){},
-      loadingStart: function(){},
-      loadingStop: function(){}
-    },
-    user: { isUserAccountAvailable: false }
-  }
-};
-window.adsbygoogle = { push: function(){} };
-window.open = function(url){ console.log("Blocked popup:", url); return null; };
-</script>
+<meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'self' data: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob:; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' data: blob:; worker-src 'self' blob:; frame-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'none'"><meta name="robots" content="noindex,follow"><script src="../../shared/platform.js"></script><link rel="stylesheet" href="../../shared/game.css">
 
-<base target="_parent">
+
+
+
 
 <!-- Google Analytics -->
 
@@ -49,13 +18,10 @@ window.open = function(url){ console.log("Blocked popup:", url); return null; };
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="apple-mobile-web-app-capable" content="yes">
 
-    <link rel="apple-touch-icon" href="https://greghub.github.io/coloron/public/images/touch-icon-iphone.png">
-    <link rel="apple-touch-icon" sizes="76x76"
-        href="https://greghub.github.io/coloron/public/images/touch-icon-ipad.png">
-    <link rel="apple-touch-icon" sizes="120x120"
-        href="https://greghub.github.io/coloron/public/images/touch-icon-iphone-retina.png">
-    <link rel="apple-touch-icon" sizes="152x152"
-        href="https://greghub.github.io/coloron/public/images/touch-icon-ipad-retina.png">
+    
+    
+    
+    
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@CodePen">
@@ -109,7 +75,7 @@ window.open = function(url){ console.log("Blocked popup:", url); return null; };
 
         <div class="start-game game-full-flex" id="start-game">
 
-            <div class="start-game-top"><a class="play-full-page" href="https://codepen.io/gregh/full/yVLOyO/"
+            <div class="start-game-top"><a class="play-full-page"
                     target="_blank" rel="noopener noreferrer">Full Page Mode</a></div>
 
             <div class="logo-holder">
@@ -202,8 +168,8 @@ window.open = function(url){ console.log("Blocked popup:", url); return null; };
         <div class="noise"></div>
 
     </div>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <script src="../../shared/vendor/jquery.min.js"></script>
+    <script src="../../shared/vendor/TweenMax.min.js"></script>
     <script src="main.js"></script>
 </body>
 <div id="footer"><a href="/games">AC-GAMES</a></div><a href="/donate.html" class="donate-button">Donate❤️</a>
