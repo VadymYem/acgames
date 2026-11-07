@@ -4,6 +4,8 @@ import {chromium,webkit} from 'playwright';
 const registry=JSON.parse(fs.readFileSync('catalog.json','utf8'));
 const device=process.env.GAME_DEVICE||'desktop';
 const BASE=(process.env.GAME_BASE_URL||'http://127.0.0.1:4173/').replace(/\/?$/, '/');
+const EMBED=process.env.GAME_EMBED_URL||'';
+const allowed=url=>url.startsWith(BASE)||(EMBED&&new URL(url).origin===new URL(EMBED).origin);
 const isMobile=device!=='desktop';
 const engine=device==='ios'?webkit:chromium;
 const browser=await engine.launch({headless:true,args:device==='ios'?[]:['--enable-unsafe-swiftshader','--use-gl=angle','--use-angle=swiftshader']});
@@ -25,33 +27,41 @@ async function worker(){
   const page=await context.newPage();const errors=[],missing=[],external=[],blocked=[],rowStacks=[];
   page.on('pageerror',e=>{errors.push(e.message);rowStacks.push(e.stack);});
   page.on('response',r=>{if(r.status()>=400)missing.push({status:r.status(),url:r.url().replace(BASE,'')});});
-  page.on('response',r=>{if(/^https?:/.test(r.url())&&!r.url().startsWith(BASE))external.push(r.url());});
-  page.on('requestfailed',r=>{if(/^https?:/.test(r.url())&&!r.url().startsWith(BASE)){blocked.push(r.url());if(!/fonts\.google|unity3d|analytics|googletagmanager|sockjs-node/.test(r.url()))missing.push({status:'blocked-external',url:r.url()});}});
+  page.on('response',r=>{if(/^https?:/.test(r.url())&&!allowed(r.url()))external.push(r.url());});
+  page.on('requestfailed',r=>{if(/^https?:/.test(r.url())&&!allowed(r.url())){blocked.push(r.url());if(!/fonts\.google|unity3d|analytics|googletagmanager|sockjs-node/.test(r.url()))missing.push({status:'blocked-external',url:r.url()});}});
   const row={id:game.id,device,entry:game.entry,errors,missing,external,blocked,stacks:rowStacks};
   try{
-   await page.goto(BASE+game.entry,{waitUntil:'domcontentloaded',timeout:30000});
+   let scope=page;
+   if(EMBED){
+    const target=new URL(EMBED);target.searchParams.set('id',game.id);
+    await page.goto(target.href,{waitUntil:'domcontentloaded',timeout:30000});
+    const prefix=BASE+game.entry;
+    scope=page.frames().find(frame=>frame.url().startsWith(prefix))||await page.waitForEvent('framenavigated',{predicate:frame=>frame.url().startsWith(prefix),timeout:30000});
+    await scope.waitForLoadState('domcontentloaded',{timeout:30000});
+   }else await page.goto(BASE+game.entry,{waitUntil:'domcontentloaded',timeout:30000});
    await page.mouse.click(12,12).catch(()=>{});
    await page.waitForTimeout(game.kind==='flash'?10000:5500);
    for(const name of [/^play(?: now)?$/i,/^start(?: game)?$/i,/^new game$/i,/^continue$/i,/^Почати$/i]){
-    const btn=page.getByRole('button',{name}).first();if(await btn.isVisible().catch(()=>false)){await btn.click({timeout:1500}).catch(()=>{});break;}
+    const btn=scope.getByRole('button',{name}).first();if(await btn.isVisible().catch(()=>false)){await btn.click({timeout:1500}).catch(()=>{});break;}
    }
-   const domControl=page.locator('.play-button,.start-button,.option_image,.card,.js-pacman-start').first();
+   const domControl=scope.locator('.play-button,.start-button,.option_image,.card,.js-pacman-start').first();
    if(await domControl.isVisible().catch(()=>false))await domControl.click({timeout:1500}).catch(()=>{});
-   const canvas=page.locator('canvas').first();
+   const canvas=scope.locator('canvas').first();
    if(await canvas.isVisible().catch(()=>false)){
     const box=await canvas.boundingBox();if(box){const x=Math.min(box.x+box.width/2,1280-8),y=Math.min(box.y+box.height/2,(isMobile?844:800)-8);if(isMobile)await page.touchscreen.tap(Math.min(x,382),y);else await page.mouse.click(x,y);}
    }
    if(isMobile){await page.touchscreen.tap(195,380).catch(()=>{});}
    else{for(const key of ['Enter','ArrowRight','ArrowUp','ArrowLeft','ArrowDown','Space'])await page.keyboard.press(key).catch(()=>{});}
    await page.waitForTimeout(1200);
-   row.surface=await page.evaluate(()=>({canvas:[...document.querySelectorAll('canvas')].filter(c=>c.width>1&&c.height>1).length,buttons:document.querySelectorAll('button,input,[role="button"],.tile,.square,.cell,.card,.option_image,.play-button,.js-pacman-playground>*').length,text:document.body?.innerText.trim().length||0,flash:document.querySelectorAll('ruffle-player').length,overflow:document.documentElement.scrollWidth>innerWidth+2}));
-   const policy=await page.evaluate(()=>window.__acPolicyViolations||[]);
+   row.surface=await scope.evaluate(()=>({canvas:[...document.querySelectorAll('canvas')].filter(c=>c.width>1&&c.height>1).length,buttons:document.querySelectorAll('button,input,[role="button"],.tile,.square,.cell,.card,.option_image,.play-button,.js-pacman-playground>*').length,text:document.body?.innerText.trim().length||0,flash:document.querySelectorAll('ruffle-player').length,overflow:document.documentElement.scrollWidth>innerWidth+2}));
+   const policy=await scope.evaluate(()=>window.__acPolicyViolations||[]);
    for(const url of new Set(policy)){
     if(/fonts\.google|unity3d|analytics|googletagmanager|sockjs-node/.test(url))continue;
     if(!missing.some(item=>item.url===url))missing.push({status:'csp-blocked',url});
    }
    row.started=Boolean(row.surface.canvas||row.surface.buttons||row.surface.flash);
-   row.passed=row.started&&errors.length===0&&missing.length===0&&external.length===0;
+   if(EMBED)row.player=await page.locator('#gameFrame').evaluate(frame=>({hidden:frame.hidden,status:document.getElementById('gameStatus').textContent,statusHidden:document.getElementById('gameStatus').hidden}));
+   row.passed=row.started&&errors.length===0&&missing.length===0&&external.length===0&&(!row.player||(!row.player.hidden&&row.player.statusHidden));
    await page.screenshot({path:path.join(out,game.id+'.jpg'),type:'jpeg',quality:60,timeout:5000}).catch(()=>{});
   }catch(e){row.failure=e.message;row.passed=false;}
   results.push(row);console.log(device,game.id,row.passed?'PASS':'REVIEW',JSON.stringify({errors:errors.slice(0,2),missing:missing.slice(0,2),failure:row.failure}));
