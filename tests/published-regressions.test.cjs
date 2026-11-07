@@ -29,6 +29,9 @@ test('embedded legacy telemetry completes locally without network requests',asyn
  const movie=await p.window.fetch('https://mochibot.com/my/core.swf?mv=7');
  assert.equal(movie.headers.get('content-type'),'application/x-shockwave-flash');
  assert.equal(Buffer.from(await movie.arrayBuffer()).subarray(0,3).toString(),'FWS');
+ const api=await p.window.fetch('https://www.kongregate.com/flash/API_AS3_Local.swf');
+ assert.equal(api.headers.get('content-type'),'application/x-shockwave-flash');
+ assert.equal(Buffer.from(await api.arrayBuffer()).subarray(0,3).toString(),'FWS');
  const news=await p.window.fetch('https://ninjakiwi.com/btd5/scripts/get-challenge.php');
  assert.equal(await news.text(),'{}');
  assert.equal(p.navigator.sendBeacon('https://itch.io/html-callback',new Uint8Array()),true);
