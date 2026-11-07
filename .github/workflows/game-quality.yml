@@ -1,0 +1,27 @@
+name: Game source and dependency audit
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/game-quality.yml'
+      - 'tools/**'
+      - 'games/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Archive runtime for reproducible local checks
+        run: tar --exclude=.git --exclude=node_modules -czf /tmp/acgames-runtime.tar.gz .
+      - uses: actions/upload-artifact@v4
+        with:
+          name: acgames-runtime
+          path: /tmp/acgames-runtime.tar.gz
+          compression-level: 0
+          retention-days: 2
