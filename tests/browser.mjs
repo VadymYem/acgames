@@ -34,10 +34,13 @@ async function worker(){
    let scope=page;
    if(EMBED){
     const target=new URL(EMBED);target.searchParams.set('id',game.id);
+    if(target.hostname==='127.0.0.1'){target.searchParams.set('runtime',BASE);target.searchParams.set('build',process.env.GITHUB_SHA||'local');}
     await page.goto(target.href,{waitUntil:'domcontentloaded',timeout:30000});
-    const prefix=BASE+game.entry;
-    scope=page.frames().find(frame=>frame.url().startsWith(prefix))||await page.waitForEvent('framenavigated',{predicate:frame=>frame.url().startsWith(prefix),timeout:30000});
-    await scope.waitForLoadState('domcontentloaded',{timeout:30000});
+    const handle=await page.locator('#gameFrame').elementHandle();
+    if(!handle)throw new Error('The player did not create a game frame');
+    scope=await handle.contentFrame();
+    if(!scope)throw new Error('The game frame is not attached');
+    await scope.waitForURL(url=>url.href.startsWith(BASE),{waitUntil:'domcontentloaded',timeout:30000});
    }else await page.goto(BASE+game.entry,{waitUntil:'domcontentloaded',timeout:30000});
    await page.mouse.click(12,12).catch(()=>{});
    await page.waitForTimeout(game.kind==='flash'?10000:5500);
@@ -63,7 +66,13 @@ async function worker(){
    if(EMBED)row.player=await page.locator('#gameFrame').evaluate(frame=>({hidden:frame.hidden,status:document.getElementById('gameStatus').textContent,statusHidden:document.getElementById('gameStatus').hidden}));
    row.passed=row.started&&errors.length===0&&missing.length===0&&external.length===0&&(!row.player||(!row.player.hidden&&row.player.statusHidden));
    await page.screenshot({path:path.join(out,game.id+'.jpg'),type:'jpeg',quality:60,timeout:5000}).catch(()=>{});
-  }catch(e){row.failure=e.message;row.passed=false;}
+   }catch(e){
+   row.failure=e.message;row.passed=false;
+   if(EMBED&&await page.locator('#gameFrame').count())row.player=await page.locator('#gameFrame').evaluate(frame=>({hidden:frame.hidden,status:document.getElementById('gameStatus')?.textContent,statusHidden:document.getElementById('gameStatus')?.hidden})).catch(()=>null);
+   row.blockedBySiteProtection=external.some(url=>new URL(url).hostname.endsWith('challenges.cloudflare.com'));
+   if(row.blockedBySiteProtection)queue.length=0;
+   await page.screenshot({path:path.join(out,game.id+'.jpg'),type:'jpeg',quality:60,timeout:5000}).catch(()=>{});
+  }
   results.push(row);console.log(device,game.id,row.passed?'PASS':'REVIEW',JSON.stringify({errors:errors.slice(0,2),missing:missing.slice(0,2),external:external.slice(0,2),player:row.player,failure:row.failure}));
   await context.close();
  }
