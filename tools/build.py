@@ -70,6 +70,20 @@ patch_runtime('games/breaklock/index.html',
  '<img class="introduction-demo" src="assets/intro.svg" alt="Example of a lock pattern">')
 patch_runtime('games/wbwwb/index.html',
  '<script defer src="htmlgame.js" type="text/javascript"></script>', '')
+
+patch_runtime('games/vex3/vex-3.js',
+ 'GameDistribution$1.prototype.areAdsEnabled = function() {\n            return false;',
+ 'GameDistribution$1.prototype.areAdsEnabled = function() {\n            return Promise.resolve(false);')
+vex = DEST/'games/vex3/vex-3.js'
+if vex.exists():
+ text = vex.read_text()
+ begin = text.index('        function RayGun() {')
+ end = text.index('\n        return RayGun.getInstance',begin)
+ text = text[:begin]+'        function RayGun() { this.recurringError = []; }'+text[end:]
+ vex.write_text(text)
+raygun = DEST/'games/vex3/raygun.min.js'
+if raygun.exists(): raygun.unlink()
+
 tracker = DEST/'games/wbwwb/htmlgame.js'
 if tracker.exists(): tracker.unlink()
 music = DEST/'games/ayun/music.js'
@@ -92,6 +106,10 @@ if font_package.exists():
 # Keep returning visitors on the same reviewed build as its manifest.
 import hashlib, os
 revision = os.environ.get('GITHUB_SHA') or hashlib.sha256((ROOT/'catalog.json').read_bytes()+(ROOT/'shared/platform.js').read_bytes()+Path(__file__).read_bytes()).hexdigest()[:20]
+vex_version = DEST/'games/vex3/version.js'
+if vex_version.exists():
+ text = vex_version.read_text()
+ vex_version.write_text(re.sub(r'version="[^"]*"',f'version="{revision}"',text,count=1))
 manifest = json.loads((DEST/'catalog.json').read_text())
 manifest['buildRevision'] = revision
 (DEST/'catalog.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
