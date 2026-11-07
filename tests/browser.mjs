@@ -8,7 +8,9 @@ const engine=device==='ios'?webkit:chromium;
 const browser=await engine.launch({headless:true,args:device==='ios'?[]:['--enable-unsafe-swiftshader','--use-gl=angle','--use-angle=swiftshader']});
 const out=path.join('reports','browser',device);fs.mkdirSync(out,{recursive:true});
 const results=[];
-const queue=registry.games.filter(g=>g.devices[device]);
+const requested=(process.env.GAME_IDS||'').split(',').filter(Boolean);
+const queue=registry.games.filter(g=>(g.candidateDevices||g.devices)[device]&&(!requested.length||requested.includes(g.id)));
+const published=new Set(registry.games.filter(g=>g.devices[device]).map(g=>g.id));
 async function worker(){
  for(;;){
   const game=queue.shift();if(!game)return;
@@ -48,3 +50,7 @@ await Promise.all(Array.from({length:3},()=>worker()));
 await browser.close();
 fs.writeFileSync(path.join(out,'results.json'),JSON.stringify({device,tested:results.length,passed:results.filter(r=>r.passed).length,results},null,2));
 console.log('Completed',device,results.length,'games;',results.filter(r=>r.passed).length,'passed load and input smoke');
+
+const regressions=results.filter(row=>(published.has(row.id)||process.env.GAME_REQUIRE_ALL==='true')&&!row.passed);
+console.log('Published game regressions:',regressions.length);
+if(regressions.length)process.exitCode=1;

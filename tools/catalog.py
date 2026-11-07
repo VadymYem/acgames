@@ -84,7 +84,9 @@ STRATEGY=set('adarkroom ageofwar btd btd2 btd3 btd4 btd5 clicker clickerheroes c
 ACTION=set('asciispace asteroids bounceback captaincallisto gh gunmayhem2 menja multiply-defense q1k3 radiusraid rb skibiditoilet skibiditoiletattack spacehuggers spaceinvaders sw timeshooter1 underrun xx142-b2exe'.split())
 COVERS=ROOT/'shared/covers';COVERS.mkdir(parents=True,exist_ok=True)
 previous={}
-if (ROOT/'catalog.json').exists():previous={x['id']:x for x in json.loads((ROOT/'catalog.json').read_text())['games']}
+metadata={}
+if (ROOT/'catalog.json').exists():
+ metadata=json.loads((ROOT/'catalog.json').read_text());previous={x['id']:x for x in metadata['games']}
 rows=[]
 for folder in sorted(GAMES.iterdir()):
  if not folder.is_dir() or folder.name in EXCLUDED:continue
@@ -119,8 +121,10 @@ for folder in sorted(GAMES.iterdir()):
   title_xml=html.escape(title)
   (ROOT/cover).write_text(f'<svg xmlns="http://www.w3.org/2000/svg" width="480" height="270" viewBox="0 0 480 270"><rect width="480" height="270" fill="#101a2b"/><circle cx="330" cy="65" r="140" fill="{color}" opacity=".1"/><path d="M204 58h72v72h-72z M168 94h72v72h-72z" fill="none" stroke="{color}" stroke-width="5"/><text x="28" y="206" fill="{color}" font-family="system-ui,sans-serif" font-size="22">{title_xml}</text><text x="28" y="241" fill="#c1c9d5" font-family="system-ui,sans-serif" font-size="12">AUTHORCHE GAMES</text></svg>')
  row={'id':gid,'title':title,'category':category,'entry':str(entry.relative_to(ROOT)),'cover':cover,'kind':kind,'controls':controls,'instructions':instructions,'devices':{'desktop':True,'android':gid in MOBILE and kind!='flash','ios':gid in MOBILE and kind!='flash'},'review':'candidate'}
- if previous.get(gid,{}).get('review')=='verified':
-  row['review']='verified';row['devices']=previous[gid]['devices']
+ if previous.get(gid,{}).get('review') in ['verified','smoke-tested']:
+  row['review']=previous[gid]['review'];row['devices']=previous[gid]['devices']
+  for key in ['candidateDevices','verification']:
+   if key in previous[gid]:row[key]=previous[gid][key]
  rows.append(row)
-(ROOT/'catalog.json').write_text(json.dumps({'version':2,'games':rows,'excluded':EXCLUDED},ensure_ascii=False,indent=2)+'\n')
+(ROOT/'catalog.json').write_text(json.dumps({'version':3,'games':rows,'excluded':EXCLUDED,'verification':metadata.get('verification',{})},ensure_ascii=False,indent=2)+'\n')
 print(len(rows),'unique game candidates;',len(EXCLUDED),'excluded entries')

@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "games": [
     {
       "id": "1on1soccer",
@@ -15,7 +15,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "2048",
@@ -31,7 +41,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "2drocketleague",
@@ -43,11 +63,21 @@
       "controls": "keyboard",
       "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
       "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": false
+      },
+      "review": "smoke-tested",
+      "candidateDevices": {
         "desktop": true,
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "verification": {
+        "desktop": "needs-review",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "60sburgerrun",
@@ -59,11 +89,21 @@
       "controls": "keyboard",
       "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
       "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": false
+      },
+      "review": "smoke-tested",
+      "candidateDevices": {
         "desktop": true,
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "verification": {
+        "desktop": "needs-review",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "achieveunlocked",
@@ -79,7 +119,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "achieveunlocked2",
@@ -95,7 +145,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "adarkroom",
@@ -107,11 +167,21 @@
       "controls": "touch",
       "instructions": "Торкання або миша; підказки керування — у грі.",
       "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": false
+      },
+      "review": "smoke-tested",
+      "candidateDevices": {
         "desktop": true,
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "verification": {
+        "desktop": "needs-review",
+        "android": "needs-review",
+        "ios": "needs-review"
+      }
     },
     {
       "id": "adofai",
@@ -127,7 +197,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "agario-offline",
@@ -143,7 +223,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "ageofwar",
@@ -159,7 +249,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "amongus",
@@ -173,9 +273,19 @@
       "devices": {
         "desktop": true,
         "android": true,
+        "ios": false
+      },
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "needs-review"
+      }
     },
     {
       "id": "asciispace",
@@ -191,7 +301,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "asteroids",
@@ -207,7 +327,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "astray",
@@ -223,7 +353,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "audio-game",
@@ -239,7 +379,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "avalanche",
@@ -255,7 +405,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "ayun",
@@ -271,7 +431,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "backcountry",
@@ -287,7 +457,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "badicecream",
@@ -303,7 +483,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "badicecream2",
@@ -316,10 +506,20 @@
       "instructions": "Торкання або миша; підказки керування — у грі.",
       "devices": {
         "desktop": true,
+        "android": false,
+        "ios": true
+      },
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "needs-review",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "badicecream3",
@@ -331,11 +531,21 @@
       "controls": "touch",
       "instructions": "Торкання або миша; підказки керування — у грі.",
       "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": true
+      },
+      "review": "smoke-tested",
+      "candidateDevices": {
         "desktop": true,
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "verification": {
+        "desktop": "needs-review",
+        "android": "needs-review",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "badpiggies",
@@ -351,7 +561,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "badtimesimulator",
@@ -367,7 +587,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "ball-shooting",
@@ -383,7 +613,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "basketballstars",
@@ -395,11 +635,21 @@
       "controls": "touch",
       "instructions": "Торкання або миша; підказки керування — у грі.",
       "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": false
+      },
+      "review": "smoke-tested",
+      "candidateDevices": {
         "desktop": true,
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "verification": {
+        "desktop": "needs-review",
+        "android": "needs-review",
+        "ios": "needs-review"
+      }
     },
     {
       "id": "basketbros",
@@ -411,11 +661,21 @@
       "controls": "keyboard",
       "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
       "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": false
+      },
+      "review": "smoke-tested",
+      "candidateDevices": {
         "desktop": true,
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "verification": {
+        "desktop": "needs-review",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "basketrandom",
@@ -429,9 +689,19 @@
       "devices": {
         "desktop": true,
         "android": true,
+        "ios": false
+      },
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "needs-review"
+      }
     },
     {
       "id": "bitlife",
@@ -447,7 +717,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "blackholesquare",
@@ -463,7 +743,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "bobtherobber2",
@@ -475,11 +765,21 @@
       "controls": "keyboard",
       "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
       "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": false
+      },
+      "review": "smoke-tested",
+      "candidateDevices": {
         "desktop": true,
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "verification": {
+        "desktop": "needs-review",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "bounceback",
@@ -495,7 +795,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "box2d-car-game",
@@ -511,7 +821,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "boxingrandom",
@@ -527,7 +847,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "bp",
@@ -539,11 +869,21 @@
       "controls": "touch",
       "instructions": "Торкання або миша; підказки керування — у грі.",
       "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": false
+      },
+      "review": "smoke-tested",
+      "candidateDevices": {
         "desktop": true,
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "verification": {
+        "desktop": "needs-review",
+        "android": "needs-review",
+        "ios": "needs-review"
+      }
     },
     {
       "id": "breaker",
@@ -559,7 +899,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "breakingthebank",
@@ -575,7 +925,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "breaklock",
@@ -591,7 +951,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "breakout",
@@ -603,11 +973,21 @@
       "controls": "keyboard",
       "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
       "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": false
+      },
+      "review": "smoke-tested",
+      "candidateDevices": {
         "desktop": true,
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "verification": {
+        "desktop": "needs-review",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "btd",
@@ -623,7 +1003,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "btd2",
@@ -639,7 +1029,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "btd3",
@@ -655,7 +1055,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "btd4",
@@ -671,7 +1081,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "btd5",
@@ -687,7 +1107,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "canvas-untangle-game",
@@ -703,7 +1133,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "captaincallisto",
@@ -719,7 +1159,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "celeste",
@@ -735,7 +1185,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "chess",
@@ -751,7 +1211,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "chromaincident",
@@ -767,7 +1237,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "clicker",
@@ -783,7 +1263,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "clickerheroes",
@@ -797,9 +1287,19 @@
       "devices": {
         "desktop": true,
         "android": true,
+        "ios": false
+      },
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "needs-review"
+      }
     },
     {
       "id": "coloron",
@@ -811,11 +1311,21 @@
       "controls": "touch",
       "instructions": "Торкання або миша; підказки керування — у грі.",
       "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": true
+      },
+      "review": "smoke-tested",
+      "candidateDevices": {
         "desktop": true,
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "verification": {
+        "desktop": "needs-review",
+        "android": "needs-review",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "connect-four",
@@ -831,7 +1341,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "connect3",
@@ -847,7 +1367,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "count-99",
@@ -863,7 +1393,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "crossyroad",
@@ -875,11 +1415,21 @@
       "controls": "keyboard",
       "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
       "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": false
+      },
+      "review": "smoke-tested",
+      "candidateDevices": {
         "desktop": true,
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "verification": {
+        "desktop": "needs-review",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "css3-matching-game",
@@ -895,7 +1445,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "cube",
@@ -911,7 +1471,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "cubefield",
@@ -927,7 +1497,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "cuttheropeholiday",
@@ -939,11 +1519,21 @@
       "controls": "touch",
       "instructions": "Торкання або миша; підказки керування — у грі.",
       "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": false
+      },
+      "review": "smoke-tested",
+      "candidateDevices": {
         "desktop": true,
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "verification": {
+        "desktop": "needs-review",
+        "android": "needs-review",
+        "ios": "needs-review"
+      }
     },
     {
       "id": "cuttheropetimetravel",
@@ -955,11 +1545,21 @@
       "controls": "touch",
       "instructions": "Торкання або миша; підказки керування — у грі.",
       "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": false
+      },
+      "review": "smoke-tested",
+      "candidateDevices": {
         "desktop": true,
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "verification": {
+        "desktop": "needs-review",
+        "android": "needs-review",
+        "ios": "needs-review"
+      }
     },
     {
       "id": "dino",
@@ -975,7 +1575,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "dj",
@@ -991,7 +1601,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "doctor-acorn2",
@@ -1007,7 +1627,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "doctor-acorn3",
@@ -1023,7 +1653,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "doge2048",
@@ -1035,11 +1675,21 @@
       "controls": "touch",
       "instructions": "Торкання або миша; підказки керування — у грі.",
       "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": false
+      },
+      "review": "smoke-tested",
+      "candidateDevices": {
         "desktop": true,
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "verification": {
+        "desktop": "needs-review",
+        "android": "needs-review",
+        "ios": "needs-review"
+      }
     },
     {
       "id": "dogeminer",
@@ -1051,11 +1701,21 @@
       "controls": "touch",
       "instructions": "Торкання або миша; підказки керування — у грі.",
       "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": false
+      },
+      "review": "smoke-tested",
+      "candidateDevices": {
         "desktop": true,
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "verification": {
+        "desktop": "needs-review",
+        "android": "needs-review",
+        "ios": "needs-review"
+      }
     },
     {
       "id": "drift-boss",
@@ -1067,11 +1727,21 @@
       "controls": "touch",
       "instructions": "Торкання або миша; підказки керування — у грі.",
       "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": false
+      },
+      "review": "smoke-tested",
+      "candidateDevices": {
         "desktop": true,
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "verification": {
+        "desktop": "needs-review",
+        "android": "needs-review",
+        "ios": "needs-review"
+      }
     },
     {
       "id": "drivemad",
@@ -1083,11 +1753,21 @@
       "controls": "touch",
       "instructions": "Торкання або миша; підказки керування — у грі.",
       "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": false
+      },
+      "review": "smoke-tested",
+      "candidateDevices": {
         "desktop": true,
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "verification": {
+        "desktop": "needs-review",
+        "android": "needs-review",
+        "ios": "needs-review"
+      }
     },
     {
       "id": "ducklife",
@@ -1103,7 +1783,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "ducklife2",
@@ -1119,7 +1809,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "ducklife3",
@@ -1135,7 +1835,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "edge-surf",
@@ -1151,7 +1861,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "edgenotfound",
@@ -1167,7 +1887,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "escapingtheprison",
@@ -1183,7 +1913,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "evilglitch",
@@ -1199,7 +1939,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "factoryballsforever",
@@ -1215,7 +1965,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "fireboy-and-watergirl-1",
@@ -1227,11 +1987,21 @@
       "controls": "keyboard",
       "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
       "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": false
+      },
+      "review": "smoke-tested",
+      "candidateDevices": {
         "desktop": true,
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "verification": {
+        "desktop": "needs-review",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "fireboy-and-watergirl-2",
@@ -1243,11 +2013,21 @@
       "controls": "keyboard",
       "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
       "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": false
+      },
+      "review": "smoke-tested",
+      "candidateDevices": {
         "desktop": true,
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "verification": {
+        "desktop": "needs-review",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "fireboy-and-watergirl-3",
@@ -1259,11 +2039,21 @@
       "controls": "keyboard",
       "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
       "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": false
+      },
+      "review": "smoke-tested",
+      "candidateDevices": {
         "desktop": true,
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "verification": {
+        "desktop": "needs-review",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "fireboy-and-watergirl-4",
@@ -1275,11 +2065,21 @@
       "controls": "keyboard",
       "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
       "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": false
+      },
+      "review": "smoke-tested",
+      "candidateDevices": {
         "desktop": true,
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "verification": {
+        "desktop": "needs-review",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "flappy-2048",
@@ -1295,7 +2095,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "flappybird-retro",
@@ -1311,7 +2121,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "flappydot",
@@ -1327,7 +2147,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "friendlyfire",
@@ -1343,7 +2173,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "geometry",
@@ -1355,11 +2195,21 @@
       "controls": "keyboard",
       "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
       "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": false
+      },
+      "review": "smoke-tested",
+      "candidateDevices": {
         "desktop": true,
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "verification": {
+        "desktop": "needs-review",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "geometrydash",
@@ -1375,7 +2225,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "gh",
@@ -1391,7 +2251,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "gn",
@@ -1407,7 +2277,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "gopher",
@@ -1423,7 +2303,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "gorilla",
@@ -1439,7 +2329,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "gunmayhem2",
@@ -1455,7 +2355,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "halloween",
@@ -1471,7 +2381,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "hangman",
@@ -1487,7 +2407,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "happywheels",
@@ -1503,7 +2433,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "hextris",
@@ -1515,11 +2455,21 @@
       "controls": "touch",
       "instructions": "Торкання або миша; підказки керування — у грі.",
       "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": true
+      },
+      "review": "smoke-tested",
+      "candidateDevices": {
         "desktop": true,
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "verification": {
+        "desktop": "needs-review",
+        "android": "needs-review",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "holeio",
@@ -1533,9 +2483,19 @@
       "devices": {
         "desktop": true,
         "android": true,
+        "ios": false
+      },
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "needs-review"
+      }
     },
     {
       "id": "icypurplehead2",
@@ -1551,7 +2511,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "icypurplehead3",
@@ -1567,7 +2537,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "jetpackjoyride",
@@ -1583,7 +2563,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "konnekt",
@@ -1595,11 +2585,21 @@
       "controls": "keyboard",
       "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
       "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": false
+      },
+      "review": "smoke-tested",
+      "candidateDevices": {
         "desktop": true,
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "verification": {
+        "desktop": "needs-review",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "learntofly",
@@ -1615,7 +2615,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "maze",
@@ -1631,7 +2641,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "mc",
@@ -1647,7 +2667,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "mcbeta1.3",
@@ -1663,7 +2693,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "menja",
@@ -1679,7 +2719,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "minecraft",
@@ -1695,7 +2745,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "minesweeper",
@@ -1711,7 +2771,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "motox3m",
@@ -1723,11 +2793,21 @@
       "controls": "touch",
       "instructions": "Торкання або миша; підказки керування — у грі.",
       "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": true
+      },
+      "review": "smoke-tested",
+      "candidateDevices": {
         "desktop": true,
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "verification": {
+        "desktop": "needs-review",
+        "android": "needs-review",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "multiply-defense",
@@ -1743,7 +2823,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "ninjavsevilcorp",
@@ -1759,7 +2849,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "nonogram",
@@ -1775,7 +2875,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "packabunchas",
@@ -1791,14 +2901,24 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "pacman",
       "title": "jsPacman",
       "category": "arcade",
       "entry": "games/pacman/index.html",
-      "cover": "shared/covers/pacman.webp",
+      "cover": "shared/covers/pacman.svg",
       "kind": "html5",
       "controls": "touch",
       "instructions": "Торкання або миша; підказки керування — у грі.",
@@ -1807,7 +2927,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "paperio",
@@ -1819,11 +2949,21 @@
       "controls": "touch",
       "instructions": "Торкання або миша; підказки керування — у грі.",
       "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": false
+      },
+      "review": "smoke-tested",
+      "candidateDevices": {
         "desktop": true,
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "verification": {
+        "desktop": "needs-review",
+        "android": "needs-review",
+        "ios": "needs-review"
+      }
     },
     {
       "id": "particleclicker",
@@ -1839,7 +2979,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "physicsplayground",
@@ -1855,7 +3005,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "pingpoing",
@@ -1867,11 +3027,21 @@
       "controls": "keyboard",
       "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
       "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": false
+      },
+      "review": "smoke-tested",
+      "candidateDevices": {
         "desktop": true,
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "verification": {
+        "desktop": "needs-review",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "poker",
@@ -1883,11 +3053,21 @@
       "controls": "touch",
       "instructions": "Торкання або миша; підказки керування — у грі.",
       "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": false
+      },
+      "review": "smoke-tested",
+      "candidateDevices": {
         "desktop": true,
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "verification": {
+        "desktop": "needs-review",
+        "android": "needs-review",
+        "ios": "needs-review"
+      }
     },
     {
       "id": "pushback",
@@ -1903,7 +3083,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "q1k3",
@@ -1919,7 +3109,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "racer",
@@ -1935,7 +3135,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "radiusraid",
@@ -1951,7 +3161,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "rb",
@@ -1967,7 +3187,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "rcs",
@@ -1983,7 +3213,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "retrobowl",
@@ -1999,7 +3239,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "retrohaunt",
@@ -2015,7 +3265,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "roadblocks",
@@ -2031,7 +3291,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "rooftopsniper",
@@ -2047,7 +3317,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "run3",
@@ -2063,7 +3343,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "rush",
@@ -2079,7 +3369,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "sandbox",
@@ -2091,11 +3391,21 @@
       "controls": "touch",
       "instructions": "Торкання або миша; підказки керування — у грі.",
       "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": false
+      },
+      "review": "smoke-tested",
+      "candidateDevices": {
         "desktop": true,
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "verification": {
+        "desktop": "needs-review",
+        "android": "needs-review",
+        "ios": "needs-review"
+      }
     },
     {
       "id": "sh",
@@ -2111,7 +3421,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "shuttledeck",
@@ -2127,7 +3447,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "simon-memory",
@@ -2143,7 +3473,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "skibiditoilet",
@@ -2159,7 +3499,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "skibiditoiletattack",
@@ -2175,7 +3525,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "sleepingbeauty",
@@ -2191,7 +3551,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "slitherio-offline",
@@ -2207,7 +3577,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "slope2",
@@ -2223,7 +3603,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "slope3",
@@ -2235,11 +3625,21 @@
       "controls": "keyboard",
       "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
       "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": false
+      },
+      "review": "smoke-tested",
+      "candidateDevices": {
         "desktop": true,
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "verification": {
+        "desktop": "needs-review",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "sm64",
@@ -2255,7 +3655,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "snake-retro",
@@ -2271,7 +3681,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "snowrider3d",
@@ -2287,7 +3707,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "spacecompany",
@@ -2303,7 +3733,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "spacegarden",
@@ -2319,7 +3759,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "spacehuggers",
@@ -2335,7 +3785,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "spaceinvaders",
@@ -2351,7 +3811,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "stack",
@@ -2367,7 +3837,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "stacktower",
@@ -2379,11 +3859,21 @@
       "controls": "touch",
       "instructions": "Торкання або миша; підказки керування — у грі.",
       "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": false
+      },
+      "review": "smoke-tested",
+      "candidateDevices": {
         "desktop": true,
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "verification": {
+        "desktop": "needs-review",
+        "android": "needs-review",
+        "ios": "needs-review"
+      }
     },
     {
       "id": "subway-surfers",
@@ -2395,11 +3885,21 @@
       "controls": "touch",
       "instructions": "Торкання або миша; підказки керування — у грі.",
       "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": false
+      },
+      "review": "smoke-tested",
+      "candidateDevices": {
         "desktop": true,
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "verification": {
+        "desktop": "needs-review",
+        "android": "needs-review",
+        "ios": "needs-review"
+      }
     },
     {
       "id": "subway-surfers-ny",
@@ -2415,7 +3915,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "sudoku",
@@ -2431,7 +3941,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "superhot",
@@ -2447,7 +3967,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "supermeatboy",
@@ -2463,7 +3993,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "supersmashflash",
@@ -2479,7 +4019,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "sw",
@@ -2495,7 +4045,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "tabs",
@@ -2511,7 +4071,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "tetris-retro",
@@ -2527,7 +4097,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "theimpossiblegame",
@@ -2543,7 +4123,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "thereisnogame",
@@ -2559,7 +4149,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "thisistheonlylevel",
@@ -2575,7 +4175,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "thisistheonlylevel2",
@@ -2591,7 +4201,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "tictactoe-retro",
@@ -2607,7 +4227,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "timeshooter1",
@@ -2619,11 +4249,21 @@
       "controls": "keyboard",
       "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
       "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": false
+      },
+      "review": "smoke-tested",
+      "candidateDevices": {
         "desktop": true,
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "verification": {
+        "desktop": "needs-review",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "tinyfishing",
@@ -2635,11 +4275,21 @@
       "controls": "touch",
       "instructions": "Торкання або миша; підказки керування — у грі.",
       "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": false
+      },
+      "review": "smoke-tested",
+      "candidateDevices": {
         "desktop": true,
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "verification": {
+        "desktop": "needs-review",
+        "android": "needs-review",
+        "ios": "needs-review"
+      }
     },
     {
       "id": "towermaster",
@@ -2655,7 +4305,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "tron",
@@ -2671,7 +4331,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "ts",
@@ -2687,7 +4357,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "tube-jumpers",
@@ -2699,11 +4379,21 @@
       "controls": "keyboard",
       "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
       "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": false
+      },
+      "review": "smoke-tested",
+      "candidateDevices": {
         "desktop": true,
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "verification": {
+        "desktop": "needs-review",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "tunnelrush",
@@ -2715,11 +4405,21 @@
       "controls": "keyboard",
       "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
       "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": false
+      },
+      "review": "smoke-tested",
+      "candidateDevices": {
         "desktop": true,
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "verification": {
+        "desktop": "needs-review",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "underrun",
@@ -2735,7 +4435,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "universal-paperclips",
@@ -2751,7 +4461,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "vex3",
@@ -2764,10 +4484,20 @@
       "instructions": "Торкання або миша; підказки керування — у грі.",
       "devices": {
         "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "needs-review",
+        "ios": "needs-review"
+      }
     },
     {
       "id": "vex4",
@@ -2781,9 +4511,19 @@
       "devices": {
         "desktop": true,
         "android": true,
+        "ios": false
+      },
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "needs-review"
+      }
     },
     {
       "id": "vex5",
@@ -2795,11 +4535,21 @@
       "controls": "touch",
       "instructions": "Торкання або миша; підказки керування — у грі.",
       "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": false
+      },
+      "review": "smoke-tested",
+      "candidateDevices": {
         "desktop": true,
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "verification": {
+        "desktop": "needs-review",
+        "android": "needs-review",
+        "ios": "needs-review"
+      }
     },
     {
       "id": "vex6",
@@ -2815,7 +4565,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "walls",
@@ -2831,7 +4591,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "wbwwb",
@@ -2847,7 +4617,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "weavesilk",
@@ -2859,11 +4639,21 @@
       "controls": "touch",
       "instructions": "Торкання або миша; підказки керування — у грі.",
       "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": false
+      },
+      "review": "smoke-tested",
+      "candidateDevices": {
         "desktop": true,
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "verification": {
+        "desktop": "needs-review",
+        "android": "needs-review",
+        "ios": "needs-review"
+      }
     },
     {
       "id": "wg",
@@ -2879,7 +4669,17 @@
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      }
     },
     {
       "id": "wordle",
@@ -2891,11 +4691,21 @@
       "controls": "touch",
       "instructions": "Торкання або миша; підказки керування — у грі.",
       "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": false
+      },
+      "review": "smoke-tested",
+      "candidateDevices": {
         "desktop": true,
         "android": true,
         "ios": true
       },
-      "review": "candidate"
+      "verification": {
+        "desktop": "needs-review",
+        "android": "needs-review",
+        "ios": "needs-review"
+      }
     },
     {
       "id": "worldshardestgame",
@@ -2911,7 +4721,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "xx142-b2exe",
@@ -2927,7 +4747,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     },
     {
       "id": "zombocalypse",
@@ -2943,7 +4773,17 @@
         "android": false,
         "ios": false
       },
-      "review": "candidate"
+      "review": "smoke-tested",
+      "candidateDevices": {
+        "desktop": true,
+        "android": false,
+        "ios": false
+      },
+      "verification": {
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
+      }
     }
   ],
   "excluded": {
@@ -2979,5 +4819,10 @@
     "snake": "Duplicate of snake-retro.",
     "tetris": "Duplicate of tetris-retro.",
     "tictactoe": "Duplicate of tictactoe-retro."
+  },
+  "verification": {
+    "sourceCommit": "83642b1ed1a91f3b6b39b05a3300a8c6c1460caa",
+    "workflowRun": 42380357397,
+    "method": "Browser load and basic input smoke; not a complete playthrough."
   }
 }

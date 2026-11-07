@@ -33,7 +33,7 @@
   w.RufflePlayer.config = {allowScriptAccess: false, openUrlMode: 'deny', showRuffleLogo: false, contextMenu: 'off', splashScreen: false};
   function suppressed(value) {
     const url = String(value && value.url || value || '');
-    return /(?:config\.uca\.cloud\.unity3d|cdp\.cloud\.unity3d|api\.uca\.cloud\.unity3d|stats\.unity3d|perf-events\.cloud\.unity3d|gameanalytics\.com|google-analytics|googletagmanager|cloudflareinsights|recordsession\.php|unitygame\.herokuapp\.com\/bitlife\/transfer|sockjs-node)/i.test(url);
+    return /(?:config\.uca\.cloud\.unity3d|cdp\.cloud\.unity3d|api\.uca\.cloud\.unity3d|stats\.unity3d|perf-events\.cloud\.unity3d|gameanalytics\.com|google-analytics|googletagmanager|cloudflareinsights|recordsession\.php|unitygame\.herokuapp\.com\/bitlife\/transfer|sockjs-node|nitrome\.com\/ajax\/v1\/|t\.y8\.com\/log)/i.test(url);
   }
   const nativeFetch = w.fetch;
   if (nativeFetch) w.fetch = function (input, options) {

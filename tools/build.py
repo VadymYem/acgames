@@ -45,3 +45,15 @@ for name in ['index.html','catalog.json','LICENSE','README.md','main.min.js']:
  shutil.copyfile(ROOT/name,DEST/name)
 (DEST/'.nojekyll').touch()
 print(f"Built {len(data['games'])} games, {sum(p.stat().st_size for p in DEST.rglob('*') if p.is_file())/1e6:.1f} MB")
+
+# Keep the available level-completion cue under the runtime's expected name.
+fishing=DEST/'games/tinyfishing/html5game'
+if fishing.exists() and not (fishing/'snd_levCompl.ogg').exists():
+ shutil.copyfile(fishing/'snd_levComplBest.ogg',fishing/'snd_levCompl.ogg')
+
+# This font is already present in the Fancade data package; expose it for CSS too.
+font_package=DEST/'games/drivemad/webapp/index.data'
+if font_package.exists():
+ font=font_package.read_bytes()[76165:100237]
+ if font[:4]!=b'wOFF':raise ValueError('Drive Mad font package layout changed')
+ (font_package.parent/'baloo2.woff').write_bytes(font)

@@ -1,0 +1,50 @@
+name: Repaired game verification
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'games/**'
+      - 'shared/**'
+      - 'tools/**'
+      - 'tests/**'
+      - '.github/workflows/repair-quality.yml'
+permissions:
+  contents: read
+concurrency:
+  group: repaired-games-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  repaired:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        device: [desktop, android, ios]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - run: npm install --no-save --package-lock=false playwright@1.64.1
+      - run: npx playwright install --with-deps chromium webkit
+      - run: npm run build
+      - run: npm run audit && npm run syntax && npm test && python3 tests/sanitize.test.py
+      - name: Exercise each repaired game
+        env:
+          GAME_DEVICE: ${{ matrix.device }}
+          GAME_IDS: 2drocketleague,ball-shooting,doge2048,flappy-2048,hextris,spacecompany,tinyfishing,60sburgerrun,towermaster,badicecream2,badicecream3,drivemad
+          GAME_REQUIRE_ALL: 'true'
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 --directory dist >/tmp/games-repair-http.log 2>&1 &
+          node tests/browser.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: repaired-games-${{ matrix.device }}
+          path: reports/browser/${{ matrix.device }}/
+          retention-days: 7

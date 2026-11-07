@@ -53,7 +53,15 @@ def sanitize_source(s, p):
  s=re.sub(r'<meta\b[^>]*http-equiv=[\'"]Content-Security-Policy[\'"][^>]*>','',s,flags=re.I)
  s=re.sub(r'<base\b[^>]*>','',s,flags=re.I)
  # Retain attribution text without sending visitors to publisher/advertiser sites.
- s=re.sub(r'(<a\b[^>]*?)\s+href=([\'"])(?:https?:)?//(?!authorche\.top(?:/|\2)).*?\2',r'\1',s,flags=re.I)
+ def anchor(match):
+  tag=match.group(0)
+  attribute=re.search(r'''\s+href\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))''',tag,re.I)
+  if not attribute:return tag
+  value=next(value for value in attribute.groups() if value is not None)
+  if re.match(r'(?:https?:)?//',value,re.I) and not re.match(r'(?:https?:)?//authorche\.top(?:/|$)',value,re.I):
+   return tag[:attribute.start()]+tag[attribute.end():]
+  return tag
+ s=re.sub(r'<a\b[^>]*>',anchor,s,flags=re.I)
  # Canonical metadata is handled by the main website; game runtimes stay noindex.
  s=re.sub(r'<meta\b[^>]*name=[\'"]robots[\'"][^>]*>','',s,flags=re.I)
  s=re.sub(r'<script\b[^>]*\bsrc=[\'"][^\'"]*shared/platform\.js[\'"][^>]*>\s*</script>','',s,flags=re.I)
