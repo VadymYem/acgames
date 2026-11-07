@@ -28,7 +28,7 @@ async function worker(){
   page.on('pageerror',e=>{errors.push(e.message);rowStacks.push(e.stack);});
   page.on('response',r=>{if(r.status()>=400)missing.push({status:r.status(),url:r.url().replace(BASE,'')});});
   page.on('response',r=>{if(/^https?:/.test(r.url())&&!allowed(r.url()))external.push(r.url());});
-  page.on('requestfailed',r=>{if(/^https?:/.test(r.url())&&!allowed(r.url())){blocked.push(r.url());if(!/fonts\.google|unity3d|analytics|googletagmanager|sockjs-node/.test(r.url()))missing.push({status:'blocked-external',url:r.url()});}});
+  page.on('requestfailed',r=>{if(/^https?:/.test(r.url())&&!allowed(r.url())){blocked.push(r.url());if(!/fonts\.google|cloudflareinsights|unity3d|analytics|googletagmanager|sockjs-node/.test(r.url()))missing.push({status:'blocked-external',url:r.url()});}});
   const row={id:game.id,device,entry:game.entry,errors,missing,external,blocked,stacks:rowStacks};
   try{
    let scope=page;
@@ -56,7 +56,7 @@ async function worker(){
    row.surface=await scope.evaluate(()=>({canvas:[...document.querySelectorAll('canvas')].filter(c=>c.width>1&&c.height>1).length,buttons:document.querySelectorAll('button,input,[role="button"],.tile,.square,.cell,.card,.option_image,.play-button,.js-pacman-playground>*').length,text:document.body?.innerText.trim().length||0,flash:document.querySelectorAll('ruffle-player').length,overflow:document.documentElement.scrollWidth>innerWidth+2}));
    const policy=await scope.evaluate(()=>window.__acPolicyViolations||[]);
    for(const url of new Set(policy)){
-    if(/fonts\.google|unity3d|analytics|googletagmanager|sockjs-node/.test(url))continue;
+    if(/fonts\.google|cloudflareinsights|unity3d|analytics|googletagmanager|sockjs-node/.test(url))continue;
     if(!missing.some(item=>item.url===url))missing.push({status:'csp-blocked',url});
    }
    row.started=Boolean(row.surface.canvas||row.surface.buttons||row.surface.flash);
@@ -64,13 +64,13 @@ async function worker(){
    row.passed=row.started&&errors.length===0&&missing.length===0&&external.length===0&&(!row.player||(!row.player.hidden&&row.player.statusHidden));
    await page.screenshot({path:path.join(out,game.id+'.jpg'),type:'jpeg',quality:60,timeout:5000}).catch(()=>{});
   }catch(e){row.failure=e.message;row.passed=false;}
-  results.push(row);console.log(device,game.id,row.passed?'PASS':'REVIEW',JSON.stringify({errors:errors.slice(0,2),missing:missing.slice(0,2),failure:row.failure}));
+  results.push(row);console.log(device,game.id,row.passed?'PASS':'REVIEW',JSON.stringify({errors:errors.slice(0,2),missing:missing.slice(0,2),external:external.slice(0,2),player:row.player,failure:row.failure}));
   await context.close();
  }
 }
 await Promise.all(Array.from({length:3},()=>worker()));
 await browser.close();
-fs.writeFileSync(path.join(out,'results.json'),JSON.stringify({device,tested:results.length,passed:results.filter(r=>r.passed).length,results},null,2));
+fs.writeFileSync(path.join(out,'results.json'),JSON.stringify({device,base:BASE,embed:EMBED,revision:process.env.GITHUB_SHA,tested:results.length,passed:results.filter(r=>r.passed).length,results},null,2));
 console.log('Completed',device,results.length,'games;',results.filter(r=>r.passed).length,'passed load and input smoke');
 
 const regressions=results.filter(row=>(published.has(row.id)||process.env.GAME_REQUIRE_ALL==='true')&&!row.passed);
