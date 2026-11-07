@@ -59,6 +59,14 @@ def patch_runtime(name, old, new):
  target.write_text(text.replace(old,new,1),encoding='utf-8')
  print(f'Prepared standalone runtime: {name}')
 
+
+# Publisher callbacks must not read properties of a cross-origin parent window.
+for part in ['loader.js','level.js','gameOver.js']:
+ patch_runtime('games/60sburgerrun/js/'+part,
+  "if(parent && parent.cmgGameEvent){parent.cmgGameEvent('start'); }", '')
+patch_runtime('games/sm64/index.html',
+ "if(parent.location != location){\n\tparent.addEventListener('keydown', dupe);\n\tparent.addEventListener('keyup', dupe);\n}", '')
+
 patch_runtime('games/friendlyfire/FriendlyFire.js',
  'return __webpack_require__(__webpack_require__.s = 0);',
  'return __webpack_require__(__webpack_require__.s = "./lib/FriendlyFire.js");')
