@@ -31,6 +31,13 @@ jobs:
           name: game-static-reports
           path: reports/*.json
           retention-days: 7
+      - uses: actions/upload-artifact@v4
+        with:
+          name: catalog-artwork
+          path: |
+            shared/covers/
+            catalog.json
+          retention-days: 7
   browser:
     needs: static
     runs-on: ubuntu-latest
