@@ -1,6 +1,12 @@
 name: Verify published games
 on:
   workflow_dispatch:
+    inputs:
+      game_ids:
+        description: 'Optional game IDs separated by commas; empty checks all published games'
+        required: false
+        type: string
+        default: ''
   push:
     branches: [main]
     paths:
@@ -12,7 +18,7 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: published-games-check
+  group: published-games-embed-${{ github.event_name }}-${{ inputs.game_ids || 'all' }}
   cancel-in-progress: false
 jobs:
   verify:
@@ -36,6 +42,8 @@ jobs:
         env:
           GAME_DEVICE: ${{ matrix.device }}
           GAME_BASE_URL: https://vadymyem.github.io/acgames/
+          GAME_EMBED_URL: https://authorche.top/games/play.html
+          GAME_IDS: ${{ inputs.game_ids || '' }}
           GAME_PUBLISHED_ONLY: 'true'
           GAME_REQUIRE_ALL: 'true'
         run: node tests/browser.mjs
