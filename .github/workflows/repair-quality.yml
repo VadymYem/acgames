@@ -37,8 +37,9 @@ jobs:
       - name: Exercise each repaired game
         env:
           GAME_DEVICE: ${{ matrix.device }}
-          GAME_IDS: 2drocketleague,ball-shooting,doge2048,flappy-2048,hextris,spacecompany,tinyfishing,60sburgerrun,towermaster,badicecream2,badicecream3,drivemad
+          GAME_IDS: 2drocketleague,ball-shooting,doge2048,flappy-2048,hextris,spacecompany,tinyfishing,60sburgerrun,towermaster,badicecream2,badicecream3,drivemad,bounceback,vex3
           GAME_REQUIRE_ALL: 'true'
+          GAME_PUBLISHED_ONLY: 'true'
         run: |
           python3 -m http.server 4173 --bind 127.0.0.1 --directory dist >/tmp/games-repair-http.log 2>&1 &
           node tests/browser.mjs

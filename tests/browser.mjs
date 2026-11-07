@@ -9,7 +9,7 @@ const browser=await engine.launch({headless:true,args:device==='ios'?[]:['--enab
 const out=path.join('reports','browser',device);fs.mkdirSync(out,{recursive:true});
 const results=[];
 const requested=(process.env.GAME_IDS||'').split(',').filter(Boolean);
-const queue=registry.games.filter(g=>(g.candidateDevices||g.devices)[device]&&(!requested.length||requested.includes(g.id)));
+const queue=registry.games.filter(g=>(process.env.GAME_PUBLISHED_ONLY==='true'?g.devices:(g.candidateDevices||g.devices))[device]&&(!requested.length||requested.includes(g.id)));
 const published=new Set(registry.games.filter(g=>g.devices[device]).map(g=>g.id));
 async function worker(){
  for(;;){

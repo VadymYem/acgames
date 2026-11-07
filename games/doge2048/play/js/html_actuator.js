@@ -5,7 +5,7 @@ function HTMLActuator() {
   this.messageContainer = document.querySelector(".game-message");
   this.info             = document.querySelector(".info");  
   this.dogeSays = document.querySelector(".doge-says");
-  this.adSpace = document.querySelector(".shout-out");
+
 
   this.score = 0;
 }
@@ -132,9 +132,7 @@ HTMLActuator.prototype.updateScore = function (score) {
     var styleString = left + top + color
     messageElement.setAttribute('style', styleString);
     this.dogeSays.appendChild(messageElement);
-    if (difference > 4) {
-     this.adSpace.innerHTML = ads[Math.floor(Math.random() * ads.length)]
-    }
+
     
   }
 };

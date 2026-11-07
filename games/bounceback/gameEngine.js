@@ -381,7 +381,9 @@ onmouseup     = function(e) { mouseIsDown=0; }
 onmousemove   = function(e) 
 { 
     // convert mouse pos to canvas space
-    let rect = mainCanvas.getBoundingClientRect();
+    let inputCanvas = document.getElementById('c1');
+    if (!inputCanvas) return;
+    let rect = inputCanvas.getBoundingClientRect();
     mousePos.Set
     ( 
         (e.clientX - rect.left) / rect.width,
