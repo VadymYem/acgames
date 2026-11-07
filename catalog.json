@@ -80,8 +80,8 @@
       },
       "verificationEvidence": {
         "desktop": {
-          "sourceCommit": "9a1ad0e2ad51572ce2ee6a0317bf70c8f1556878",
-          "workflowRun": 42382374323
+          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
+          "workflowRun": 42382708081
         }
       }
     },
@@ -112,8 +112,8 @@
       },
       "verificationEvidence": {
         "desktop": {
-          "sourceCommit": "9a1ad0e2ad51572ce2ee6a0317bf70c8f1556878",
-          "workflowRun": 42382374323
+          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
+          "workflowRun": 42382708081
         }
       }
     },
@@ -534,16 +534,16 @@
       },
       "verificationEvidence": {
         "desktop": {
-          "sourceCommit": "9a1ad0e2ad51572ce2ee6a0317bf70c8f1556878",
-          "workflowRun": 42382374323
+          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
+          "workflowRun": 42382708081
         },
         "android": {
-          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
-          "workflowRun": 42382014259
+          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
+          "workflowRun": 42382708081
         },
         "ios": {
-          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
-          "workflowRun": 42382014259
+          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
+          "workflowRun": 42382708081
         }
       }
     },
@@ -574,16 +574,16 @@
       },
       "verificationEvidence": {
         "desktop": {
-          "sourceCommit": "9a1ad0e2ad51572ce2ee6a0317bf70c8f1556878",
-          "workflowRun": 42382374323
+          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
+          "workflowRun": 42382708081
         },
         "android": {
-          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
-          "workflowRun": 42382014259
+          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
+          "workflowRun": 42382708081
         },
         "ios": {
-          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
-          "workflowRun": 42382014259
+          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
+          "workflowRun": 42382708081
         }
       }
     },
@@ -666,16 +666,16 @@
       },
       "verificationEvidence": {
         "desktop": {
-          "sourceCommit": "9a1ad0e2ad51572ce2ee6a0317bf70c8f1556878",
-          "workflowRun": 42382374323
+          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
+          "workflowRun": 42382708081
         },
         "android": {
-          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
-          "workflowRun": 42382014259
+          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
+          "workflowRun": 42382708081
         },
         "ios": {
-          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
-          "workflowRun": 42382014259
+          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
+          "workflowRun": 42382708081
         }
       }
     },
@@ -1746,16 +1746,16 @@
       },
       "verificationEvidence": {
         "desktop": {
-          "sourceCommit": "9a1ad0e2ad51572ce2ee6a0317bf70c8f1556878",
-          "workflowRun": 42382374323
+          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
+          "workflowRun": 42382708081
         },
         "android": {
-          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
-          "workflowRun": 42382014259
+          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
+          "workflowRun": 42382708081
         },
         "ios": {
-          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
-          "workflowRun": 42382014259
+          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
+          "workflowRun": 42382708081
         }
       }
     },
@@ -1838,16 +1838,16 @@
       },
       "verificationEvidence": {
         "desktop": {
-          "sourceCommit": "9a1ad0e2ad51572ce2ee6a0317bf70c8f1556878",
-          "workflowRun": 42382374323
+          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
+          "workflowRun": 42382708081
         },
         "android": {
-          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
-          "workflowRun": 42382014259
+          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
+          "workflowRun": 42382708081
         },
         "ios": {
-          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
-          "workflowRun": 42382014259
+          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
+          "workflowRun": 42382708081
         }
       }
     },
@@ -2190,16 +2190,16 @@
       },
       "verificationEvidence": {
         "desktop": {
-          "sourceCommit": "9a1ad0e2ad51572ce2ee6a0317bf70c8f1556878",
-          "workflowRun": 42382374323
+          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
+          "workflowRun": 42382708081
         },
         "android": {
-          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
-          "workflowRun": 42382014259
+          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
+          "workflowRun": 42382708081
         },
         "ios": {
-          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
-          "workflowRun": 42382014259
+          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
+          "workflowRun": 42382708081
         }
       }
     },
@@ -2551,7 +2551,7 @@
       "controls": "touch",
       "instructions": "Торкання або миша; підказки керування — у грі.",
       "devices": {
-        "desktop": false,
+        "desktop": true,
         "android": true,
         "ios": true
       },
@@ -2562,22 +2562,22 @@
         "ios": true
       },
       "verification": {
-        "desktop": "needs-review",
+        "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
       },
       "verificationEvidence": {
         "desktop": {
-          "sourceCommit": "9a1ad0e2ad51572ce2ee6a0317bf70c8f1556878",
-          "workflowRun": 42382374323
+          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
+          "workflowRun": 42382708081
         },
         "android": {
-          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
-          "workflowRun": 42382014259
+          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
+          "workflowRun": 42382708081
         },
         "ios": {
-          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
-          "workflowRun": 42382014259
+          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
+          "workflowRun": 42382708081
         }
       }
     },
@@ -3856,16 +3856,16 @@
       },
       "verificationEvidence": {
         "desktop": {
-          "sourceCommit": "9a1ad0e2ad51572ce2ee6a0317bf70c8f1556878",
-          "workflowRun": 42382374323
+          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
+          "workflowRun": 42382708081
         },
         "android": {
-          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
-          "workflowRun": 42382014259
+          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
+          "workflowRun": 42382708081
         },
         "ios": {
-          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
-          "workflowRun": 42382014259
+          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
+          "workflowRun": 42382708081
         }
       }
     },
@@ -4416,16 +4416,16 @@
       },
       "verificationEvidence": {
         "desktop": {
-          "sourceCommit": "9a1ad0e2ad51572ce2ee6a0317bf70c8f1556878",
-          "workflowRun": 42382374323
+          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
+          "workflowRun": 42382708081
         },
         "android": {
-          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
-          "workflowRun": 42382014259
+          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
+          "workflowRun": 42382708081
         },
         "ios": {
-          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
-          "workflowRun": 42382014259
+          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
+          "workflowRun": 42382708081
         }
       }
     },
@@ -4456,16 +4456,16 @@
       },
       "verificationEvidence": {
         "desktop": {
-          "sourceCommit": "9a1ad0e2ad51572ce2ee6a0317bf70c8f1556878",
-          "workflowRun": 42382374323
+          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
+          "workflowRun": 42382708081
         },
         "android": {
-          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
-          "workflowRun": 42382014259
+          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
+          "workflowRun": 42382708081
         },
         "ios": {
-          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
-          "workflowRun": 42382014259
+          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
+          "workflowRun": 42382708081
         }
       }
     },
@@ -4978,7 +4978,8 @@
     "method": "Browser load and basic input smoke; not a complete playthrough.",
     "additionalRuns": [
       42382014259,
-      42382374323
+      42382374323,
+      42382708081
     ]
   }
 }

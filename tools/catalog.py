@@ -123,7 +123,7 @@ for folder in sorted(GAMES.iterdir()):
  row={'id':gid,'title':title,'category':category,'entry':str(entry.relative_to(ROOT)),'cover':cover,'kind':kind,'controls':controls,'instructions':instructions,'devices':{'desktop':True,'android':gid in MOBILE and kind!='flash','ios':gid in MOBILE and kind!='flash'},'review':'candidate'}
  if previous.get(gid,{}).get('review') in ['verified','smoke-tested']:
   row['review']=previous[gid]['review'];row['devices']=previous[gid]['devices']
-  for key in ['candidateDevices','verification']:
+  for key in ['candidateDevices','verification','verificationEvidence']:
    if key in previous[gid]:row[key]=previous[gid][key]
  rows.append(row)
 (ROOT/'catalog.json').write_text(json.dumps({'version':3,'games':rows,'excluded':EXCLUDED,'verification':metadata.get('verification',{})},ensure_ascii=False,indent=2)+'\n')
