@@ -1,0 +1,47 @@
+name: Verify published games
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/live-quality.yml'
+      - 'tests/browser.mjs'
+  workflow_run:
+    workflows: ['Publish AuthorChe Games']
+    types: [completed]
+permissions:
+  contents: read
+concurrency:
+  group: published-games-check
+  cancel-in-progress: false
+jobs:
+  verify:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        device: [desktop, android, ios]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-save --package-lock=false --ignore-scripts --no-audit --no-fund playwright@1.64.1
+      - run: npx playwright install --with-deps chromium webkit
+      - name: Test every published game at the live project URL
+        env:
+          GAME_DEVICE: ${{ matrix.device }}
+          GAME_BASE_URL: https://vadymyem.github.io/acgames/
+          GAME_PUBLISHED_ONLY: 'true'
+          GAME_REQUIRE_ALL: 'true'
+        run: node tests/browser.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: published-games-${{ matrix.device }}
+          path: reports/browser/
+          retention-days: 7
