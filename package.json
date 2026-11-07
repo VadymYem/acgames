@@ -6,7 +6,8 @@
     "build": "python3 tools/build.py",
     "audit": "python3 tools/audit.py --dist",
     "test": "node --test tests/*.test.cjs",
-    "syntax": "node --experimental-vm-modules tools/check-syntax.cjs"
+    "syntax": "node --experimental-vm-modules tools/check-syntax.cjs",
+    "build:review": "python3 tools/build.py --review"
   },
   "dependencies": {
     "@ruffle-rs/ruffle": "0.7.1",

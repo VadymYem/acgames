@@ -1,6 +1,6 @@
 """Produce a self-contained static runtime; production never loads dependency CDNs."""
 from pathlib import Path
-import json, shutil, re, zipfile, gzip
+import json, shutil, re, zipfile, gzip, sys
 ROOT=Path(__file__).resolve().parents[1]
 VENDOR=ROOT/'shared/vendor';VENDOR.mkdir(parents=True,exist_ok=True)
 packed=VENDOR/'playcanvas.min.js.gz'
@@ -28,11 +28,13 @@ DEST=ROOT/'dist'
 if DEST.exists():shutil.rmtree(DEST)
 DEST.mkdir()
 data=json.loads((ROOT/'catalog.json').read_text())
-for item in data['games']:
+review_mode='--review' in sys.argv
+selected=[game for game in data['games'] if review_mode or any(game['devices'].values())]
+for item in selected:
  shutil.copytree(ROOT/'games'/item['id'],DEST/'games'/item['id'],ignore=shutil.ignore_patterns('*.zip','*.map','.DS_Store'))
 # Slope 3 ships as an upstream archive. Expand runtime assets without CDN loaders.
 archive=ROOT/'games/slope3/slope3.zip'
-if archive.exists() and any(g['id']=='slope3' for g in data['games']):
+if archive.exists() and any(g['id']=='slope3' for g in selected):
  with zipfile.ZipFile(archive) as z:
   for name in z.namelist():
    if name.startswith('slope3/') and not '/cdn-cgi/' in name and not name.endswith('/') and not name.endswith('index.html'):
@@ -41,10 +43,11 @@ if archive.exists() and any(g['id']=='slope3' for g in data['games']):
 # Poker refers to this shared art directory.
 if (ROOT/'games/avatar').exists():shutil.copytree(ROOT/'games/avatar',DEST/'games/avatar')
 shutil.copytree(ROOT/'shared',DEST/'shared',ignore=shutil.ignore_patterns('*.map'))
-for name in ['index.html','catalog.json','LICENSE','README.md','main.min.js']:
+for name in ['index.html','LICENSE','README.md','main.min.js']:
  shutil.copyfile(ROOT/name,DEST/name)
+(DEST/'catalog.json').write_text(json.dumps(dict(data,games=selected),ensure_ascii=False,indent=2)+'\n')
 (DEST/'.nojekyll').touch()
-print(f"Built {len(data['games'])} games, {sum(p.stat().st_size for p in DEST.rglob('*') if p.is_file())/1e6:.1f} MB")
+print(f"Built {len(selected)} games, {sum(p.stat().st_size for p in DEST.rglob('*') if p.is_file())/1e6:.1f} MB")
 
 # Keep the available level-completion cue under the runtime's expected name.
 fishing=DEST/'games/tinyfishing/html5game'

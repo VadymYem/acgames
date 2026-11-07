@@ -8,7 +8,7 @@ BASE=ROOT/'dist' if '--dist' in sys.argv else ROOT
 class Page(HTMLParser):
  def __init__(self,s):super().__init__();self.nodes=[];self.feed(s)
  def handle_starttag(self,t,a):self.nodes.append((t,dict(a)))
-data=json.loads((ROOT/'catalog.json').read_text());errors=[];resources=[];ids=set()
+data=json.loads((BASE/'catalog.json').read_text());errors=[];resources=[];ids=set()
 for g in data['games']:
  if g['id'] in ids:errors.append('Duplicate ID: '+g['id'])
  ids.add(g['id'])

@@ -63,7 +63,7 @@
       "controls": "keyboard",
       "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
       "devices": {
-        "desktop": false,
+        "desktop": true,
         "android": false,
         "ios": false
       },
@@ -74,9 +74,15 @@
         "ios": false
       },
       "verification": {
-        "desktop": "needs-review",
+        "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "9a1ad0e2ad51572ce2ee6a0317bf70c8f1556878",
+          "workflowRun": 42382374323
+        }
       }
     },
     {
@@ -89,7 +95,7 @@
       "controls": "keyboard",
       "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
       "devices": {
-        "desktop": false,
+        "desktop": true,
         "android": false,
         "ios": false
       },
@@ -100,9 +106,15 @@
         "ios": false
       },
       "verification": {
-        "desktop": "needs-review",
+        "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "9a1ad0e2ad51572ce2ee6a0317bf70c8f1556878",
+          "workflowRun": 42382374323
+        }
       }
     },
     {
@@ -506,7 +518,7 @@
       "instructions": "Торкання або миша; підказки керування — у грі.",
       "devices": {
         "desktop": true,
-        "android": false,
+        "android": true,
         "ios": true
       },
       "review": "smoke-tested",
@@ -517,8 +529,22 @@
       },
       "verification": {
         "desktop": "smoke-pass",
-        "android": "needs-review",
+        "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "9a1ad0e2ad51572ce2ee6a0317bf70c8f1556878",
+          "workflowRun": 42382374323
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014259
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014259
+        }
       }
     },
     {
@@ -531,8 +557,8 @@
       "controls": "touch",
       "instructions": "Торкання або миша; підказки керування — у грі.",
       "devices": {
-        "desktop": false,
-        "android": false,
+        "desktop": true,
+        "android": true,
         "ios": true
       },
       "review": "smoke-tested",
@@ -542,9 +568,23 @@
         "ios": true
       },
       "verification": {
-        "desktop": "needs-review",
-        "android": "needs-review",
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "9a1ad0e2ad51572ce2ee6a0317bf70c8f1556878",
+          "workflowRun": 42382374323
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014259
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014259
+        }
       }
     },
     {
@@ -623,6 +663,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "9a1ad0e2ad51572ce2ee6a0317bf70c8f1556878",
+          "workflowRun": 42382374323
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014259
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014259
+        }
       }
     },
     {
@@ -1675,9 +1729,9 @@
       "controls": "touch",
       "instructions": "Торкання або миша; підказки керування — у грі.",
       "devices": {
-        "desktop": false,
-        "android": false,
-        "ios": false
+        "desktop": true,
+        "android": true,
+        "ios": true
       },
       "review": "smoke-tested",
       "candidateDevices": {
@@ -1686,9 +1740,23 @@
         "ios": true
       },
       "verification": {
-        "desktop": "needs-review",
-        "android": "needs-review",
-        "ios": "needs-review"
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "9a1ad0e2ad51572ce2ee6a0317bf70c8f1556878",
+          "workflowRun": 42382374323
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014259
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014259
+        }
       }
     },
     {
@@ -1753,9 +1821,9 @@
       "controls": "touch",
       "instructions": "Торкання або миша; підказки керування — у грі.",
       "devices": {
-        "desktop": false,
-        "android": false,
-        "ios": false
+        "desktop": true,
+        "android": true,
+        "ios": true
       },
       "review": "smoke-tested",
       "candidateDevices": {
@@ -1764,9 +1832,23 @@
         "ios": true
       },
       "verification": {
-        "desktop": "needs-review",
-        "android": "needs-review",
-        "ios": "needs-review"
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "9a1ad0e2ad51572ce2ee6a0317bf70c8f1556878",
+          "workflowRun": 42382374323
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014259
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014259
+        }
       }
     },
     {
@@ -2105,6 +2187,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "9a1ad0e2ad51572ce2ee6a0317bf70c8f1556878",
+          "workflowRun": 42382374323
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014259
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014259
+        }
       }
     },
     {
@@ -2456,7 +2552,7 @@
       "instructions": "Торкання або миша; підказки керування — у грі.",
       "devices": {
         "desktop": false,
-        "android": false,
+        "android": true,
         "ios": true
       },
       "review": "smoke-tested",
@@ -2467,8 +2563,22 @@
       },
       "verification": {
         "desktop": "needs-review",
-        "android": "needs-review",
+        "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "9a1ad0e2ad51572ce2ee6a0317bf70c8f1556878",
+          "workflowRun": 42382374323
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014259
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014259
+        }
       }
     },
     {
@@ -3743,6 +3853,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "9a1ad0e2ad51572ce2ee6a0317bf70c8f1556878",
+          "workflowRun": 42382374323
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014259
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014259
+        }
       }
     },
     {
@@ -4275,9 +4399,9 @@
       "controls": "touch",
       "instructions": "Торкання або миша; підказки керування — у грі.",
       "devices": {
-        "desktop": false,
-        "android": false,
-        "ios": false
+        "desktop": true,
+        "android": true,
+        "ios": true
       },
       "review": "smoke-tested",
       "candidateDevices": {
@@ -4286,9 +4410,23 @@
         "ios": true
       },
       "verification": {
-        "desktop": "needs-review",
-        "android": "needs-review",
-        "ios": "needs-review"
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "9a1ad0e2ad51572ce2ee6a0317bf70c8f1556878",
+          "workflowRun": 42382374323
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014259
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014259
+        }
       }
     },
     {
@@ -4315,6 +4453,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "9a1ad0e2ad51572ce2ee6a0317bf70c8f1556878",
+          "workflowRun": 42382374323
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014259
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014259
+        }
       }
     },
     {
@@ -4823,6 +4975,10 @@
   "verification": {
     "sourceCommit": "83642b1ed1a91f3b6b39b05a3300a8c6c1460caa",
     "workflowRun": 42380357397,
-    "method": "Browser load and basic input smoke; not a complete playthrough."
+    "method": "Browser load and basic input smoke; not a complete playthrough.",
+    "additionalRuns": [
+      42382014259,
+      42382374323
+    ]
   }
 }
