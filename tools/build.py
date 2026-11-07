@@ -72,8 +72,8 @@ patch_runtime('games/wbwwb/index.html',
  '<script defer src="htmlgame.js" type="text/javascript"></script>', '')
 
 patch_runtime('games/vex3/vex-3.js',
- 'GameDistribution$1.prototype.areAdsEnabled = function() {\n            return false;',
- 'GameDistribution$1.prototype.areAdsEnabled = function() {\n            return Promise.resolve(false);')
+ 'GameDistribution$$1.prototype.areAdsEnabled = function() {\n            return false;',
+ 'GameDistribution$$1.prototype.areAdsEnabled = function() {\n            return Promise.resolve(false);')
 vex = DEST/'games/vex3/vex-3.js'
 if vex.exists():
  text = vex.read_text()
