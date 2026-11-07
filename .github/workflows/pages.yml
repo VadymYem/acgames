@@ -44,7 +44,7 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 25
     permissions:
       pages: write
       id-token: write
@@ -55,3 +55,6 @@ jobs:
       - name: Publish reviewed runtime
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          timeout: 1200000
+          reporting_interval: 15000
