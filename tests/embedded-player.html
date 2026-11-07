@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:,"><title>Game iframe integration check</title>
+<style>html,body{margin:0;width:100%;height:100%;background:#10131c;color:#fff}iframe{display:block;width:100%;height:100%;border:0}iframe[hidden]{display:none}#gameStatus{position:absolute;inset:0;display:grid;place-items:center;pointer-events:none}#gameStatus[hidden]{display:none}</style></head>
+<body><p id="gameStatus" role="status">Loading game…</p><iframe id="gameFrame" title="Game runtime" sandbox="allow-scripts allow-same-origin allow-pointer-lock" allow="fullscreen; gamepad" allowfullscreen referrerpolicy="no-referrer"></iframe>
+<script>
+(async function(){
+ const params=new URLSearchParams(location.search);
+ const base=new URL(params.get('runtime')||'https://vadymyem.github.io/acgames/');
+ const frame=document.getElementById('gameFrame'),status=document.getElementById('gameStatus');
+ window.addEventListener('message',function(event){
+  if(event.source!==frame.contentWindow||event.origin!==base.origin||event.data?.source!=='authorche-game')return;
+  if(event.data.type==='ac-game-loaded'){status.hidden=true;frame.focus();}
+  else if(event.data.type==='ac-game-error'){frame.hidden=true;status.hidden=false;status.textContent='Game startup error: '+(event.data.reason||'runtime');}
+ });
+ try{
+  const response=await fetch('../catalog.json');
+  if(!response.ok)throw new Error('Registry unavailable');
+  const registry=await response.json(),game=registry.games.find(item=>item.id===params.get('id'));
+  if(!game)throw new Error('Unknown game');
+  const url=new URL(game.entry,base);url.searchParams.set('check',params.get('build')||'current');
+  frame.src=url.href;
+ }catch(error){frame.hidden=true;status.textContent=error.message;}
+})();
+</script></body></html>
