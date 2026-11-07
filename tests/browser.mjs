@@ -49,6 +49,8 @@ async function worker(){
    }
    const domControl=scope.locator('.play-button,.start-button,.option_image,.card,.js-pacman-start').first();
    if(await domControl.isVisible().catch(()=>false))await domControl.click({timeout:1500}).catch(()=>{});
+   const textPlay=scope.getByText(/^play(?: now)?$/i).first();
+   if(await textPlay.isVisible().catch(()=>false))await textPlay.click({timeout:1500}).catch(()=>{});
    const canvas=scope.locator('canvas').first();
    if(await canvas.isVisible().catch(()=>false)){
     const box=await canvas.boundingBox();if(box){const x=Math.min(box.x+box.width/2,1280-8),y=Math.min(box.y+box.height/2,(isMobile?844:800)-8);if(isMobile)await page.touchscreen.tap(Math.min(x,382),y);else await page.mouse.click(x,y);}
