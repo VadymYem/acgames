@@ -15,6 +15,12 @@ async function worker(){
  for(;;){
   const game=queue.shift();if(!game)return;
   const context=await browser.newContext({viewport:isMobile?{width:390,height:844}:{width:1280,height:800},hasTouch:isMobile,isMobile,userAgent:device==='android'?'Mozilla/5.0 (Linux; Android 16; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Mobile Safari/537.36':device==='ios'?'Mozilla/5.0 (iPhone; CPU iPhone OS 19_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/19.0 Mobile/15E148 Safari/604.1':undefined});
+  await context.addInitScript(()=>{
+   window.__acPolicyViolations=[];
+   document.addEventListener('securitypolicyviolation',event=>{
+    if(/^https?:/i.test(event.blockedURI))window.__acPolicyViolations.push(event.blockedURI);
+   });
+  });
   const page=await context.newPage();const errors=[],missing=[],external=[],blocked=[],rowStacks=[];
   page.on('pageerror',e=>{errors.push(e.message);rowStacks.push(e.stack);});
   page.on('response',r=>{if(r.status()>=400)missing.push({status:r.status(),url:r.url().replace('http://127.0.0.1:4173/','')});});
@@ -38,6 +44,11 @@ async function worker(){
    else{for(const key of ['Enter','ArrowRight','ArrowUp','ArrowLeft','ArrowDown','Space'])await page.keyboard.press(key).catch(()=>{});}
    await page.waitForTimeout(1200);
    row.surface=await page.evaluate(()=>({canvas:[...document.querySelectorAll('canvas')].filter(c=>c.width>1&&c.height>1).length,buttons:document.querySelectorAll('button,input,[role="button"],.tile,.square,.cell,.card,.option_image,.play-button,.js-pacman-playground>*').length,text:document.body?.innerText.trim().length||0,flash:document.querySelectorAll('ruffle-player').length,overflow:document.documentElement.scrollWidth>innerWidth+2}));
+   const policy=await page.evaluate(()=>window.__acPolicyViolations||[]);
+   for(const url of new Set(policy)){
+    if(/fonts\.google|unity3d|analytics|googletagmanager|sockjs-node/.test(url))continue;
+    if(!missing.some(item=>item.url===url))missing.push({status:'csp-blocked',url});
+   }
    row.started=Boolean(row.surface.canvas||row.surface.buttons||row.surface.flash);
    row.passed=row.started&&errors.length===0&&missing.length===0&&external.length===0;
    await page.screenshot({path:path.join(out,game.id+'.jpg'),type:'jpeg',quality:60,timeout:5000}).catch(()=>{});

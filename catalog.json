@@ -25,6 +25,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -51,6 +57,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -80,8 +100,8 @@
       },
       "verificationEvidence": {
         "desktop": {
-          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
-          "workflowRun": 42382708081
+          "sourceCommit": "86457661095062549750a90a5ab0c17a396d9ffa",
+          "workflowRun": 42384056308
         }
       }
     },
@@ -112,8 +132,8 @@
       },
       "verificationEvidence": {
         "desktop": {
-          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
-          "workflowRun": 42382708081
+          "sourceCommit": "86457661095062549750a90a5ab0c17a396d9ffa",
+          "workflowRun": 42384056308
         }
       }
     },
@@ -141,6 +161,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -167,6 +193,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -193,6 +225,20 @@
         "desktop": "needs-review",
         "android": "needs-review",
         "ios": "needs-review"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -219,6 +265,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -245,6 +297,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -271,6 +329,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -297,6 +361,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "needs-review"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -323,6 +401,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -349,6 +433,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -375,6 +465,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -401,6 +497,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -427,6 +529,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -453,6 +561,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -479,6 +593,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -505,6 +625,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -534,16 +668,16 @@
       },
       "verificationEvidence": {
         "desktop": {
-          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
-          "workflowRun": 42382708081
+          "sourceCommit": "86457661095062549750a90a5ab0c17a396d9ffa",
+          "workflowRun": 42384056308
         },
         "android": {
-          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
-          "workflowRun": 42382708081
+          "sourceCommit": "86457661095062549750a90a5ab0c17a396d9ffa",
+          "workflowRun": 42384056308
         },
         "ios": {
-          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
-          "workflowRun": 42382708081
+          "sourceCommit": "86457661095062549750a90a5ab0c17a396d9ffa",
+          "workflowRun": 42384056308
         }
       }
     },
@@ -574,16 +708,16 @@
       },
       "verificationEvidence": {
         "desktop": {
-          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
-          "workflowRun": 42382708081
+          "sourceCommit": "86457661095062549750a90a5ab0c17a396d9ffa",
+          "workflowRun": 42384056308
         },
         "android": {
-          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
-          "workflowRun": 42382708081
+          "sourceCommit": "86457661095062549750a90a5ab0c17a396d9ffa",
+          "workflowRun": 42384056308
         },
         "ios": {
-          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
-          "workflowRun": 42382708081
+          "sourceCommit": "86457661095062549750a90a5ab0c17a396d9ffa",
+          "workflowRun": 42384056308
         }
       }
     },
@@ -611,6 +745,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -637,6 +777,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -666,16 +812,16 @@
       },
       "verificationEvidence": {
         "desktop": {
-          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
-          "workflowRun": 42382708081
+          "sourceCommit": "86457661095062549750a90a5ab0c17a396d9ffa",
+          "workflowRun": 42384056308
         },
         "android": {
-          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
-          "workflowRun": 42382708081
+          "sourceCommit": "86457661095062549750a90a5ab0c17a396d9ffa",
+          "workflowRun": 42384056308
         },
         "ios": {
-          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
-          "workflowRun": 42382708081
+          "sourceCommit": "86457661095062549750a90a5ab0c17a396d9ffa",
+          "workflowRun": 42384056308
         }
       }
     },
@@ -703,6 +849,20 @@
         "desktop": "needs-review",
         "android": "needs-review",
         "ios": "needs-review"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -729,6 +889,12 @@
         "desktop": "needs-review",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -755,6 +921,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "needs-review"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -781,6 +961,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -807,6 +1001,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -833,6 +1041,12 @@
         "desktop": "needs-review",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -859,6 +1073,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "86457661095062549750a90a5ab0c17a396d9ffa",
+          "workflowRun": 42384056308
+        }
       }
     },
     {
@@ -885,6 +1105,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -911,6 +1137,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -937,6 +1177,20 @@
         "desktop": "needs-review",
         "android": "needs-review",
         "ios": "needs-review"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -963,6 +1217,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -989,6 +1257,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -1015,6 +1289,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -1041,6 +1329,12 @@
         "desktop": "needs-review",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -1067,6 +1361,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -1093,6 +1393,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -1119,6 +1425,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -1145,6 +1457,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -1171,6 +1489,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -1197,6 +1521,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -1223,6 +1561,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -1249,6 +1593,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -1275,6 +1625,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -1301,6 +1665,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -1327,6 +1697,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -1353,6 +1737,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "needs-review"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -1367,7 +1765,7 @@
       "devices": {
         "desktop": false,
         "android": false,
-        "ios": true
+        "ios": false
       },
       "review": "smoke-tested",
       "candidateDevices": {
@@ -1378,7 +1776,22 @@
       "verification": {
         "desktop": "needs-review",
         "android": "needs-review",
-        "ios": "smoke-pass"
+        "ios": "needs-review"
+      },
+      "verificationNotes": "Shared external dependencies are still missing; kept unpublished on iOS despite an initial smoke pass.",
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -1405,6 +1818,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -1431,6 +1858,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -1457,6 +1898,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -1483,6 +1938,12 @@
         "desktop": "needs-review",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -1509,6 +1970,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -1535,6 +2010,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -1561,6 +2050,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -1587,6 +2082,20 @@
         "desktop": "needs-review",
         "android": "needs-review",
         "ios": "needs-review"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -1613,6 +2122,20 @@
         "desktop": "needs-review",
         "android": "needs-review",
         "ios": "needs-review"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -1639,6 +2162,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -1665,6 +2202,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -1691,6 +2242,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -1717,6 +2282,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -1746,16 +2325,16 @@
       },
       "verificationEvidence": {
         "desktop": {
-          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
-          "workflowRun": 42382708081
+          "sourceCommit": "86457661095062549750a90a5ab0c17a396d9ffa",
+          "workflowRun": 42384056308
         },
         "android": {
-          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
-          "workflowRun": 42382708081
+          "sourceCommit": "86457661095062549750a90a5ab0c17a396d9ffa",
+          "workflowRun": 42384056308
         },
         "ios": {
-          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
-          "workflowRun": 42382708081
+          "sourceCommit": "86457661095062549750a90a5ab0c17a396d9ffa",
+          "workflowRun": 42384056308
         }
       }
     },
@@ -1783,6 +2362,20 @@
         "desktop": "needs-review",
         "android": "needs-review",
         "ios": "needs-review"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -1809,6 +2402,20 @@
         "desktop": "needs-review",
         "android": "needs-review",
         "ios": "needs-review"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -1838,16 +2445,16 @@
       },
       "verificationEvidence": {
         "desktop": {
-          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
-          "workflowRun": 42382708081
+          "sourceCommit": "86457661095062549750a90a5ab0c17a396d9ffa",
+          "workflowRun": 42384056308
         },
         "android": {
-          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
-          "workflowRun": 42382708081
+          "sourceCommit": "86457661095062549750a90a5ab0c17a396d9ffa",
+          "workflowRun": 42384056308
         },
         "ios": {
-          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
-          "workflowRun": 42382708081
+          "sourceCommit": "86457661095062549750a90a5ab0c17a396d9ffa",
+          "workflowRun": 42384056308
         }
       }
     },
@@ -1875,6 +2482,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -1901,6 +2514,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -1927,6 +2546,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -1953,6 +2578,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -1979,6 +2618,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -2005,6 +2650,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -2031,6 +2682,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -2057,6 +2714,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -2083,6 +2754,12 @@
         "desktop": "needs-review",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -2109,6 +2786,12 @@
         "desktop": "needs-review",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -2135,6 +2818,12 @@
         "desktop": "needs-review",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -2161,6 +2850,12 @@
         "desktop": "needs-review",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -2190,16 +2885,16 @@
       },
       "verificationEvidence": {
         "desktop": {
-          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
-          "workflowRun": 42382708081
+          "sourceCommit": "86457661095062549750a90a5ab0c17a396d9ffa",
+          "workflowRun": 42384056308
         },
         "android": {
-          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
-          "workflowRun": 42382708081
+          "sourceCommit": "86457661095062549750a90a5ab0c17a396d9ffa",
+          "workflowRun": 42384056308
         },
         "ios": {
-          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
-          "workflowRun": 42382708081
+          "sourceCommit": "86457661095062549750a90a5ab0c17a396d9ffa",
+          "workflowRun": 42384056308
         }
       }
     },
@@ -2227,6 +2922,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -2253,6 +2962,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -2279,6 +3002,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -2305,6 +3034,12 @@
         "desktop": "needs-review",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -2331,6 +3066,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -2357,6 +3098,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -2383,6 +3138,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -2409,6 +3178,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -2435,6 +3210,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -2461,6 +3250,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -2487,6 +3282,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -2513,6 +3314,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -2539,6 +3354,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -2568,16 +3389,16 @@
       },
       "verificationEvidence": {
         "desktop": {
-          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
-          "workflowRun": 42382708081
+          "sourceCommit": "86457661095062549750a90a5ab0c17a396d9ffa",
+          "workflowRun": 42384056308
         },
         "android": {
-          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
-          "workflowRun": 42382708081
+          "sourceCommit": "86457661095062549750a90a5ab0c17a396d9ffa",
+          "workflowRun": 42384056308
         },
         "ios": {
-          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
-          "workflowRun": 42382708081
+          "sourceCommit": "86457661095062549750a90a5ab0c17a396d9ffa",
+          "workflowRun": 42384056308
         }
       }
     },
@@ -2605,6 +3426,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "needs-review"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -2631,6 +3466,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -2657,6 +3506,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -2683,6 +3546,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -2709,6 +3586,12 @@
         "desktop": "needs-review",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -2735,6 +3618,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -2761,6 +3650,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -2787,6 +3690,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -2813,6 +3730,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -2839,6 +3762,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -2865,6 +3802,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -2891,6 +3834,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -2905,7 +3862,7 @@
       "devices": {
         "desktop": false,
         "android": false,
-        "ios": true
+        "ios": false
       },
       "review": "smoke-tested",
       "candidateDevices": {
@@ -2916,7 +3873,22 @@
       "verification": {
         "desktop": "needs-review",
         "android": "needs-review",
-        "ios": "smoke-pass"
+        "ios": "needs-review"
+      },
+      "verificationNotes": "Shared external dependencies are still missing; kept unpublished on iOS despite an initial smoke pass.",
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -2943,6 +3915,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -2969,6 +3955,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -2995,6 +3987,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -3021,6 +4027,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -3047,6 +4067,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -3073,6 +4107,20 @@
         "desktop": "needs-review",
         "android": "needs-review",
         "ios": "needs-review"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -3099,6 +4147,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -3125,6 +4187,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -3151,6 +4227,12 @@
         "desktop": "needs-review",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -3177,6 +4259,20 @@
         "desktop": "needs-review",
         "android": "needs-review",
         "ios": "needs-review"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -3203,6 +4299,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -3229,6 +4339,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -3255,6 +4371,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -3281,6 +4403,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -3307,6 +4435,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -3333,6 +4467,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -3359,6 +4507,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -3385,6 +4539,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -3411,6 +4571,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -3437,6 +4611,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -3463,6 +4643,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -3489,6 +4675,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -3515,6 +4715,20 @@
         "desktop": "needs-review",
         "android": "needs-review",
         "ios": "needs-review"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -3541,6 +4755,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -3567,6 +4795,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -3593,6 +4835,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -3619,6 +4875,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -3645,6 +4907,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -3671,6 +4947,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -3697,6 +4979,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -3723,6 +5019,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -3749,6 +5051,12 @@
         "desktop": "needs-review",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -3775,6 +5083,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -3801,6 +5115,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -3827,6 +5147,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -3856,16 +5182,16 @@
       },
       "verificationEvidence": {
         "desktop": {
-          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
-          "workflowRun": 42382708081
+          "sourceCommit": "86457661095062549750a90a5ab0c17a396d9ffa",
+          "workflowRun": 42384056308
         },
         "android": {
-          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
-          "workflowRun": 42382708081
+          "sourceCommit": "86457661095062549750a90a5ab0c17a396d9ffa",
+          "workflowRun": 42384056308
         },
         "ios": {
-          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
-          "workflowRun": 42382708081
+          "sourceCommit": "86457661095062549750a90a5ab0c17a396d9ffa",
+          "workflowRun": 42384056308
         }
       }
     },
@@ -3893,6 +5219,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -3919,6 +5259,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -3945,6 +5299,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -3971,6 +5339,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -3997,6 +5379,20 @@
         "desktop": "needs-review",
         "android": "needs-review",
         "ios": "needs-review"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -4023,6 +5419,20 @@
         "desktop": "needs-review",
         "android": "needs-review",
         "ios": "needs-review"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -4049,6 +5459,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -4075,6 +5499,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -4101,6 +5539,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -4127,6 +5571,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -4153,6 +5603,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -4179,6 +5635,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -4205,6 +5675,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -4231,6 +5707,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -4257,6 +5747,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -4283,6 +5779,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -4309,6 +5811,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -4335,6 +5843,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -4361,6 +5875,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -4387,6 +5915,12 @@
         "desktop": "needs-review",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -4416,16 +5950,16 @@
       },
       "verificationEvidence": {
         "desktop": {
-          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
-          "workflowRun": 42382708081
+          "sourceCommit": "86457661095062549750a90a5ab0c17a396d9ffa",
+          "workflowRun": 42384056308
         },
         "android": {
-          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
-          "workflowRun": 42382708081
+          "sourceCommit": "86457661095062549750a90a5ab0c17a396d9ffa",
+          "workflowRun": 42384056308
         },
         "ios": {
-          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
-          "workflowRun": 42382708081
+          "sourceCommit": "86457661095062549750a90a5ab0c17a396d9ffa",
+          "workflowRun": 42384056308
         }
       }
     },
@@ -4456,16 +5990,16 @@
       },
       "verificationEvidence": {
         "desktop": {
-          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
-          "workflowRun": 42382708081
+          "sourceCommit": "86457661095062549750a90a5ab0c17a396d9ffa",
+          "workflowRun": 42384056308
         },
         "android": {
-          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
-          "workflowRun": 42382708081
+          "sourceCommit": "86457661095062549750a90a5ab0c17a396d9ffa",
+          "workflowRun": 42384056308
         },
         "ios": {
-          "sourceCommit": "885be71cd68a3a3ca3045b1f6147092738cb481d",
-          "workflowRun": 42382708081
+          "sourceCommit": "86457661095062549750a90a5ab0c17a396d9ffa",
+          "workflowRun": 42384056308
         }
       }
     },
@@ -4493,6 +6027,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -4519,6 +6059,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -4545,6 +6091,12 @@
         "desktop": "needs-review",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -4571,6 +6123,12 @@
         "desktop": "needs-review",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -4597,6 +6155,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -4623,6 +6187,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -4649,6 +6219,20 @@
         "desktop": "smoke-pass",
         "android": "needs-review",
         "ios": "needs-review"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "86457661095062549750a90a5ab0c17a396d9ffa",
+          "workflowRun": 42384056308
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -4675,6 +6259,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "needs-review"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -4701,6 +6299,20 @@
         "desktop": "needs-review",
         "android": "needs-review",
         "ios": "needs-review"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -4727,6 +6339,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -4753,6 +6371,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -4779,6 +6411,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -4805,6 +6451,20 @@
         "desktop": "needs-review",
         "android": "needs-review",
         "ios": "needs-review"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -4831,6 +6491,20 @@
         "desktop": "smoke-pass",
         "android": "smoke-pass",
         "ios": "smoke-pass"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -4857,6 +6531,20 @@
         "desktop": "needs-review",
         "android": "needs-review",
         "ios": "needs-review"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "android": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        },
+        "ios": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -4883,6 +6571,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -4909,6 +6603,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     },
     {
@@ -4935,6 +6635,12 @@
         "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
+      },
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+          "workflowRun": 42382014303
+        }
       }
     }
   ],
@@ -4973,13 +6679,11 @@
     "tictactoe": "Duplicate of tictactoe-retro."
   },
   "verification": {
-    "sourceCommit": "83642b1ed1a91f3b6b39b05a3300a8c6c1460caa",
-    "workflowRun": 42380357397,
-    "method": "Browser load and basic input smoke; not a complete playthrough.",
+    "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
+    "workflowRun": 42382014303,
     "additionalRuns": [
-      42382014259,
-      42382374323,
-      42382708081
-    ]
+      42384056308
+    ],
+    "method": "Full browser load/input smoke plus targeted repair checks; not a complete playthrough. Coloron and Moto X3M are withheld on iOS because shared external dependencies remain missing."
   }
 }
