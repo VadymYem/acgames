@@ -19,29 +19,36 @@ VENDOR = {
  'playcanvas-stable.min.js':'playcanvas.min.js'
 }
 CSP = "default-src 'self' data: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob:; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' data: blob:; worker-src 'self' blob:; frame-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'none'"
-TRACKER = re.compile(r'googletagmanager|google-analytics|cloudflareinsights|analytics_ubg|analytics_games235|imasdk\.googleapis|3kh0\.github\.io/js/main|ven0myt\.github\.io/js/main|cdn-cgi/|/assets/js/prefixfree|^/js/main\.js', re.I)
+TRACKER = re.compile(r'googletagmanager|google-analytics|cloudflareinsights|analytics_ubg|analytics_games235|imasdk\.googleapis|3kh0\.github\.io/js/main|ven0myt\.github\.io/js/main|cdn-cgi/|/assets/js/prefixfree|hextris\.io/scripts|^/js/main\.js', re.I)
 REPORT = []
 def rel(p, target): return os.path.relpath(ROOT / target, p.parent).replace(os.sep,'/')
 def resource_script(match, p):
  tag = match.group(0)
- m = re.search(r'\bsrc\s*=\s*([\'"])(.*?)\1', tag, re.S|re.I)
+ m = re.search(r'''\bsrc\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))''', tag, re.S|re.I)
  if not m: return tag
- src = html.unescape(m.group(2))
+ group = next(i for i in (1,2,3) if m.group(i) is not None)
+ src = html.unescape(m.group(group))
  if TRACKER.search(src):
   REPORT.append({'path':str(p.relative_to(ROOT)), 'removed':src}); return ''
  if src.startswith(('http:','https:','//')):
   for key, target in VENDOR.items():
-   if key in src: return tag[:m.start(2)] + rel(p,'shared/vendor/'+target) + tag[m.end(2):]
+   if key in src: return tag[:m.start(group)] + rel(p,'shared/vendor/'+target) + tag[m.end(group):]
   # GIF Maker and CodePen are tools/demos, not standalone game dependencies.
   REPORT.append({'path':str(p.relative_to(ROOT)), 'removed':src}); return ''
  return tag
 
-def clean_html(p):
- s=p.read_text(errors='replace')
- s=re.sub(r'<script\b[^>]*>\s*// AuthorChe Clean Game Wrapper.*?</script>', '', s, flags=re.S|re.I)
- s=re.sub(r'<script\b[^>]*>\s*window\.open\s*=.*?</script>', '', s, flags=re.S|re.I)
- s=re.sub(r'<script\b(?![^>]*\bsrc=)[^>]*>[^<]*(?:\bgtag\(|google-analytics\.com|googletagmanager\.com)[\s\S]*?</script>', '', s, flags=re.I)
- s=re.sub(r'<script\b[^>]*\bsrc\s*=\s*[\'"][^\'"]+[\'"][^>]*>\s*</script>', lambda m:resource_script(m,p),s,flags=re.S|re.I)
+def sanitize_source(s, p):
+ def script_element(match):
+  tag=match.group(0)
+  opening=tag[:tag.index('>')+1]
+  if re.search(r'\bsrc\s*=',opening,re.I):
+   return resource_script(match,p)
+  body=tag[tag.index('>')+1:tag.lower().rfind('</script>')]
+  if re.search(r'GoogleAnalyticsObject|google-analytics\.com|googletagmanager\.com|connect.facebook.net|adsbygoogle|cloudflareinsights|\bgtag\s*\(|// AuthorChe Clean Game Wrapper|^\s*window\.open\s*=',body,re.I):
+   return ''
+  return tag
+ # Match one complete script at a time: removal must never span page markup.
+ s=re.sub(r'<script\b[^>]*>[\s\S]*?</script\s*>',script_element,s,flags=re.I)
  s=re.sub(r'<link\b[^>]*>',lambda m:'' if re.search(r'(?:fonts\.googleapis|fonts\.gstatic|rawgit|greghub\.github|weavesilk\.com|g\.eags\.us)',m.group(0),re.I) else m.group(0),s,flags=re.I)
  s=re.sub(r'<meta\b[^>]*http-equiv=[\'"]Content-Security-Policy[\'"][^>]*>','',s,flags=re.I)
  s=re.sub(r'<base\b[^>]*>','',s,flags=re.I)
@@ -60,46 +67,53 @@ def clean_html(p):
  if p.parent.name=='dj': s=s.replace('src="/js/main.js"','src="main.js"')
  if p.parent.name=='poker':
   s=s.replace('src="static/js/jquery.js"','src="'+rel(p,'shared/vendor/jquery-classic.min.js')+'"').replace('src="casino.ogg"','src="sounds/casino.ogg"')
+ return s
+
+def clean_html(p):
+ p.write_text(sanitize_source(p.read_text(errors='replace'),p))
+
+def main():
+ # Slope 3 contains its complete runtime in an archive; unpack it once for normal HTTP loading.
+ p=GAMES/'slope3/slope3.zip'
+ if p.exists():
+  with zipfile.ZipFile(p) as z:
+   for name in z.namelist():
+    if name.startswith('slope3/') and not '/cdn-cgi/' in name and not name.endswith('/'):
+     target=GAMES/'slope3'/name[len('slope3/'):]
+     target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(z.read(name))
+  # Keep the source archive for reproducible production builds.
+ 
+ # Fix the Doodle Jump entry before dropping unrelated /js/main.js includes.
+ p=GAMES/'dj/index.html'
+ p.write_text(p.read_text().replace('src="/js/main.js"','src="main.js"'))
+ 
+ # Lightweight publisher API replacements retain callbacks needed by game logic.
+ platform=(ROOT/'shared/platform.js').read_text()
+ for p in GAMES.rglob('*.js'):
+  name=p.name.lower()
+  if name in ['poki.js','poki-sdk.js','poki-sdk-core.js','gm-sdk.js','gm-sdk-mobile.js']:
+   p.write_text(platform)
+  elif name.startswith(('analytics_ubg','analytics_games')):
+   p.write_text('/* Analytics is managed by the consent-aware AuthorChe parent page. */\n')
+  elif name=='nitromepreloader.js' or name=='unityprogress.js':
+   p.write_text((ROOT/'shared/preloader.js').read_text())
+ 
+ # Particle Clicker calls this public facade throughout its interface.
+ p=GAMES/'particleclicker/js/analytics.js'
+ s=p.read_text();s=re.sub(r'enabled:\s*true','enabled: false',s)
+ s=re.sub(r'init:\s*function\(\)\s*\{.*?\n    \},', 'init: function() {},', s, count=1, flags=re.S)
+ # Keep the named methods, disable sending even when a game calls one directly.
+ s=s.replace("ga(", "void(")
  p.write_text(s)
+ 
+ for p in GAMES.rglob('*.css'):
+  s=p.read_text(errors='replace')
+  s=re.sub(r'@import\s+(?:url\()?\s*[\'"]?https?://fonts\.googleapis[^;]*;','',s,flags=re.I)
+  p.write_text(s)
+ for p in GAMES.rglob('*.html'): clean_html(p)
+ (ROOT/'reports').mkdir(exist_ok=True)
+ (ROOT/'reports/sanitization.json').write_text(json.dumps(REPORT,ensure_ascii=False,indent=2)+'\n')
+ print('Normalized',len(list(GAMES.rglob('*.html'))),'HTML files; removed',len(REPORT),'remote script integrations')
 
-# Slope 3 contains its complete runtime in an archive; unpack it once for normal HTTP loading.
-p=GAMES/'slope3/slope3.zip'
-if p.exists():
- with zipfile.ZipFile(p) as z:
-  for name in z.namelist():
-   if name.startswith('slope3/') and not '/cdn-cgi/' in name and not name.endswith('/'):
-    target=GAMES/'slope3'/name[len('slope3/'):]
-    target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(z.read(name))
- # Keep the source archive for reproducible production builds.
-
-# Fix the Doodle Jump entry before dropping unrelated /js/main.js includes.
-p=GAMES/'dj/index.html'
-p.write_text(p.read_text().replace('src="/js/main.js"','src="main.js"'))
-
-# Lightweight publisher API replacements retain callbacks needed by game logic.
-platform=(ROOT/'shared/platform.js').read_text()
-for p in GAMES.rglob('*.js'):
- name=p.name.lower()
- if name in ['poki.js','poki-sdk.js','poki-sdk-core.js','gm-sdk.js','gm-sdk-mobile.js']:
-  p.write_text(platform)
- elif name.startswith(('analytics_ubg','analytics_games')):
-  p.write_text('/* Analytics is managed by the consent-aware AuthorChe parent page. */\n')
- elif name=='nitromepreloader.js' or name=='unityprogress.js':
-  p.write_text((ROOT/'shared/preloader.js').read_text())
-
-# Particle Clicker calls this public facade throughout its interface.
-p=GAMES/'particleclicker/js/analytics.js'
-s=p.read_text();s=re.sub(r'enabled:\s*true','enabled: false',s)
-s=re.sub(r'init:\s*function\(\)\s*\{.*?\n    \},', 'init: function() {},', s, count=1, flags=re.S)
-# Keep the named methods, disable sending even when a game calls one directly.
-s=s.replace("ga(", "void(")
-p.write_text(s)
-
-for p in GAMES.rglob('*.css'):
- s=p.read_text(errors='replace')
- s=re.sub(r'@import\s+(?:url\()?\s*[\'"]?https?://fonts\.googleapis[^;]*;','',s,flags=re.I)
- p.write_text(s)
-for p in GAMES.rglob('*.html'): clean_html(p)
-(ROOT/'reports').mkdir(exist_ok=True)
-(ROOT/'reports/sanitization.json').write_text(json.dumps(REPORT,ensure_ascii=False,indent=2)+'\n')
-print('Normalized',len(list(GAMES.rglob('*.html'))),'HTML files; removed',len(REPORT),'remote script integrations')
+if __name__ == '__main__':
+ main()

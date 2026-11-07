@@ -6,13 +6,60 @@
 
 
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+
+
+
 		<meta charset="utf-8" />
 		<meta http-equiv="pragma" content="no-cache"/>
 		<meta name ="viewport" content="width=512px, user-scalable=0, minimal-ui" />
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 		<title>60 Seconds Burger Run</title>
+		<script type="text/javascript" src="js/phaser.js"></script>
+		<script type="text/javascript" src="js/loader.js"></script>
+		<script type="text/javascript" src="js/title.js"></script>
+		<script type="text/javascript" src="js/level.js"></script>
+		<script type="text/javascript" src="js/bus.js"></script>
+		<script type="text/javascript" src="js/gameOver.js"></script>
+		<script type="text/javascript">document.ontouchmove = function (e) {e.preventDefault();}</script>
 		
+
+		
+		<style type="text/css">
+		@font-face {
+    font-family: "font";
+    src: url(font.ttf) format("truetype");
+}
+			body {
+				font-size:34px;
+				padding: 0px;
+				margin: 0px;
+				background: #000000;
+				width: 512px;
+				overflow-y: hidden;
+				padding-bottom: 280px;
+			}
+		</style>
+	
+            <style type="text/css">
+              .no-select {
+              -webkit-touch-callout: none; /* iOS Safari */
+              -webkit-user-select: none; /* Safari */
+              -khtml-user-select: none; /* Konqueror HTML */
+              -moz-user-select: none; /* Old versions of Firefox */
+              -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+              }
+            </style>
+          
+            <script type="text/javascript">
+              setTimeout(function(){
+                if(document.getElementsByTagName("canvas").length) {
+                  document.getElementsByTagName("canvas")[0].classList.add("no-select")
+                }
+              }, 2000);
+            </script>
           <script type="text/javascript">
           function setUserAgent(window, userAgent) {
            // Works on Firefox, Chrome, Opera and IE9+
@@ -195,7 +242,22 @@
 
 
 	</script>
-		<script src="js/phaser.js"></script><script src="js/loader.js"></script><script src="js/title.js"></script><script src="js/level.js"></script><script src="js/gameOver.js"></script><script src="js/bus.js"></script><script src="js/main.js"></script>
-	</body>	
+		<script src="js/main.js"></script>
+	<script>function fnSendMsg(evt){
+			window.parent.postMessage('keypress-from-game', '*');
+		}
+		document.body.addEventListener('click', function(event) {
+		  fnSendMsg(event);
+		});
+		document.addEventListener('keypress', function(event) {
+			fnSendMsg(event);
+		});
+		document.addEventListener('keydown', function (e) {
+			 fnSendMsg(event);
+		});
+		document.addEventListener('keyup', function (e) {
+			  fnSendMsg(event);
+		});
+		</script></body>	
 </html>
 
