@@ -33,11 +33,19 @@
   w.RufflePlayer.config = {allowScriptAccess: false, openUrlMode: 'deny', showRuffleLogo: false, contextMenu: 'off', splashScreen: false};
   function suppressed(value) {
     const url = String(value && value.url || value || '');
-    return /(?:config\.uca\.cloud\.unity3d|cdp\.cloud\.unity3d|api\.uca\.cloud\.unity3d|stats\.unity3d|perf-events\.cloud\.unity3d|gameanalytics\.com|google-analytics|googletagmanager|cloudflareinsights|recordsession\.php|unitygame\.herokuapp\.com\/bitlife\/transfer|sockjs-node|nitrome\.com\/ajax\/v1\/|t\.y8\.com\/log)/i.test(url);
+    return /(?:config\.uca\.cloud\.unity3d|cdp\.cloud\.unity3d|api\.uca\.cloud\.unity3d|stats\.unity3d|perf-events\.cloud\.unity3d|gameanalytics\.com|google-analytics|googletagmanager|cloudflareinsights|recordsession\.php|unitygame\.herokuapp\.com\/bitlife\/transfer|mochibot\.com|ngads\.com|itch\.io\/html-callback|game\.y2013\.com\/loaded\/|ninjakiwi\.com\/(?:nklogin|Games\/NewsFeed|btd5\/scripts)|sockjs-node|nitrome\.com\/ajax\/v1\/|t\.y8\.com\/log)/i.test(url);
+  }
+  function offlineResponse(value) {
+    const url = String(value && value.url || value || '');
+    if (/\.swf(?:[?#]|$)/i.test(url)) {
+      const movie = new Uint8Array([70,87,83,9,16,0,0,0,8,0,0,12,1,0,0,0]);
+      return new Response(movie, {status: 200, headers: {'Content-Type': 'application/x-shockwave-flash'}});
+    }
+    return new Response('{}', {status: 200, headers: {'Content-Type': 'application/json'}});
   }
   const nativeFetch = w.fetch;
   if (nativeFetch) w.fetch = function (input, options) {
-    if (suppressed(input)) return Promise.resolve(new Response('{}', {status: 200, headers: {'Content-Type': 'application/json'}}));
+    if (suppressed(input)) return Promise.resolve(offlineResponse(input));
     return nativeFetch.call(this, input, options);
   };
   if (w.XMLHttpRequest) {
@@ -68,9 +76,29 @@
     user: {isUserAccountAvailable: false, getUser: function () { return Promise.resolve(null); }}
   };
   w.CrazyGames = {SDK: crazy, CrazySDK: {getInstance: function () { return crazy; }}};
+  // SDKs are supplied locally; prevent legacy engines from injecting another copy.
+  if (d.head && d.createElement && !d.getElementById('gamedistribution-jssdk')) {
+    const marker = d.createElement('meta');
+    marker.id = 'gamedistribution-jssdk';
+    d.head.appendChild(marker);
+  }
+  let gdOptions = w.GD_OPTIONS, gdAnnounced;
+  Object.defineProperty(w, 'GD_OPTIONS', {
+    configurable: true,
+    get: function () { return gdOptions; },
+    set: function (options) {
+      gdOptions = options;
+      Promise.resolve().then(function () { gdEvent('SDK_READY'); });
+    }
+  });
   function gdEvent(name) {
     const options = w.GD_OPTIONS;
-    if (options && typeof options.onEvent === 'function') options.onEvent({name: name});
+    if (!options || typeof options.onEvent !== 'function') return;
+    if (name === 'SDK_READY') {
+      if (gdAnnounced === options) return;
+      gdAnnounced = options;
+    }
+    options.onEvent({name: name});
   }
   w.gdsdk = {
     AdType: {Rewarded: 'rewarded', Interstitial: 'interstitial'},
