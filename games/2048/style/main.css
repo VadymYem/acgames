@@ -756,3 +756,43 @@ hr {
     margin-top: 90px !important; }
   .game-message .lower {
     margin-top: 30px !important; } }
+
+/* Keep the complete board visible inside the game player. */
+:root{--board-size:clamp(220px,min(500px,calc(100vw - 24px),calc(100vh - 210px)),500px);--board-gap:10px;--board-cell:calc((var(--board-size) - 50px)/4)}
+@supports(height:100dvh){:root{--board-size:clamp(220px,min(500px,calc(100vw - 24px),calc(100dvh - 210px)),500px)}}
+body{margin:12px 0;padding:0;font-size:16px}
+.container{width:var(--board-size);margin:0 auto}
+.heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}
+h1.title{font-size:clamp(30px,7vw,54px);margin:0;float:none}
+.scores-container{display:flex;gap:5px;float:none}
+.score-container,.best-container{margin-top:0;padding:15px 10px;min-width:40px}
+.above-game{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.game-intro{width:auto;flex:1;float:none;line-height:1.4;font-size:14px}
+.restart-button{float:none;flex:none;width:auto;padding:0 14px;margin:0;font-size:14px}
+.game-container{width:var(--board-size);height:var(--board-size);margin-top:12px;padding:10px}
+.grid-row{margin-bottom:var(--board-gap)}
+.grid-cell{width:var(--board-cell);height:var(--board-cell);margin-right:var(--board-gap)}
+.tile,.tile .tile-inner{width:var(--board-cell);height:var(--board-cell);line-height:var(--board-cell)}
+.tile .tile-inner{font-size:calc(var(--board-cell)*.5)}
+.tile.tile-128 .tile-inner,.tile.tile-256 .tile-inner,.tile.tile-512 .tile-inner{font-size:calc(var(--board-cell)*.4)}
+.tile.tile-1024 .tile-inner,.tile.tile-2048 .tile-inner,.tile.tile-super .tile-inner{font-size:calc(var(--board-cell)*.3)}
+.tile.tile-position-1-1{transform:translate(calc((var(--board-cell) + var(--board-gap))*0),calc((var(--board-cell) + var(--board-gap))*0))}
+.tile.tile-position-1-2{transform:translate(calc((var(--board-cell) + var(--board-gap))*0),calc((var(--board-cell) + var(--board-gap))*1))}
+.tile.tile-position-1-3{transform:translate(calc((var(--board-cell) + var(--board-gap))*0),calc((var(--board-cell) + var(--board-gap))*2))}
+.tile.tile-position-1-4{transform:translate(calc((var(--board-cell) + var(--board-gap))*0),calc((var(--board-cell) + var(--board-gap))*3))}
+.tile.tile-position-2-1{transform:translate(calc((var(--board-cell) + var(--board-gap))*1),calc((var(--board-cell) + var(--board-gap))*0))}
+.tile.tile-position-2-2{transform:translate(calc((var(--board-cell) + var(--board-gap))*1),calc((var(--board-cell) + var(--board-gap))*1))}
+.tile.tile-position-2-3{transform:translate(calc((var(--board-cell) + var(--board-gap))*1),calc((var(--board-cell) + var(--board-gap))*2))}
+.tile.tile-position-2-4{transform:translate(calc((var(--board-cell) + var(--board-gap))*1),calc((var(--board-cell) + var(--board-gap))*3))}
+.tile.tile-position-3-1{transform:translate(calc((var(--board-cell) + var(--board-gap))*2),calc((var(--board-cell) + var(--board-gap))*0))}
+.tile.tile-position-3-2{transform:translate(calc((var(--board-cell) + var(--board-gap))*2),calc((var(--board-cell) + var(--board-gap))*1))}
+.tile.tile-position-3-3{transform:translate(calc((var(--board-cell) + var(--board-gap))*2),calc((var(--board-cell) + var(--board-gap))*2))}
+.tile.tile-position-3-4{transform:translate(calc((var(--board-cell) + var(--board-gap))*2),calc((var(--board-cell) + var(--board-gap))*3))}
+.tile.tile-position-4-1{transform:translate(calc((var(--board-cell) + var(--board-gap))*3),calc((var(--board-cell) + var(--board-gap))*0))}
+.tile.tile-position-4-2{transform:translate(calc((var(--board-cell) + var(--board-gap))*3),calc((var(--board-cell) + var(--board-gap))*1))}
+.tile.tile-position-4-3{transform:translate(calc((var(--board-cell) + var(--board-gap))*3),calc((var(--board-cell) + var(--board-gap))*2))}
+.tile.tile-position-4-4{transform:translate(calc((var(--board-cell) + var(--board-gap))*3),calc((var(--board-cell) + var(--board-gap))*3))}
+.game-explanation{margin-top:14px;font-size:14px;line-height:1.4}
+.game-container .game-message.game-won,.game-container .game-message.game-over{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px}
+.game-container .game-message p{margin:0!important;height:auto!important;line-height:1.2!important;font-size:clamp(28px,6vw,48px)!important}
+.game-container .game-message .lower{margin:0!important}
