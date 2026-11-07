@@ -170128,10 +170128,7 @@ function _PP3(_Yr3, _QP3, _RP3) {
     );
     return;
   }
-  var _tm3 = /* removed window.open */,
-    yyGetString(_QP3),
-    yyGetString(_RP3)
-  );
+  var _tm3 = null;
 }
 var _SP3 = _Z52;
 function _Z52(_Yr3, _QP3) {
@@ -239095,7 +239092,7 @@ function _u76() {
 }
 function _v76() {
   try {
-    _mj3 = /* removed window.open */;
+    _mj3 = null;
     if (_mj3) {
       if (!_mj3.document.getElementById("debug_console")) {
         {

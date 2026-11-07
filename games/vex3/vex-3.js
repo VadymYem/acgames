@@ -407,7 +407,7 @@ var a, b;
                     break;
 
                   case exports.BrandingDomain.Admeen:
-                    return url = 'https://media.admeen.com/branding/link.php', void ((win = /* removed window.open */) && win.focus && win.focus());
+                    return url = 'https://media.admeen.com/branding/link.php', void ((win = null) && win.focus && win.focus());
 
                   case exports.BrandingDomain.PlayCell:
                     url = protocol + 'www.playcell.com';
@@ -422,7 +422,7 @@ var a, b;
                     break;
 
                   case exports.BrandingDomain.Bild:
-                    return void ((win = /* removed window.open */) && win.focus && win.focus());
+                    return void ((win = null) && win.focus && win.focus());
 
                   case exports.BrandingDomain.Funnygames:
                     url = protocol + 'www.funnygames.nu';
@@ -441,7 +441,7 @@ var a, b;
                     url = protocol + 'm.zigiz.com';
                 }
                 var utmContent = 'string' == typeof type ? type : exports.UtmTargets[type];
-                (win = /* removed window.open */) && win.focus && win.focus();
+                (win = null) && win.focus && win.focus();
             }
         }, Branding$$1.isInternal = function() {
             return Branding$$1.hostMatchesList(Loader.instance.get(Branding$$1.INTERNAL_PORTALS_KEY));
@@ -40484,7 +40484,7 @@ var GameStates, TimerGui = function() {
     }, MainMenu.prototype.showAchievements = function(main) {
         h5branding.google.sendScreenView('achievements_menu'), h5branding.Utils.isOnDevice() ? SocialServicesHandler.showAchievements(this.game) : main.state === GameStates.MainMenu && main.achievementsWindow.show();
     }, MainMenu.prototype.vex4Link = function() {
-        /* removed window.open */;
+        null;
     }, MainMenu.prototype.enterMenu = function() {
         this.logoAni = 0, this.vexLogo.position.y = -200, this.buttonLayer.y = 600, this.logoScale = 1;
     }, MainMenu.prototype.update = function() {
@@ -42262,7 +42262,7 @@ var SaveGame = function() {
         this.container.position.set(game.width / 2, -60), this.frame = this.container.create(0, 0, 'stuckWindow'), 
         this.frame.anchor.set(.5, .5), this.screenX = game.width, this.container.visible = !1, 
         this.showing = !1, this.frame.inputEnabled = !0, this.frame.events.onInputUp.add((function() {
-            /* removed window.open */;
+            null;
         }));
     }
     StuckPopup.prototype.show = function(level) {

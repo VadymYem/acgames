@@ -818,11 +818,11 @@
       "review": "candidate"
     },
     {
-      "id": "connect3",
-      "title": "Connect 3",
+      "id": "connect-four",
+      "title": "Чотири в ряд",
       "category": "puzzle",
-      "entry": "games/connect3/index.html",
-      "cover": "shared/covers/connect3.svg",
+      "entry": "games/connect-four/index.html",
+      "cover": "shared/covers/connect-four.svg",
       "kind": "html5",
       "controls": "touch",
       "instructions": "Торкання або миша; підказки керування — у грі.",
@@ -834,11 +834,11 @@
       "review": "candidate"
     },
     {
-      "id": "cookieclicker",
-      "title": "Cookie Clicker",
-      "category": "strategy",
-      "entry": "games/cookieclicker/index.html",
-      "cover": "shared/covers/cookieclicker.svg",
+      "id": "connect3",
+      "title": "Connect 3",
+      "category": "puzzle",
+      "entry": "games/connect3/index.html",
+      "cover": "shared/covers/connect3.svg",
       "kind": "html5",
       "controls": "touch",
       "instructions": "Торкання або миша; підказки керування — у грі.",
@@ -1287,22 +1287,6 @@
       "category": "puzzle",
       "entry": "games/flappy-2048/play/index.html",
       "cover": "shared/covers/flappy-2048.svg",
-      "kind": "html5",
-      "controls": "touch",
-      "instructions": "Торкання або миша; підказки керування — у грі.",
-      "devices": {
-        "desktop": true,
-        "android": true,
-        "ios": true
-      },
-      "review": "candidate"
-    },
-    {
-      "id": "flappybird",
-      "title": "Flappy Bird",
-      "category": "arcade",
-      "entry": "games/flappybird/index.html",
-      "cover": "shared/covers/flappybird.svg",
       "kind": "html5",
       "controls": "touch",
       "instructions": "Торкання або миша; підказки керування — у грі.",
@@ -1778,6 +1762,22 @@
       "review": "candidate"
     },
     {
+      "id": "nonogram",
+      "title": "Нонограми",
+      "category": "puzzle",
+      "entry": "games/nonogram/index.html",
+      "cover": "shared/covers/nonogram.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
       "id": "packabunchas",
       "title": "PACKABUNCHAS",
       "category": "puzzle",
@@ -2130,6 +2130,22 @@
       "review": "candidate"
     },
     {
+      "id": "simon-memory",
+      "title": "Світлова пам’ять",
+      "category": "puzzle",
+      "entry": "games/simon-memory/index.html",
+      "cover": "shared/covers/simon-memory.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
       "id": "skibiditoilet",
       "title": "Skibidi Toilet 1v100",
       "category": "action",
@@ -2391,6 +2407,22 @@
       "category": "racing",
       "entry": "games/subway-surfers-ny/index.html",
       "cover": "shared/covers/subway-surfers-ny.webp",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "devices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "review": "candidate"
+    },
+    {
+      "id": "sudoku",
+      "title": "Судоку",
+      "category": "puzzle",
+      "entry": "games/sudoku/index.html",
+      "cover": "shared/covers/sudoku.svg",
       "kind": "html5",
       "controls": "touch",
       "instructions": "Торкання або миша; підказки керування — у грі.",
@@ -2915,6 +2947,8 @@
     }
   ],
   "excluded": {
+    "cookieclicker": "Publisher notice explicitly forbids rehosting; excluded from publication.",
+    "flappybird": "PlayCanvas scene and asset files are missing; local 3D variant is available.",
     "avatar": "Shared poker artwork, not a game.",
     "1v1lol": "Empty AlgebraHelper page; no game runtime.",
     "8ball": "Missing proxy endpoint; no local pool game.",

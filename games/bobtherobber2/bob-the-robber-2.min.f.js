@@ -32273,7 +32273,7 @@ function(e, t) {
                     break;
                 case h.BrandingDomain.Admeen:
                     return i = "https://media.admeen.com/branding/link.php",
-                    void ((r = /* removed window.open */) && r.focus && r.focus());
+                    void ((r = null) && r.focus && r.focus());
                 case h.BrandingDomain.PlayCell:
                     i = s + "www.playcell.com";
                     break;
@@ -32285,12 +32285,12 @@ function(e, t) {
                     i = "http://www.kizi.com";
                     break;
                 case h.BrandingDomain.Bild:
-                    return void ((r = /* removed window.open */) && r.focus && r.focus());
+                    return void ((r = null) && r.focus && r.focus());
                 case h.BrandingDomain.Funnygames:
                     i = s + "www.funnygames.nu"
                 }
                 var a = "string" == typeof t ? t : h.UtmTargets[t];
-                (r = /* removed window.open */) && r.focus && r.focus()
+                (r = null) && r.focus && r.focus()
             }
         }
         ,
@@ -122407,7 +122407,7 @@ var Boot = states.Boot
     }
     ,
     u.GetURL = function(e) {
-        /* removed window.open */
+        null
     }
     ,
     u.OnSegment = function(e, t, i) {

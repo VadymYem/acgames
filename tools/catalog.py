@@ -6,6 +6,8 @@ import json,re,html,hashlib,shutil
 ROOT=Path(__file__).resolve().parents[1]
 GAMES=ROOT/'games'
 EXCLUDED={
+ 'cookieclicker':'Publisher notice explicitly forbids rehosting; excluded from publication.',
+ 'flappybird':'PlayCanvas scene and asset files are missing; local 3D variant is available.',
  'avatar':'Shared poker artwork, not a game.',
  '1v1lol':'Empty AlgebraHelper page; no game runtime.',
  '8ball':'Missing proxy endpoint; no local pool game.',
@@ -32,6 +34,7 @@ EXCLUDED={
  'snake':'Duplicate of snake-retro.', 'tetris':'Duplicate of tetris-retro.', 'tictactoe':'Duplicate of tictactoe-retro.'
 }
 TITLES={
+ 'connect-four':'Чотири в ряд','sudoku':'Судоку','nonogram':'Нонограми','simon-memory':'Світлова пам’ять',
  '1on1soccer':'1 on 1 Soccer','2drocketleague':'Rocket League 2D','60sburgerrun':'60 Seconds Burger Run',
  'achieveunlocked':'Achievement Unlocked','achieveunlocked2':'Achievement Unlocked 2','adarkroom':'A Dark Room',
  'adofai':'A Dance of Fire and Ice','agario-offline':'Agar Arena Offline','ageofwar':'Age of War','amongus':'Among Us',
@@ -74,8 +77,8 @@ TITLES={
  'ts':'Typing Speed','wbwwb':'We Become What We Behold','wg':'Guess the Word',
  'worldshardestgame':"The World’s Hardest Game",'xx142-b2exe':'xx142-b2.exe'
 }
-MOBILE=set('2048 adarkroom amongus badicecream badicecream2 badicecream3 ball-shooting basketballstars basketrandom boxingrandom bitlife blackholesquare bp breaker breaklock canvas-untangle-game chess clicker clickerheroes coloron connect3 cookieclicker count-99 css3-matching-game cube cuttheropeholiday cuttheropetimetravel dino dj doctor-acorn2 doctor-acorn3 doge2048 dogeminer drift-boss drivemad edge-surf factoryballsforever flappy-2048 flappybird flappybird-retro flappydot gh gn gorilla hangman hextris holeio icypurplehead2 icypurplehead3 jetpackjoyride maze mc menja minesweeper motox3m multiply-defense packabunchas pacman paperio particleclicker physicsplayground poker pushback rcs roadblocks rush sandbox sh shuttledeck skibiditoiletattack slitherio-offline spacecompany spacegarden spacehuggers spaceinvaders stack stacktower subway-surfers subway-surfers-ny sw tetris-retro tictactoe-retro tinyfishing towermaster vex3 vex4 vex5 walls wbwwb weavesilk wg wordle'.split())
-PUZZLE=set('2048 blackholesquare bp breaklock canvas-untangle-game chess connect3 count-99 css3-matching-game cube doge2048 factoryballsforever flappy-2048 gn hangman hextris konnekt maze mc minesweeper packabunchas poker roadblocks rcs tictactoe-retro wg wordle'.split())
+MOBILE=set('connect-four sudoku nonogram simon-memory 2048 adarkroom amongus badicecream badicecream2 badicecream3 ball-shooting basketballstars basketrandom boxingrandom bitlife blackholesquare bp breaker breaklock canvas-untangle-game chess clicker clickerheroes coloron connect3 cookieclicker count-99 css3-matching-game cube cuttheropeholiday cuttheropetimetravel dino dj doctor-acorn2 doctor-acorn3 doge2048 dogeminer drift-boss drivemad edge-surf factoryballsforever flappy-2048 flappybird flappybird-retro flappydot gh gn gorilla hangman hextris holeio icypurplehead2 icypurplehead3 jetpackjoyride maze mc menja minesweeper motox3m multiply-defense packabunchas pacman paperio particleclicker physicsplayground poker pushback rcs roadblocks rush sandbox sh shuttledeck skibiditoiletattack slitherio-offline spacecompany spacegarden spacehuggers spaceinvaders stack stacktower subway-surfers subway-surfers-ny sw tetris-retro tictactoe-retro tinyfishing towermaster vex3 vex4 vex5 walls wbwwb weavesilk wg wordle'.split())
+PUZZLE=set('connect-four sudoku nonogram simon-memory 2048 blackholesquare bp breaklock canvas-untangle-game chess connect3 count-99 css3-matching-game cube doge2048 factoryballsforever flappy-2048 gn hangman hextris konnekt maze mc minesweeper packabunchas poker roadblocks rcs tictactoe-retro wg wordle'.split())
 RACING=set('2drocketleague box2d-car-game drift-boss drivemad gopher motox3m racer snowrider3d subway-surfers subway-surfers-ny'.split())
 STRATEGY=set('adarkroom ageofwar btd btd2 btd3 btd4 btd5 clicker clickerheroes cookieclicker dogeminer particleclicker spacecompany universal-paperclips'.split())
 ACTION=set('asciispace asteroids bounceback captaincallisto gh gunmayhem2 menja multiply-defense q1k3 radiusraid rb skibiditoilet skibiditoiletattack spacehuggers spaceinvaders sw timeshooter1 underrun xx142-b2exe'.split())

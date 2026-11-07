@@ -3650,7 +3650,7 @@
                             e.Download(t, n)
                         } else {
                             var o = URL.createObjectURL(t),
-                                s = /* removed window.open */;
+                                s = null;
                             if (!s) return;
                             var a = s.document.createElement("img");
                             a.onload = function() {

@@ -384,6 +384,7 @@
                if(this.isInputBlocked) return;
 
                let currentCell = this.grid[this.index(this.player.i, this.player.j)];
+               if (!currentCell) return;
                let moved = false;
 
                if (dir === 'up' && !currentCell.walls[0]) {

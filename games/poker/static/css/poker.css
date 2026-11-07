@@ -154,7 +154,7 @@ html {
     left: 5px;
     position: absolute;
     transform: rotate(0deg);
-    background-image: url('../images/cardback.png');
+    background-image: url('../images/cardback.gif');
     background-size: 100%;
     border-radius: 4px;
     height:75px;
@@ -166,7 +166,7 @@ html {
     left: 46px;
     position: absolute;
     transform: rotate(0deg);
-    background-image: url('../images/cardback.png');
+    background-image: url('../images/cardback.gif');
     background-size: 100%;
     border-radius: 4px;
     height:75px;
@@ -178,7 +178,7 @@ html {
     left: -15px;
     position: absolute;
     transform: rotate(0deg);
-    background-image: url('../images/cardback.png');
+    background-image: url('../images/cardback.gif');
     background-size: 100%;
     border-radius: 4px;
     height:75px;
@@ -190,7 +190,7 @@ html {
     left: 26px;
     position: absolute;
     transform: rotate(0deg);
-    background-image: url('../images/cardback.png');
+    background-image: url('../images/cardback.gif');
     background-size: 100%;
     border-radius: 4px;
     height:75px;

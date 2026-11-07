@@ -1950,7 +1950,7 @@
                 else if (self["cordova"] && self["cordova"]["InAppBrowser"])
                     self["cordova"]["InAppBrowser"]["open"](url, "_system");
                 else if (exportType === "preview")
-                    /* removed window.open */;
+                    null;
                 else if (!this._isScirraArcade)
                     if (target === 2)
                         window.top.location = url;
@@ -1967,7 +1967,7 @@
                 else if (self["cordova"] && self["cordova"]["InAppBrowser"])
                     self["cordova"]["InAppBrowser"]["open"](url, "_system");
                 else
-                    /* removed window.open */
+                    null
             }
         }
         _OnRequestFullscreen(e) {

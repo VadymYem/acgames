@@ -80,7 +80,7 @@ function internal_setCard (diva, card, folded) {
   } else if (card === "") {
     image = "url('static/images/outline.gif')";
   } else if (card === "blinded") {
-    image = "url('static/images/cardback.png')";
+    image = "url('static/images/cardback.gif')";
   } else {
     if (folded) {
       opacity = 0.5;

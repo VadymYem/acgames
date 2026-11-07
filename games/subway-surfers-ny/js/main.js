@@ -12413,7 +12413,7 @@
                   this.app.prompt.open(this.subtitle.description, this.subtitle.text, function (t) {
                     t && ((e.subtitle.text = t), (e.value = t));
                   }),
-                "link" === this.type && /* removed window.open */;
+                "link" === this.type && null;
             }),
             (n.toggle = function () {
               this.value = !this.value;

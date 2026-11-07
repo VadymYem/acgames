@@ -38,7 +38,7 @@ uauth.open = function(type, exts, callback) {
 		// popup picker mode
 		
 		let timestamp = Date.now();
-		let pickerWindow = /* removed window.open */);
+		let pickerWindow = null;
 		
 		function messageHandler(e) {
 			if (uauth.origins.includes(e.origin)) uauth.log(e.data.webretro, timestamp);
@@ -54,7 +54,7 @@ uauth.open = function(type, exts, callback) {
 		// cross-origin isolated picker mode
 		
 		let timestamp = Date.now();
-		let pickerWindow = /* removed window.open */.href) + "&timestamp=" + timestamp + "&type=" + type + "&exts=" + exts.join(","));
+		let pickerWindow = null;
 		
 		function messageHandler(e) {
 			if (uauth.origins.includes(e.data.fwOrigin)) uauth.log(e.data.webretro, timestamp);

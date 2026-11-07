@@ -1,6 +1,11 @@
 /* AuthorChe game platform. Games run locally without advertising or telemetry. */
 (function (w, d) {
   'use strict';
+  const Audio = w.AudioBufferSourceNode;
+  if (Audio && Audio.prototype) {
+    if (!Audio.prototype.noteOn) Audio.prototype.noteOn = Audio.prototype.start;
+    if (!Audio.prototype.noteOff) Audio.prototype.noteOff = Audio.prototype.stop;
+  }
   const noop = function () {};
   const ready = function () { return Promise.resolve(); };
   const rewarded = function (callback) {
@@ -10,6 +15,28 @@
   const finish = function (callbacks) {
     if (callbacks && typeof callbacks.adFinished === 'function') callbacks.adFinished();
   };
+  w.RufflePlayer = w.RufflePlayer || {};
+  w.RufflePlayer.config = {allowScriptAccess: false, openUrlMode: 'deny', showRuffleLogo: false, contextMenu: 'off', splashScreen: false};
+  function suppressed(value) {
+    const url = String(value && value.url || value || '');
+    return /(?:config\.uca\.cloud\.unity3d|cdp\.cloud\.unity3d|api\.uca\.cloud\.unity3d|stats\.unity3d|perf-events\.cloud\.unity3d|google-analytics|googletagmanager|cloudflareinsights|recordsession\.php|unitygame\.herokuapp\.com\/bitlife\/transfer|sockjs-node)/i.test(url);
+  }
+  const nativeFetch = w.fetch;
+  if (nativeFetch) w.fetch = function (input, options) {
+    if (suppressed(input)) return Promise.resolve(new Response('{}', {status: 200, headers: {'Content-Type': 'application/json'}}));
+    return nativeFetch.call(this, input, options);
+  };
+  if (w.XMLHttpRequest) {
+    const open = w.XMLHttpRequest.prototype.open, send = w.XMLHttpRequest.prototype.send;
+    w.XMLHttpRequest.prototype.open = function (method, url) {
+      this.acSuppressed = suppressed(url);
+      if (this.acSuppressed) return open.call(this, 'GET', 'data:application/json,%7B%7D', true);
+      return open.apply(this, arguments);
+    };
+    w.XMLHttpRequest.prototype.send = function (body) { return send.call(this, this.acSuppressed ? null : body); };
+  }
+  const beacon = navigator.sendBeacon;
+  if (beacon) navigator.sendBeacon = function (url, data) { return suppressed(url) ? true : beacon.call(this, url, data); };
   w.PokiSDK = {
     init: ready, initWithVideoback: ready, setDebug: noop, setDebugTouchOverlayController: noop,
     gameLoadingStart: noop, gameLoadingProgress: noop, gameLoadingFinished: noop,
@@ -32,6 +59,7 @@
     if (options && typeof options.onEvent === 'function') options.onEvent({name: name});
   }
   w.gdsdk = {
+    AdType: {Rewarded: 'rewarded', Interstitial: 'interstitial'},
     showAd: function () { gdEvent('SDK_GAME_START'); return Promise.resolve(); },
     preloadAd: ready, openConsole: noop, cancelAd: noop,
     showBanner: ready, getSession: function () { return Promise.resolve({}); }
