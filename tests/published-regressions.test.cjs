@@ -53,3 +53,33 @@ test('Subway mesh cloning honors its explicit texture after asynchronous model l
  assert.equal(clone.material.map,'props-bitmap');
  assert.equal(clone.geometry,entity.view3d.geometry);
 });
+
+test('Burger Run can start and restart with an inaccessible publisher window',()=>{
+ const parent=new Proxy({},{get(){throw new Error('Cross-origin publisher access');}});
+ let starts=0,stops=0,clicks=0;
+ const context={parent,newState(){starts++;},game:{sound:{stopAll(){stops++;}}},sprt:{gameDone:true},rotDevice:false,clickSound(){clicks++;}};
+ vm.createContext(context);
+ vm.runInContext(fs.readFileSync('dist/games/60sburgerrun/js/loader.js','utf8'),context);
+ context.startGame();
+ assert.equal(starts,1);
+ vm.runInContext(fs.readFileSync('dist/games/60sburgerrun/js/level.js','utf8'),context);
+ context.controlDown();
+ assert.equal(starts,2);
+ assert.equal(stops,1);
+ assert.equal(context.levl,0);
+ vm.runInContext(fs.readFileSync('dist/games/60sburgerrun/js/gameOver.js','utf8'),context);
+ context.goClick();
+ assert.equal(starts,3);
+ assert.equal(clicks,1);
+});
+test('SM64 initializes its canvas without access to parent keyboard listeners',()=>{
+ const html=fs.readFileSync('dist/games/sm64/index.html','utf8');
+ const script=html.match(/<script>\s*([\s\S]*?var Module[\s\S]*?)<\/script>/)[1];
+ const canvas={addEventListener(){}};
+ const parent=new Proxy({},{get(){throw new Error('Cross-origin publisher access');}});
+ const context={parent,document:{querySelector(){return canvas;},body:{focus(){}}},window:{focus(){},innerWidth:1280,innerHeight:800},console};
+ vm.runInNewContext(script,context);
+ assert.equal(context.Module.canvas,canvas);
+ assert.equal(canvas.width,1280);
+ assert.equal(canvas.height,800);
+});
