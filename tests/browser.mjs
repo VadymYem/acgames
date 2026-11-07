@@ -3,6 +3,7 @@ import path from 'node:path';
 import {chromium,webkit} from 'playwright';
 const registry=JSON.parse(fs.readFileSync('catalog.json','utf8'));
 const device=process.env.GAME_DEVICE||'desktop';
+const BASE=(process.env.GAME_BASE_URL||'http://127.0.0.1:4173/').replace(/\/?$/, '/');
 const isMobile=device!=='desktop';
 const engine=device==='ios'?webkit:chromium;
 const browser=await engine.launch({headless:true,args:device==='ios'?[]:['--enable-unsafe-swiftshader','--use-gl=angle','--use-angle=swiftshader']});
@@ -23,12 +24,12 @@ async function worker(){
   });
   const page=await context.newPage();const errors=[],missing=[],external=[],blocked=[],rowStacks=[];
   page.on('pageerror',e=>{errors.push(e.message);rowStacks.push(e.stack);});
-  page.on('response',r=>{if(r.status()>=400)missing.push({status:r.status(),url:r.url().replace('http://127.0.0.1:4173/','')});});
-  page.on('response',r=>{if(/^https?:/.test(r.url())&&!r.url().startsWith('http://127.0.0.1:4173/'))external.push(r.url());});
-  page.on('requestfailed',r=>{if(/^https?:/.test(r.url())&&!r.url().startsWith('http://127.0.0.1:4173/')){blocked.push(r.url());if(!/fonts\.google|unity3d|analytics|googletagmanager|sockjs-node/.test(r.url()))missing.push({status:'blocked-external',url:r.url()});}});
+  page.on('response',r=>{if(r.status()>=400)missing.push({status:r.status(),url:r.url().replace(BASE,'')});});
+  page.on('response',r=>{if(/^https?:/.test(r.url())&&!r.url().startsWith(BASE))external.push(r.url());});
+  page.on('requestfailed',r=>{if(/^https?:/.test(r.url())&&!r.url().startsWith(BASE)){blocked.push(r.url());if(!/fonts\.google|unity3d|analytics|googletagmanager|sockjs-node/.test(r.url()))missing.push({status:'blocked-external',url:r.url()});}});
   const row={id:game.id,device,entry:game.entry,errors,missing,external,blocked,stacks:rowStacks};
   try{
-   await page.goto('http://127.0.0.1:4173/'+game.entry,{waitUntil:'domcontentloaded',timeout:30000});
+   await page.goto(BASE+game.entry,{waitUntil:'domcontentloaded',timeout:30000});
    await page.mouse.click(12,12).catch(()=>{});
    await page.waitForTimeout(game.kind==='flash'?10000:5500);
    for(const name of [/^play(?: now)?$/i,/^start(?: game)?$/i,/^new game$/i,/^continue$/i,/^Почати$/i]){
