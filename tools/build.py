@@ -49,6 +49,34 @@ for name in ['index.html','LICENSE','README.md','main.min.js']:
 (DEST/'.nojekyll').touch()
 print(f"Built {len(selected)} games, {sum(p.stat().st_size for p in DEST.rglob('*') if p.is_file())/1e6:.1f} MB")
 
+
+# Prepare upstream exports for a standalone production runtime.
+def patch_runtime(name, old, new):
+ target = DEST/name
+ if not target.exists(): return
+ text = target.read_text(encoding='utf-8-sig')
+ if text.count(old) != 1: raise ValueError(f'Unexpected export layout: {name}')
+ target.write_text(text.replace(old,new,1),encoding='utf-8')
+ print(f'Prepared standalone runtime: {name}')
+
+patch_runtime('games/friendlyfire/FriendlyFire.js',
+ 'return __webpack_require__(__webpack_require__.s = 0);',
+ 'return __webpack_require__(__webpack_require__.s = "./lib/FriendlyFire.js");')
+patch_runtime('games/subway-surfers-ny/js/main.js',
+ 'o = "string" == typeof t ? this.getEntity(t) : t;',
+ 'o = "string" == typeof t ? this.getEntity(t, e) : t;')
+patch_runtime('games/breaklock/index.html',
+ '<object class="introduction-demo" data="assets/intro.svg" type="image/svg+xml"></object>',
+ '<img class="introduction-demo" src="assets/intro.svg" alt="Example of a lock pattern">')
+patch_runtime('games/wbwwb/index.html',
+ '<script defer src="htmlgame.js" type="text/javascript"></script>', '')
+tracker = DEST/'games/wbwwb/htmlgame.js'
+if tracker.exists(): tracker.unlink()
+music = DEST/'games/ayun/music.js'
+if music.exists():
+ music.write_text("window.startmusic=function(){};window.stopmusic=function(){};window.volmusic=function(){};window.playingmusic=function(){return true;};\n")
+shutil.copyfile(DEST/'shared/platform.js',DEST/'main.min.js')
+
 # Keep the available level-completion cue under the runtime's expected name.
 fishing=DEST/'games/tinyfishing/html5game'
 if fishing.exists() and not (fishing/'snd_levCompl.ogg').exists():
