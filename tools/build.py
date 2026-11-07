@@ -88,3 +88,20 @@ if font_package.exists():
  font=font_package.read_bytes()[76165:100237]
  if font[:4]!=b'wOFF':raise ValueError('Drive Mad font package layout changed')
  (font_package.parent/'baloo2.woff').write_bytes(font)
+
+# Keep returning visitors on the same reviewed build as its manifest.
+import hashlib, os
+revision = os.environ.get('GITHUB_SHA') or hashlib.sha256((ROOT/'catalog.json').read_bytes()+(ROOT/'shared/platform.js').read_bytes()+Path(__file__).read_bytes()).hexdigest()[:20]
+manifest = json.loads((DEST/'catalog.json').read_text())
+manifest['buildRevision'] = revision
+(DEST/'catalog.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
+def version_asset(match):
+ url = match.group(2)
+ if url.startswith(('https:','http:','//','data:','blob:','#')): return match.group(0)
+ return match.group(1)+url+('&' if '?' in url else '?')+'acv='+revision+match.group(3)
+for html in DEST.rglob('*.html'):
+ try: text = html.read_text(encoding='utf-8-sig')
+ except UnicodeError: continue
+ text = re.sub(r"""(<script\b[^>]*\bsrc=["'])([^"']+)(["'])""",version_asset,text,flags=re.I)
+ text = re.sub(r"""(<link\b[^>]*\bhref=["'])([^"']+\.css(?:\?[^"']*)?)(["'])""",version_asset,text,flags=re.I)
+ html.write_text(text,encoding='utf-8')
