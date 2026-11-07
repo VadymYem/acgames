@@ -28,7 +28,7 @@ async function worker(){
    for(const name of [/^play(?: now)?$/i,/^start(?: game)?$/i,/^new game$/i,/^continue$/i,/^Почати$/i]){
     const btn=page.getByRole('button',{name}).first();if(await btn.isVisible().catch(()=>false)){await btn.click({timeout:1500}).catch(()=>{});break;}
    }
-   const domControl=page.locator('.play-button,.option_image,.card,.js-pacman-start').first();
+   const domControl=page.locator('.play-button,.start-button,.option_image,.card,.js-pacman-start').first();
    if(await domControl.isVisible().catch(()=>false))await domControl.click({timeout:1500}).catch(()=>{});
    const canvas=page.locator('canvas').first();
    if(await canvas.isVisible().catch(()=>false)){

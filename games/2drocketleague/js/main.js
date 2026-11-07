@@ -128,6 +128,7 @@ function KeyboardController(keys, repeat) {
     // key action callback and set a timer to generate another one after a delay
     //
     document.onkeydown= function(event) {
+        if (players.length < 2) return true;
         var key= (event || window.event).keyCode;
         if (!(key in keys))
             return true;
