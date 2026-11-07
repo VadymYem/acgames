@@ -135,13 +135,26 @@
       if (url.origin !== w.location.origin) event.preventDefault();
     } catch (_) { event.preventDefault(); }
   }, true);
-  function announce(type) {
-    if (w.parent !== w) w.parent.postMessage({type: type, source: 'authorche-game'}, '*');
+  let startupFailed = false;
+  function announce(type, reason) {
+    if (w.parent !== w) w.parent.postMessage({type: type, reason: reason, source: 'authorche-game'}, '*');
   }
-  w.addEventListener('load', function () { gdEvent('SDK_READY'); announce('ac-game-loaded'); });
+  w.addEventListener('load', function () { gdEvent('SDK_READY'); if (!startupFailed) announce('ac-game-loaded'); });
   w.addEventListener('error', function (event) {
-    if (event.message) announce('ac-game-error');
+    if (event.message) { startupFailed = true; announce('ac-game-error', /webgl/i.test(event.message) ? 'webgl' : undefined); }
   });
+  d.addEventListener('webglcontextcreationerror', function () {
+    const probe = d.createElement('canvas');
+    let context;
+    try { context = probe.getContext('webgl2') || probe.getContext('webgl'); } catch (_) {}
+    if (context) {
+      const release = context.getExtension('WEBGL_lose_context');
+      if (release) release.loseContext();
+      return;
+    }
+    startupFailed = true;
+    announce('ac-game-error', 'webgl');
+  }, true);
   d.addEventListener('visibilitychange', function () {
     // Browser runtimes pause their animation callbacks in background tabs.
     if (d.hidden) {
