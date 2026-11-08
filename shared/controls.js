@@ -49,7 +49,8 @@
     const toggle=document.createElement('button');toggle.type='button';toggle.textContent='Екранні кнопки';toggle.setAttribute('aria-controls','ac-touch-pad');pad.id='ac-touch-pad';
     function show(value){pad.hidden=!value;toggle.setAttribute('aria-pressed',String(value));document.body.classList.toggle('ac-has-touch-pad',value);if(!value)release();}
     toggle.addEventListener('click',()=>show(pad.hidden));root.append(toggle);document.body.append(pad);
-    show(new URLSearchParams(location.search).get('touch')==='1'||(navigator.maxTouchPoints>0&&new URLSearchParams(location.search).get('touch')!=='0'));
+    const touchDevice=navigator.maxTouchPoints>0||matchMedia('(pointer: coarse)').matches||/Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    show(new URLSearchParams(location.search).get('touch')==='1'||(touchDevice&&new URLSearchParams(location.search).get('touch')!=='0'));
   }
   function available() {return Array.from(document.querySelectorAll('#arcade button,#arcade select,#arcade input')).filter(b=>!b.disabled&&!b.closest('[hidden]')&&b.getClientRects().length);}
   function focusButton(delta) {
