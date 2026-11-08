@@ -263,6 +263,7 @@
     function startGame() {
         document.getElementById('start-screen').style.display = 'none';
         document.getElementById('game-over').style.display = 'none';
+        document.querySelector('#game-over h1').textContent = 'CRASHED';
         
         snake = { 
             x: Math.floor(tileCountX / 2), 
@@ -343,9 +344,14 @@
             if (score % 50 === 0 && speed < 18) speed += 1;
             playSound('eat');
             createParticles(apple.x * grid + grid/2, apple.y * grid + grid/2, '#ff0055');
+            if (snake.maxCells >= tileCountX * tileCountY) {
+                gameOver();
+                document.querySelector('#game-over h1').textContent = 'ПЕРЕМОГА';
+                return;
+            }
             placeApple();
             updateUI();
-        } else {
+        } else if (snake.cells.length > snake.maxCells) {
             snake.cells.pop();
         }
 
@@ -480,4 +486,5 @@
     }, {passive: false});
 
 </script>
-</body></html>
+<script src="../../shared/controls.js"></script></body></html>
+

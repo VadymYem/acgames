@@ -204,7 +204,7 @@ var AudioEngine = {
     },
     loadAudioFile: function (src) {
         if (src.indexOf('http') === -1) {
-            src = window.location + src;
+            src = new URL(src, document.baseURI).href;
         }
         if (AudioEngine.AUDIO_BUFFER_CACHE[src]) {
             return new Promise(function (resolve, reject) {
@@ -280,3 +280,4 @@ var AudioEngine = {
         );
     }
 };
+

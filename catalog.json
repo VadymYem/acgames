@@ -1832,6 +1832,16 @@
           "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
           "workflowRun": 42382014303
         }
+      },
+      "features": {
+        "touch": true,
+        "keyboard": true,
+        "gamepad": false,
+        "local2p": true,
+        "quick": true,
+        "offline": true,
+        "progress": false,
+        "daily": false
       }
     },
     {
@@ -4859,6 +4869,16 @@
           "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
           "workflowRun": 42382014303
         }
+      },
+      "features": {
+        "touch": true,
+        "keyboard": true,
+        "gamepad": false,
+        "local2p": false,
+        "quick": true,
+        "offline": true,
+        "progress": false,
+        "daily": false
       }
     },
     {

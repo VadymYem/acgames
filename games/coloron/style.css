@@ -1,7 +1,7 @@
 /* author: Greg Hovanesyan
 https://codepen.io/gregh/pen/yVLOyO */
 
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css");
+
 #footer {
     margin-top: 20px;
     font-size: 0.9em;
@@ -522,11 +522,11 @@ body {
 }
 
 a {
-  cursor: url(https://greghub.github.io/coloron/public/svg/cursor.svg), pointer;
+  cursor: pointer;
 }
 a:focus,
 a:active {
-  cursor: url(https://greghub.github.io/coloron/public/svg/cursor-tap.svg), pointer;
+  cursor: pointer;
 }
 
 .container {
@@ -557,54 +557,54 @@ a:active {
   left: 0;
   top: 77px;
   height: 151px;
-  background: url(https://greghub.github.io/coloron/public/svg/clouds.svg) repeat-x;
+  background: none repeat-x;
   background-position-x: 170px;
 }
 
 .top_wave {
-  background: url(https://greghub.github.io/coloron/public/svg/top_wave.png) repeat-x 0 -1px;
+  background: none repeat-x 0 -1px;
   height: 35px;
   bottom: 0;
   z-index: 10001;
 }
 
 .wave1 {
-  background: url(https://greghub.github.io/coloron/public/svg/wave1.svg) repeat-x;
+  background: none repeat-x;
   height: 150px;
   bottom: 0;
   z-index: 23;
 }
 
 .wave2 {
-  background: url(https://greghub.github.io/coloron/public/svg/wave2.svg) repeat-x;
+  background: none repeat-x;
   height: 180px;
   bottom: 30px;
   z-index: 22;
 }
 
 .wave3 {
-  background: url(https://greghub.github.io/coloron/public/svg/wave3.svg) repeat-x;
+  background: none repeat-x;
   height: 180px;
   bottom: 90px;
   z-index: 21;
 }
 
 .wave4 {
-  background: url(https://greghub.github.io/coloron/public/svg/wave4.svg) repeat-x;
+  background: none repeat-x;
   height: 180px;
   bottom: 120px;
   z-index: 20;
 }
 
 .mount1 {
-  background: url(https://greghub.github.io/coloron/public/svg/mount1.svg) repeat-x;
+  background: none repeat-x;
   height: 150px;
   bottom: 280px;
   z-index: 11;
 }
 
 .mount2 {
-  background: url(https://greghub.github.io/coloron/public/svg/mount2.svg) repeat-x;
+  background: none repeat-x;
   height: 150px;
   bottom: 290px;
   z-index: 10;
@@ -617,7 +617,7 @@ a:active {
   left: 0;
   top: 0;
   z-index: 1010;
-  background: url(https://greghub.github.io/coloron/public/svg/noise.png);
+  background: none;
 }
 
 .glow {
@@ -668,17 +668,17 @@ a:active {
   height: 362px;
   width: 90px;
   border-radius: 14px;
-  background-image: url(https://greghub.github.io/coloron/public/svg/noise.png);
+  background-image: none;
   position: relative;
   overflow: hidden;
   float: left;
   margin-right: 90px;
   transition: background-color 0.4s ease;
-  cursor: url(https://greghub.github.io/coloron/public/svg/cursor.svg), pointer;
+  cursor: pointer;
 }
 .stick:focus,
 .stick:active {
-  cursor: url(https://greghub.github.io/coloron/public/svg/cursor-tap.svg), pointer;
+  cursor: pointer;
 }
 
 .stick.red {
@@ -699,7 +699,7 @@ a:active {
 
 .ball,
 .ball-demo {
-  background: url(https://greghub.github.io/coloron/public/svg/ball.svg) right bottom;
+  background: none right bottom;
   background-size: 64px 64px;
   width: 53px;
   height: 53px;
@@ -844,11 +844,11 @@ a:active {
   background: #4c4660;
 }
 .start-game .how-to-play .section-2 .bar {
-  cursor: url(https://greghub.github.io/coloron/public/svg/cursor.svg), pointer;
+  cursor: pointer;
 }
 .start-game .how-to-play .section-2 .bar:focus,
 .start-game .how-to-play .section-2 .bar:active {
-  cursor: url(https://greghub.github.io/coloron/public/svg/cursor-tap.svg), pointer;
+  cursor: pointer;
 }
 .start-game .how-to-play .section-3 .ball-demo {
   background-color: #815ff8;
@@ -1014,3 +1014,7 @@ a:active {
   top: 0;
   z-index: 9999;
 }
+
+
+/* Local decoration replaces remote presentation assets. */
+.clouds{background:radial-gradient(ellipse at 50% 100%,#ffffff55 0 45%,transparent 47%) 0 0/150px 70px repeat-x}.top_wave{background:linear-gradient(#25cec9,#159eac)}.wave1,.wave2,.wave3,.wave4{background:linear-gradient(transparent,#1c92a377)}
