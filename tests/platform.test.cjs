@@ -3,6 +3,19 @@ const {test}=require('node:test');
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const vm=require('node:vm');
+test('Flash statistics are answered locally before fetch, XHR or beacon reaches the network',async()=>{
+ const calls=[],opened=[],sent=[],document={addEventListener(){},querySelectorAll(){return [];}};
+ function XHR(){};XHR.prototype.open=function(...args){opened.push(args);};XHR.prototype.send=function(body){sent.push(body);};
+ const window={location:{href:'https://games.example/games/2048/',origin:'https://games.example'},addEventListener(){},dispatchEvent(){},XMLHttpRequest:XHR,fetch:async(...args)=>{calls.push(args);return new Response('local asset');}};
+ window.parent=window;const navigator={sendBeacon:(...args)=>{calls.push(args);return true;}};
+ vm.runInNewContext(fs.readFileSync('shared/platform.js','utf8'),{window,document,navigator,URL,Promise,Proxy,Event,Response,Uint8Array});
+ for(const url of ['http://tracker.swfstats.com/Games/q.aspx?guid=test','http://tracker.swfstats.com/Games/View.html?views=1']){
+  assert.equal(await(await window.fetch(url)).text(),'{}');assert.equal(navigator.sendBeacon(url,'data'),true);
+  const xhr=new window.XMLHttpRequest();xhr.open('POST',url);xhr.send('data');
+ }
+ assert.equal(calls.length,0);assert(opened.every(args=>args[1]==='data:application/json,%7B%7D'));assert(sent.every(body=>body===null));
+ await window.fetch('https://games.example/shared/local.js');assert.equal(calls.length,1,'local game resources retain normal network behavior');
+});
 test('advertising callbacks finish locally without a network SDK',async()=>{
  const handlers={};
  const document={addEventListener(){},querySelectorAll(){return [];}};
@@ -31,3 +44,4 @@ test('registry has unique entries, artwork and explicit device support',()=>{
  }
  assert(!catalog.games.some(g=>g.id==='avatar'));
 });
+

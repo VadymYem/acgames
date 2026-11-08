@@ -33,7 +33,7 @@
   w.RufflePlayer.config = {allowScriptAccess: false, openUrlMode: 'deny', showRuffleLogo: false, contextMenu: 'off', splashScreen: false};
   function suppressed(value) {
     const url = String(value && value.url || value || '');
-    return /(?:config\.uca\.cloud\.unity3d|cdp\.cloud\.unity3d|api\.uca\.cloud\.unity3d|stats\.unity3d|perf-events\.cloud\.unity3d|gameanalytics\.com|google-analytics|googletagmanager|cloudflareinsights|recordsession\.php|unitygame\.herokuapp\.com\/bitlife\/transfer|mochibot\.com|ngads\.com|kongregate\.com\/flash\/API_|itch\.io\/html-callback|game\.y2013\.com\/loaded\/|ninjakiwi\.com\/(?:nklogin|Games\/NewsFeed|btd5\/scripts)|sockjs-node|nitrome\.com\/ajax\/v1\/|t\.y8\.com\/log)/i.test(url);
+    return /(?:config\.uca\.cloud\.unity3d|cdp\.cloud\.unity3d|api\.uca\.cloud\.unity3d|stats\.unity3d|perf-events\.cloud\.unity3d|gameanalytics\.com|google-analytics|googletagmanager|cloudflareinsights|recordsession\.php|unitygame\.herokuapp\.com\/bitlife\/transfer|mochibot\.com|swfstats\.com|ngads\.com|kongregate\.com\/flash\/API_|itch\.io\/html-callback|game\.y2013\.com\/loaded\/|ninjakiwi\.com\/(?:nklogin|Games\/NewsFeed|btd5\/scripts)|sockjs-node|nitrome\.com\/ajax\/v1\/|t\.y8\.com\/log)/i.test(url);
   }
   function offlineResponse(value) {
     const url = String(value && value.url || value || '');
@@ -163,3 +163,4 @@
     }
   });
 })(window, document);
+

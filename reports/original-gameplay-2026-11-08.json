@@ -1,0 +1,503 @@
+[
+  {
+    "device": "desktop",
+    "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
+    "workflowRun": 42464906934,
+    "results": [
+      {
+        "id": "klondike",
+        "device": "desktop",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "stock draw and undo",
+          "saved game survives reload",
+          "no document overflow",
+          "keyboard focus"
+        ],
+        "passed": true
+      },
+      {
+        "id": "spider",
+        "device": "desktop",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "ten-card row deal and undo",
+          "saved game survives reload",
+          "no document overflow",
+          "keyboard focus"
+        ],
+        "passed": true
+      },
+      {
+        "id": "mahjong",
+        "device": "desktop",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "free-pair matching, hints and undo",
+          "saved game survives reload",
+          "no document overflow",
+          "keyboard focus"
+        ],
+        "passed": true
+      },
+      {
+        "id": "sokoban",
+        "device": "desktop",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "level completion, undo and editor toggle",
+          "saved game survives reload",
+          "no document overflow",
+          "keyboard focus"
+        ],
+        "passed": true
+      },
+      {
+        "id": "wordsearch",
+        "device": "desktop",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "finding complete words in Ukrainian, German and English",
+          "saved game survives reload",
+          "no document overflow",
+          "keyboard focus"
+        ],
+        "passed": true
+      },
+      {
+        "id": "draughts",
+        "device": "desktop",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "mandatory legal moves, four local turns and undo",
+          "saved game survives reload",
+          "no document overflow",
+          "keyboard focus"
+        ],
+        "passed": true
+      },
+      {
+        "id": "reversi",
+        "device": "desktop",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "legal flips, four local turns and undo",
+          "saved game survives reload",
+          "no document overflow",
+          "keyboard focus"
+        ],
+        "passed": true
+      },
+      {
+        "id": "battleship",
+        "device": "desktop",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "fleet setup, start and successful hit",
+          "saved game survives reload",
+          "no document overflow",
+          "keyboard focus"
+        ],
+        "passed": true
+      },
+      {
+        "id": "fruit-merge",
+        "device": "desktop",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "fruit drop, physics canvas and pause",
+          "saved game survives reload",
+          "no document overflow",
+          "keyboard focus"
+        ],
+        "passed": true
+      },
+      {
+        "id": "music-lab",
+        "device": "desktop",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "user-gesture Web Audio, note answers and interval mode",
+          "saved game survives reload",
+          "no document overflow",
+          "keyboard focus"
+        ],
+        "passed": true
+      },
+      {
+        "id": "sudoku",
+        "device": "desktop",
+        "checks": [
+          "daily progress survives reload",
+          "daily settings stay deterministic"
+        ],
+        "errors": [],
+        "passed": true
+      },
+      {
+        "id": "nonogram",
+        "device": "desktop",
+        "checks": [
+          "daily progress survives reload",
+          "daily settings stay deterministic"
+        ],
+        "errors": [],
+        "passed": true
+      }
+    ]
+  },
+  {
+    "device": "ios",
+    "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
+    "workflowRun": 42464906934,
+    "results": [
+      {
+        "id": "klondike",
+        "device": "ios",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "stock draw and undo",
+          "saved game survives reload",
+          "no document overflow",
+          "keyboard focus"
+        ],
+        "passed": true
+      },
+      {
+        "id": "spider",
+        "device": "ios",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "ten-card row deal and undo",
+          "saved game survives reload",
+          "no document overflow",
+          "keyboard focus"
+        ],
+        "passed": true
+      },
+      {
+        "id": "mahjong",
+        "device": "ios",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "free-pair matching, hints and undo",
+          "saved game survives reload",
+          "no document overflow",
+          "keyboard focus"
+        ],
+        "passed": true
+      },
+      {
+        "id": "sokoban",
+        "device": "ios",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "level completion, undo and editor toggle",
+          "saved game survives reload",
+          "no document overflow",
+          "keyboard focus"
+        ],
+        "passed": true
+      },
+      {
+        "id": "wordsearch",
+        "device": "ios",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "finding complete words in Ukrainian, German and English",
+          "saved game survives reload",
+          "no document overflow",
+          "keyboard focus"
+        ],
+        "passed": true
+      },
+      {
+        "id": "draughts",
+        "device": "ios",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "mandatory legal moves, four local turns and undo",
+          "saved game survives reload",
+          "no document overflow",
+          "keyboard focus"
+        ],
+        "passed": true
+      },
+      {
+        "id": "reversi",
+        "device": "ios",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "legal flips, four local turns and undo",
+          "saved game survives reload",
+          "no document overflow",
+          "keyboard focus"
+        ],
+        "passed": true
+      },
+      {
+        "id": "battleship",
+        "device": "ios",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "fleet setup, start and successful hit",
+          "saved game survives reload",
+          "no document overflow",
+          "keyboard focus"
+        ],
+        "passed": true
+      },
+      {
+        "id": "fruit-merge",
+        "device": "ios",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "fruit drop, physics canvas and pause",
+          "saved game survives reload",
+          "no document overflow",
+          "keyboard focus"
+        ],
+        "passed": true
+      },
+      {
+        "id": "music-lab",
+        "device": "ios",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "user-gesture Web Audio, note answers and interval mode",
+          "saved game survives reload",
+          "no document overflow",
+          "keyboard focus"
+        ],
+        "passed": true
+      },
+      {
+        "id": "sudoku",
+        "device": "ios",
+        "checks": [
+          "daily progress survives reload",
+          "daily settings stay deterministic"
+        ],
+        "errors": [],
+        "passed": true
+      },
+      {
+        "id": "nonogram",
+        "device": "ios",
+        "checks": [
+          "daily progress survives reload",
+          "daily settings stay deterministic"
+        ],
+        "errors": [],
+        "passed": true
+      }
+    ]
+  },
+  {
+    "device": "android",
+    "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
+    "workflowRun": 42464906934,
+    "results": [
+      {
+        "id": "klondike",
+        "device": "android",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "stock draw and undo",
+          "saved game survives reload",
+          "no document overflow",
+          "keyboard focus"
+        ],
+        "passed": true
+      },
+      {
+        "id": "spider",
+        "device": "android",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "ten-card row deal and undo",
+          "saved game survives reload",
+          "no document overflow",
+          "keyboard focus"
+        ],
+        "passed": true
+      },
+      {
+        "id": "mahjong",
+        "device": "android",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "free-pair matching, hints and undo",
+          "saved game survives reload",
+          "no document overflow",
+          "keyboard focus"
+        ],
+        "passed": true
+      },
+      {
+        "id": "sokoban",
+        "device": "android",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "level completion, undo and editor toggle",
+          "saved game survives reload",
+          "no document overflow",
+          "keyboard focus"
+        ],
+        "passed": true
+      },
+      {
+        "id": "wordsearch",
+        "device": "android",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "finding complete words in Ukrainian, German and English",
+          "saved game survives reload",
+          "no document overflow",
+          "keyboard focus"
+        ],
+        "passed": true
+      },
+      {
+        "id": "draughts",
+        "device": "android",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "mandatory legal moves, four local turns and undo",
+          "saved game survives reload",
+          "no document overflow",
+          "keyboard focus"
+        ],
+        "passed": true
+      },
+      {
+        "id": "reversi",
+        "device": "android",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "legal flips, four local turns and undo",
+          "saved game survives reload",
+          "no document overflow",
+          "keyboard focus"
+        ],
+        "passed": true
+      },
+      {
+        "id": "battleship",
+        "device": "android",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "fleet setup, start and successful hit",
+          "saved game survives reload",
+          "no document overflow",
+          "keyboard focus"
+        ],
+        "passed": true
+      },
+      {
+        "id": "fruit-merge",
+        "device": "android",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "fruit drop, physics canvas and pause",
+          "saved game survives reload",
+          "no document overflow",
+          "keyboard focus"
+        ],
+        "passed": true
+      },
+      {
+        "id": "music-lab",
+        "device": "android",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "user-gesture Web Audio, note answers and interval mode",
+          "saved game survives reload",
+          "no document overflow",
+          "keyboard focus"
+        ],
+        "passed": true
+      },
+      {
+        "id": "sudoku",
+        "device": "android",
+        "checks": [
+          "daily progress survives reload",
+          "daily settings stay deterministic"
+        ],
+        "errors": [],
+        "passed": true
+      },
+      {
+        "id": "nonogram",
+        "device": "android",
+        "checks": [
+          "daily progress survives reload",
+          "daily settings stay deterministic"
+        ],
+        "errors": [],
+        "passed": true
+      }
+    ]
+  }
+]

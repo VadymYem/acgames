@@ -4001,6 +4001,16 @@
           "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
           "workflowRun": 42382014303
         }
+      },
+      "features": {
+        "touch": true,
+        "keyboard": true,
+        "gamepad": false,
+        "local2p": false,
+        "quick": true,
+        "offline": true,
+        "progress": true,
+        "daily": true
       }
     },
     {
@@ -5513,6 +5523,16 @@
           "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
           "workflowRun": 42382014303
         }
+      },
+      "features": {
+        "touch": true,
+        "keyboard": true,
+        "gamepad": false,
+        "local2p": false,
+        "quick": true,
+        "offline": true,
+        "progress": true,
+        "daily": true
       }
     },
     {
@@ -6653,9 +6673,9 @@
       "controls": "touch",
       "instructions": "Складайте основи від туза до короля за мастю. У стовпцях карти йдуть за спаданням із чергуванням кольорів. Порожній стовпець починається з короля. Оберіть карту, потім потрібний стовпець або основу. Доступні скасування ходу та збереження партії.",
       "devices": {
-        "desktop": false,
-        "android": false,
-        "ios": false
+        "desktop": true,
+        "android": true,
+        "ios": true
       },
       "candidateDevices": {
         "desktop": true,
@@ -6663,11 +6683,11 @@
         "ios": true
       },
       "verification": {
-        "desktop": "needs-review",
-        "android": "needs-review",
-        "ios": "needs-review"
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
       },
-      "review": "original-awaiting-gameplay-test",
+      "review": "gameplay-tested",
       "description": "Пасьянс із колодою 52 карти та відкриттям по одній карті.",
       "rules": "Складайте основи від туза до короля за мастю. У стовпцях карти йдуть за спаданням із чергуванням кольорів. Порожній стовпець починається з короля. Оберіть карту, потім потрібний стовпець або основу. Доступні скасування ходу та збереження партії.",
       "features": {
@@ -6681,7 +6701,24 @@
         "daily": false
       },
       "author": "AuthorChe",
-      "license": "MIT"
+      "license": "MIT",
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
+          "workflowRun": 42464906934,
+          "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
+        },
+        "ios": {
+          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
+          "workflowRun": 42464906934,
+          "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
+        },
+        "android": {
+          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
+          "workflowRun": 42464906934,
+          "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
+        }
+      }
     },
     {
       "id": "spider",
@@ -6693,9 +6730,9 @@
       "controls": "touch",
       "instructions": "Зберіть вісім послідовностей від короля до туза. Переміщуйте спадні послідовності на карту на один ранг старшу або в порожній стовпець. Для нової роздачі заповніть усі десять стовпців. На вузькому екрані поле можна гортати горизонтально.",
       "devices": {
-        "desktop": false,
-        "android": false,
-        "ios": false
+        "desktop": true,
+        "android": true,
+        "ios": true
       },
       "candidateDevices": {
         "desktop": true,
@@ -6703,11 +6740,11 @@
         "ios": true
       },
       "verification": {
-        "desktop": "needs-review",
-        "android": "needs-review",
-        "ios": "needs-review"
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
       },
-      "review": "original-awaiting-gameplay-test",
+      "review": "gameplay-tested",
       "description": "Пасьянс «Павук» з однією мастю, 104 картами й вісьмома послідовностями.",
       "rules": "Зберіть вісім послідовностей від короля до туза. Переміщуйте спадні послідовності на карту на один ранг старшу або в порожній стовпець. Для нової роздачі заповніть усі десять стовпців. На вузькому екрані поле можна гортати горизонтально.",
       "features": {
@@ -6721,7 +6758,24 @@
         "daily": false
       },
       "author": "AuthorChe",
-      "license": "MIT"
+      "license": "MIT",
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
+          "workflowRun": 42464906934,
+          "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
+        },
+        "ios": {
+          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
+          "workflowRun": 42464906934,
+          "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
+        },
+        "android": {
+          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
+          "workflowRun": 42464906934,
+          "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
+        }
+      }
     },
     {
       "id": "mahjong",
@@ -6733,9 +6787,9 @@
       "controls": "touch",
       "instructions": "Прибирайте пари однакових плиток. Плитка вільна, коли її не накриває інша і хоча б один бічний край відкритий. Якщо доступних пар не залишилося, скасуйте попередню пару. Підказка показує доступну пару, але не гарантує успішного завершення обраного шляху.",
       "devices": {
-        "desktop": false,
-        "android": false,
-        "ios": false
+        "desktop": true,
+        "android": true,
+        "ios": true
       },
       "candidateDevices": {
         "desktop": true,
@@ -6743,11 +6797,11 @@
         "ios": true
       },
       "verification": {
-        "desktop": "needs-review",
-        "android": "needs-review",
-        "ios": "needs-review"
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
       },
-      "review": "original-awaiting-gameplay-test",
+      "review": "gameplay-tested",
       "description": "Компактна головоломка з 36 плитками й гарантовано розв’язним початковим полем.",
       "rules": "Прибирайте пари однакових плиток. Плитка вільна, коли її не накриває інша і хоча б один бічний край відкритий. Якщо доступних пар не залишилося, скасуйте попередню пару. Підказка показує доступну пару, але не гарантує успішного завершення обраного шляху.",
       "features": {
@@ -6761,7 +6815,24 @@
         "daily": true
       },
       "author": "AuthorChe",
-      "license": "MIT"
+      "license": "MIT",
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
+          "workflowRun": 42464906934,
+          "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
+        },
+        "ios": {
+          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
+          "workflowRun": 42464906934,
+          "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
+        },
+        "android": {
+          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
+          "workflowRun": 42464906934,
+          "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
+        }
+      }
     },
     {
       "id": "sokoban",
@@ -6773,9 +6844,9 @@
       "controls": "touch",
       "instructions": "Пересуньте всі ящики на цілі. Ящик можна штовхати, але не тягнути; два ящики одночасно не рухаються. Керуйте стрілками, WASD або кнопками під полем. У редакторі оберіть інструмент і торкніться клітинки. Власні рівні зберігаються лише у вашому браузері.",
       "devices": {
-        "desktop": false,
-        "android": false,
-        "ios": false
+        "desktop": true,
+        "android": true,
+        "ios": true
       },
       "candidateDevices": {
         "desktop": true,
@@ -6783,11 +6854,11 @@
         "ios": true
       },
       "verification": {
-        "desktop": "needs-review",
-        "android": "needs-review",
-        "ios": "needs-review"
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
       },
-      "review": "original-awaiting-gameplay-test",
+      "review": "gameplay-tested",
       "description": "Десять авторських рівнів із ящиками та локальний редактор власних головоломок.",
       "rules": "Пересуньте всі ящики на цілі. Ящик можна штовхати, але не тягнути; два ящики одночасно не рухаються. Керуйте стрілками, WASD або кнопками під полем. У редакторі оберіть інструмент і торкніться клітинки. Власні рівні зберігаються лише у вашому браузері.",
       "features": {
@@ -6801,7 +6872,24 @@
         "daily": true
       },
       "author": "AuthorChe",
-      "license": "MIT"
+      "license": "MIT",
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
+          "workflowRun": 42464906934,
+          "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
+        },
+        "ios": {
+          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
+          "workflowRun": 42464906934,
+          "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
+        },
+        "android": {
+          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
+          "workflowRun": 42464906934,
+          "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
+        }
+      }
     },
     {
       "id": "wordsearch",
@@ -6813,9 +6901,9 @@
       "controls": "touch",
       "instructions": "Оберіть першу, а потім останню літеру слова. Слова можуть читатися у восьми напрямках. На клавіатурі переміщуйте фокус стрілками та обирайте літери Enter або пробілом. Мову можна змінити над полем; це починає нову головоломку.",
       "devices": {
-        "desktop": false,
-        "android": false,
-        "ios": false
+        "desktop": true,
+        "android": true,
+        "ios": true
       },
       "candidateDevices": {
         "desktop": true,
@@ -6823,11 +6911,11 @@
         "ios": true
       },
       "verification": {
-        "desktop": "needs-review",
-        "android": "needs-review",
-        "ios": "needs-review"
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
       },
-      "review": "original-awaiting-gameplay-test",
+      "review": "gameplay-tested",
       "description": "Знаходьте слова українською, німецькою та англійською.",
       "rules": "Оберіть першу, а потім останню літеру слова. Слова можуть читатися у восьми напрямках. На клавіатурі переміщуйте фокус стрілками та обирайте літери Enter або пробілом. Мову можна змінити над полем; це починає нову головоломку.",
       "features": {
@@ -6841,7 +6929,24 @@
         "daily": true
       },
       "author": "AuthorChe",
-      "license": "MIT"
+      "license": "MIT",
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
+          "workflowRun": 42464906934,
+          "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
+        },
+        "ios": {
+          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
+          "workflowRun": 42464906934,
+          "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
+        },
+        "android": {
+          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
+          "workflowRun": 42464906934,
+          "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
+        }
+      }
     },
     {
       "id": "draughts",
@@ -6853,9 +6958,9 @@
       "controls": "touch",
       "instructions": "Світлі починають. Прості шашки ходять і б’ють уперед; дамки — на одну клітинку по діагоналі в обидва боки. Взяття обов’язкове, ланцюжок взяттів потрібно завершити. Перетворення на дамку завершує хід. Оберіть шашку, потім послідовно клітинки маршруту. За 40 ходів кожного без взяття чи руху простої шашки настає нічия.",
       "devices": {
-        "desktop": false,
-        "android": false,
-        "ios": false
+        "desktop": true,
+        "android": true,
+        "ios": true
       },
       "candidateDevices": {
         "desktop": true,
@@ -6863,11 +6968,11 @@
         "ios": true
       },
       "verification": {
-        "desktop": "needs-review",
-        "android": "needs-review",
-        "ios": "needs-review"
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
       },
-      "review": "original-awaiting-gameplay-test",
+      "review": "gameplay-tested",
       "description": "Англійські шашки проти комп’ютера або друга на одному пристрої.",
       "rules": "Світлі починають. Прості шашки ходять і б’ють уперед; дамки — на одну клітинку по діагоналі в обидва боки. Взяття обов’язкове, ланцюжок взяттів потрібно завершити. Перетворення на дамку завершує хід. Оберіть шашку, потім послідовно клітинки маршруту. За 40 ходів кожного без взяття чи руху простої шашки настає нічия.",
       "features": {
@@ -6881,7 +6986,24 @@
         "daily": false
       },
       "author": "AuthorChe",
-      "license": "MIT"
+      "license": "MIT",
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
+          "workflowRun": 42464906934,
+          "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
+        },
+        "ios": {
+          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
+          "workflowRun": 42464906934,
+          "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
+        },
+        "android": {
+          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
+          "workflowRun": 42464906934,
+          "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
+        }
+      }
     },
     {
       "id": "reversi",
@@ -6893,9 +7015,9 @@
       "controls": "touch",
       "instructions": "Поставте фішку так, щоб затиснути ряд фішок суперника між своєю новою та вже наявною фішкою. Усі затиснуті ряди перевертаються. Якщо ходів немає, хід пропускається автоматично. Коли обоє не можуть ходити, перемагає той, хто має більше фішок.",
       "devices": {
-        "desktop": false,
-        "android": false,
-        "ios": false
+        "desktop": true,
+        "android": true,
+        "ios": true
       },
       "candidateDevices": {
         "desktop": true,
@@ -6903,11 +7025,11 @@
         "ios": true
       },
       "verification": {
-        "desktop": "needs-review",
-        "android": "needs-review",
-        "ios": "needs-review"
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
       },
-      "review": "original-awaiting-gameplay-test",
+      "review": "gameplay-tested",
       "description": "Стратегія на полі 8 × 8 з комп’ютером та локальним режимом удвох.",
       "rules": "Поставте фішку так, щоб затиснути ряд фішок суперника між своєю новою та вже наявною фішкою. Усі затиснуті ряди перевертаються. Якщо ходів немає, хід пропускається автоматично. Коли обоє не можуть ходити, перемагає той, хто має більше фішок.",
       "features": {
@@ -6921,7 +7043,24 @@
         "daily": false
       },
       "author": "AuthorChe",
-      "license": "MIT"
+      "license": "MIT",
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
+          "workflowRun": 42464906934,
+          "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
+        },
+        "ios": {
+          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
+          "workflowRun": 42464906934,
+          "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
+        },
+        "android": {
+          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
+          "workflowRun": 42464906934,
+          "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
+        }
+      }
     },
     {
       "id": "battleship",
@@ -6933,9 +7072,9 @@
       "controls": "touch",
       "instructions": "Перед початком можна змінити автоматичну розстановку власного флоту. Кораблі не торкаються навіть кутами. Натисніть «Почати бій» і стріляйте на полі суперника. Влучання дає додатковий постріл. Уся партія виконується локально без підключення до іншого гравця.",
       "devices": {
-        "desktop": false,
-        "android": false,
-        "ios": false
+        "desktop": true,
+        "android": true,
+        "ios": true
       },
       "candidateDevices": {
         "desktop": true,
@@ -6943,11 +7082,11 @@
         "ios": true
       },
       "verification": {
-        "desktop": "needs-review",
-        "android": "needs-review",
-        "ios": "needs-review"
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
       },
-      "review": "original-awaiting-gameplay-test",
+      "review": "gameplay-tested",
       "description": "Класичний флот із десяти кораблів проти локального комп’ютерного суперника.",
       "rules": "Перед початком можна змінити автоматичну розстановку власного флоту. Кораблі не торкаються навіть кутами. Натисніть «Почати бій» і стріляйте на полі суперника. Влучання дає додатковий постріл. Уся партія виконується локально без підключення до іншого гравця.",
       "features": {
@@ -6961,7 +7100,24 @@
         "daily": false
       },
       "author": "AuthorChe",
-      "license": "MIT"
+      "license": "MIT",
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
+          "workflowRun": 42464906934,
+          "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
+        },
+        "ios": {
+          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
+          "workflowRun": 42464906934,
+          "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
+        },
+        "android": {
+          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
+          "workflowRun": 42464906934,
+          "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
+        }
+      }
     },
     {
       "id": "fruit-merge",
@@ -6973,9 +7129,9 @@
       "controls": "touch",
       "instructions": "Оберіть позицію повзунком або стрілками та скиньте фрукт кнопкою, пробілом чи торканням кошика. Однакові фрукти при зіткненні об’єднуються. Не допускайте заповнення кошика вище пунктирної лінії. Гру можна призупинити та скасувати останнє скидання.",
       "devices": {
-        "desktop": false,
-        "android": false,
-        "ios": false
+        "desktop": true,
+        "android": true,
+        "ios": true
       },
       "candidateDevices": {
         "desktop": true,
@@ -6983,11 +7139,11 @@
         "ios": true
       },
       "verification": {
-        "desktop": "needs-review",
-        "android": "needs-review",
-        "ios": "needs-review"
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
       },
-      "review": "original-awaiting-gameplay-test",
+      "review": "gameplay-tested",
       "description": "Об’єднуйте однакові фрукти й створюйте більші у власному кошику.",
       "rules": "Оберіть позицію повзунком або стрілками та скиньте фрукт кнопкою, пробілом чи торканням кошика. Однакові фрукти при зіткненні об’єднуються. Не допускайте заповнення кошика вище пунктирної лінії. Гру можна призупинити та скасувати останнє скидання.",
       "features": {
@@ -7001,7 +7157,24 @@
         "daily": false
       },
       "author": "AuthorChe",
-      "license": "MIT"
+      "license": "MIT",
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
+          "workflowRun": 42464906934,
+          "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
+        },
+        "ios": {
+          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
+          "workflowRun": 42464906934,
+          "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
+        },
+        "android": {
+          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
+          "workflowRun": 42464906934,
+          "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
+        }
+      }
     },
     {
       "id": "music-lab",
@@ -7013,9 +7186,9 @@
       "controls": "touch",
       "instructions": "Оберіть вправу й натисніть «Прослухати». У нотах перший звук — До, потрібно впізнати другий. В інтервалах визначте відстань між двома звуками. У ритмі прослухайте чотири удари й відтворіть темп чотирма натисканнями. Почніть із комфортної гучності. Мікрофон не потрібний.",
       "devices": {
-        "desktop": false,
-        "android": false,
-        "ios": false
+        "desktop": true,
+        "android": true,
+        "ios": true
       },
       "candidateDevices": {
         "desktop": true,
@@ -7023,11 +7196,11 @@
         "ios": true
       },
       "verification": {
-        "desktop": "needs-review",
-        "android": "needs-review",
-        "ios": "needs-review"
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
       },
-      "review": "original-awaiting-gameplay-test",
+      "review": "gameplay-tested",
       "description": "Тренуйте музичний слух та відчуття ритму в коротких вправах.",
       "rules": "Оберіть вправу й натисніть «Прослухати». У нотах перший звук — До, потрібно впізнати другий. В інтервалах визначте відстань між двома звуками. У ритмі прослухайте чотири удари й відтворіть темп чотирма натисканнями. Почніть із комфортної гучності. Мікрофон не потрібний.",
       "features": {
@@ -7041,7 +7214,24 @@
         "daily": true
       },
       "author": "AuthorChe",
-      "license": "MIT"
+      "license": "MIT",
+      "verificationEvidence": {
+        "desktop": {
+          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
+          "workflowRun": 42464906934,
+          "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
+        },
+        "ios": {
+          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
+          "workflowRun": 42464906934,
+          "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
+        },
+        "android": {
+          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
+          "workflowRun": 42464906934,
+          "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
+        }
+      }
     }
   ],
   "excluded": {
