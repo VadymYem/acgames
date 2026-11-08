@@ -1,0 +1,39 @@
+name: Offline games app
+on:
+  push:
+    branches: [main]
+    paths: ['app.*','sw.js','manifest.webmanifest','catalog.json','shared/library.js','shared/icons/**','tools/offline.py','tools/build.py','tests/offline-browser.mjs','.github/workflows/offline-quality.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  offline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        device: [desktop, android, ios]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - run: npm run build
+      - run: |
+          npm install --no-save --no-package-lock playwright@1.64.1
+          npx playwright install --with-deps chromium webkit
+      - run: python3 -m http.server 4173 --bind 0.0.0.0 --directory dist >/tmp/offline-http.log 2>&1 &
+      - env:
+          GAME_DEVICE: ${{ matrix.device }}
+        run: node tests/offline-browser.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: offline-${{ matrix.device }}
+          path: reports/offline/${{ matrix.device }}/
+          retention-days: 14
