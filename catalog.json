@@ -6642,6 +6642,406 @@
           "workflowRun": 42382014303
         }
       }
+    },
+    {
+      "id": "klondike",
+      "title": "Косинка",
+      "category": "puzzle",
+      "entry": "games/klondike/index.html",
+      "cover": "shared/covers/klondike.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Складайте основи від туза до короля за мастю. У стовпцях карти йдуть за спаданням із чергуванням кольорів. Порожній стовпець починається з короля. Оберіть карту, потім потрібний стовпець або основу. Доступні скасування ходу та збереження партії.",
+      "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": false
+      },
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "needs-review",
+        "android": "needs-review",
+        "ios": "needs-review"
+      },
+      "review": "original-awaiting-gameplay-test",
+      "description": "Пасьянс із колодою 52 карти та відкриттям по одній карті.",
+      "rules": "Складайте основи від туза до короля за мастю. У стовпцях карти йдуть за спаданням із чергуванням кольорів. Порожній стовпець починається з короля. Оберіть карту, потім потрібний стовпець або основу. Доступні скасування ходу та збереження партії.",
+      "features": {
+        "touch": true,
+        "keyboard": true,
+        "gamepad": false,
+        "local2p": false,
+        "quick": false,
+        "offline": true,
+        "progress": true,
+        "daily": false
+      },
+      "author": "AuthorChe",
+      "license": "MIT"
+    },
+    {
+      "id": "spider",
+      "title": "Павук",
+      "category": "puzzle",
+      "entry": "games/spider/index.html",
+      "cover": "shared/covers/spider.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Зберіть вісім послідовностей від короля до туза. Переміщуйте спадні послідовності на карту на один ранг старшу або в порожній стовпець. Для нової роздачі заповніть усі десять стовпців. На вузькому екрані поле можна гортати горизонтально.",
+      "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": false
+      },
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "needs-review",
+        "android": "needs-review",
+        "ios": "needs-review"
+      },
+      "review": "original-awaiting-gameplay-test",
+      "description": "Пасьянс «Павук» з однією мастю, 104 картами й вісьмома послідовностями.",
+      "rules": "Зберіть вісім послідовностей від короля до туза. Переміщуйте спадні послідовності на карту на один ранг старшу або в порожній стовпець. Для нової роздачі заповніть усі десять стовпців. На вузькому екрані поле можна гортати горизонтально.",
+      "features": {
+        "touch": true,
+        "keyboard": true,
+        "gamepad": false,
+        "local2p": false,
+        "quick": false,
+        "offline": true,
+        "progress": true,
+        "daily": false
+      },
+      "author": "AuthorChe",
+      "license": "MIT"
+    },
+    {
+      "id": "mahjong",
+      "title": "Маджонг-пасьянс",
+      "category": "puzzle",
+      "entry": "games/mahjong/index.html",
+      "cover": "shared/covers/mahjong.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Прибирайте пари однакових плиток. Плитка вільна, коли її не накриває інша і хоча б один бічний край відкритий. Якщо доступних пар не залишилося, скасуйте попередню пару. Підказка показує доступну пару, але не гарантує успішного завершення обраного шляху.",
+      "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": false
+      },
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "needs-review",
+        "android": "needs-review",
+        "ios": "needs-review"
+      },
+      "review": "original-awaiting-gameplay-test",
+      "description": "Компактна головоломка з 36 плитками й гарантовано розв’язним початковим полем.",
+      "rules": "Прибирайте пари однакових плиток. Плитка вільна, коли її не накриває інша і хоча б один бічний край відкритий. Якщо доступних пар не залишилося, скасуйте попередню пару. Підказка показує доступну пару, але не гарантує успішного завершення обраного шляху.",
+      "features": {
+        "touch": true,
+        "keyboard": true,
+        "gamepad": false,
+        "local2p": false,
+        "quick": true,
+        "offline": true,
+        "progress": true,
+        "daily": true
+      },
+      "author": "AuthorChe",
+      "license": "MIT"
+    },
+    {
+      "id": "sokoban",
+      "title": "Сокобан",
+      "category": "puzzle",
+      "entry": "games/sokoban/index.html",
+      "cover": "shared/covers/sokoban.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Пересуньте всі ящики на цілі. Ящик можна штовхати, але не тягнути; два ящики одночасно не рухаються. Керуйте стрілками, WASD або кнопками під полем. У редакторі оберіть інструмент і торкніться клітинки. Власні рівні зберігаються лише у вашому браузері.",
+      "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": false
+      },
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "needs-review",
+        "android": "needs-review",
+        "ios": "needs-review"
+      },
+      "review": "original-awaiting-gameplay-test",
+      "description": "Десять авторських рівнів із ящиками та локальний редактор власних головоломок.",
+      "rules": "Пересуньте всі ящики на цілі. Ящик можна штовхати, але не тягнути; два ящики одночасно не рухаються. Керуйте стрілками, WASD або кнопками під полем. У редакторі оберіть інструмент і торкніться клітинки. Власні рівні зберігаються лише у вашому браузері.",
+      "features": {
+        "touch": true,
+        "keyboard": true,
+        "gamepad": false,
+        "local2p": false,
+        "quick": true,
+        "offline": true,
+        "progress": true,
+        "daily": true
+      },
+      "author": "AuthorChe",
+      "license": "MIT"
+    },
+    {
+      "id": "wordsearch",
+      "title": "Пошук слів",
+      "category": "puzzle",
+      "entry": "games/wordsearch/index.html",
+      "cover": "shared/covers/wordsearch.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Оберіть першу, а потім останню літеру слова. Слова можуть читатися у восьми напрямках. На клавіатурі переміщуйте фокус стрілками та обирайте літери Enter або пробілом. Мову можна змінити над полем; це починає нову головоломку.",
+      "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": false
+      },
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "needs-review",
+        "android": "needs-review",
+        "ios": "needs-review"
+      },
+      "review": "original-awaiting-gameplay-test",
+      "description": "Знаходьте слова українською, німецькою та англійською.",
+      "rules": "Оберіть першу, а потім останню літеру слова. Слова можуть читатися у восьми напрямках. На клавіатурі переміщуйте фокус стрілками та обирайте літери Enter або пробілом. Мову можна змінити над полем; це починає нову головоломку.",
+      "features": {
+        "touch": true,
+        "keyboard": true,
+        "gamepad": false,
+        "local2p": false,
+        "quick": true,
+        "offline": true,
+        "progress": true,
+        "daily": true
+      },
+      "author": "AuthorChe",
+      "license": "MIT"
+    },
+    {
+      "id": "draughts",
+      "title": "Шашки 8 × 8",
+      "category": "strategy",
+      "entry": "games/draughts/index.html",
+      "cover": "shared/covers/draughts.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Світлі починають. Прості шашки ходять і б’ють уперед; дамки — на одну клітинку по діагоналі в обидва боки. Взяття обов’язкове, ланцюжок взяттів потрібно завершити. Перетворення на дамку завершує хід. Оберіть шашку, потім послідовно клітинки маршруту. За 40 ходів кожного без взяття чи руху простої шашки настає нічия.",
+      "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": false
+      },
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "needs-review",
+        "android": "needs-review",
+        "ios": "needs-review"
+      },
+      "review": "original-awaiting-gameplay-test",
+      "description": "Англійські шашки проти комп’ютера або друга на одному пристрої.",
+      "rules": "Світлі починають. Прості шашки ходять і б’ють уперед; дамки — на одну клітинку по діагоналі в обидва боки. Взяття обов’язкове, ланцюжок взяттів потрібно завершити. Перетворення на дамку завершує хід. Оберіть шашку, потім послідовно клітинки маршруту. За 40 ходів кожного без взяття чи руху простої шашки настає нічия.",
+      "features": {
+        "touch": true,
+        "keyboard": true,
+        "gamepad": false,
+        "local2p": true,
+        "quick": true,
+        "offline": true,
+        "progress": true,
+        "daily": false
+      },
+      "author": "AuthorChe",
+      "license": "MIT"
+    },
+    {
+      "id": "reversi",
+      "title": "Реверсі",
+      "category": "strategy",
+      "entry": "games/reversi/index.html",
+      "cover": "shared/covers/reversi.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Поставте фішку так, щоб затиснути ряд фішок суперника між своєю новою та вже наявною фішкою. Усі затиснуті ряди перевертаються. Якщо ходів немає, хід пропускається автоматично. Коли обоє не можуть ходити, перемагає той, хто має більше фішок.",
+      "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": false
+      },
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "needs-review",
+        "android": "needs-review",
+        "ios": "needs-review"
+      },
+      "review": "original-awaiting-gameplay-test",
+      "description": "Стратегія на полі 8 × 8 з комп’ютером та локальним режимом удвох.",
+      "rules": "Поставте фішку так, щоб затиснути ряд фішок суперника між своєю новою та вже наявною фішкою. Усі затиснуті ряди перевертаються. Якщо ходів немає, хід пропускається автоматично. Коли обоє не можуть ходити, перемагає той, хто має більше фішок.",
+      "features": {
+        "touch": true,
+        "keyboard": true,
+        "gamepad": false,
+        "local2p": true,
+        "quick": true,
+        "offline": true,
+        "progress": true,
+        "daily": false
+      },
+      "author": "AuthorChe",
+      "license": "MIT"
+    },
+    {
+      "id": "battleship",
+      "title": "Морський бій",
+      "category": "strategy",
+      "entry": "games/battleship/index.html",
+      "cover": "shared/covers/battleship.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Перед початком можна змінити автоматичну розстановку власного флоту. Кораблі не торкаються навіть кутами. Натисніть «Почати бій» і стріляйте на полі суперника. Влучання дає додатковий постріл. Уся партія виконується локально без підключення до іншого гравця.",
+      "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": false
+      },
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "needs-review",
+        "android": "needs-review",
+        "ios": "needs-review"
+      },
+      "review": "original-awaiting-gameplay-test",
+      "description": "Класичний флот із десяти кораблів проти локального комп’ютерного суперника.",
+      "rules": "Перед початком можна змінити автоматичну розстановку власного флоту. Кораблі не торкаються навіть кутами. Натисніть «Почати бій» і стріляйте на полі суперника. Влучання дає додатковий постріл. Уся партія виконується локально без підключення до іншого гравця.",
+      "features": {
+        "touch": true,
+        "keyboard": true,
+        "gamepad": false,
+        "local2p": false,
+        "quick": false,
+        "offline": true,
+        "progress": true,
+        "daily": false
+      },
+      "author": "AuthorChe",
+      "license": "MIT"
+    },
+    {
+      "id": "fruit-merge",
+      "title": "Фруктовий кошик",
+      "category": "arcade",
+      "entry": "games/fruit-merge/index.html",
+      "cover": "shared/covers/fruit-merge.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Оберіть позицію повзунком або стрілками та скиньте фрукт кнопкою, пробілом чи торканням кошика. Однакові фрукти при зіткненні об’єднуються. Не допускайте заповнення кошика вище пунктирної лінії. Гру можна призупинити та скасувати останнє скидання.",
+      "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": false
+      },
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "needs-review",
+        "android": "needs-review",
+        "ios": "needs-review"
+      },
+      "review": "original-awaiting-gameplay-test",
+      "description": "Об’єднуйте однакові фрукти й створюйте більші у власному кошику.",
+      "rules": "Оберіть позицію повзунком або стрілками та скиньте фрукт кнопкою, пробілом чи торканням кошика. Однакові фрукти при зіткненні об’єднуються. Не допускайте заповнення кошика вище пунктирної лінії. Гру можна призупинити та скасувати останнє скидання.",
+      "features": {
+        "touch": true,
+        "keyboard": true,
+        "gamepad": false,
+        "local2p": false,
+        "quick": true,
+        "offline": true,
+        "progress": true,
+        "daily": false
+      },
+      "author": "AuthorChe",
+      "license": "MIT"
+    },
+    {
+      "id": "music-lab",
+      "title": "Музична майстерня",
+      "category": "puzzle",
+      "entry": "games/music-lab/index.html",
+      "cover": "shared/covers/music-lab.svg",
+      "kind": "html5",
+      "controls": "touch",
+      "instructions": "Оберіть вправу й натисніть «Прослухати». У нотах перший звук — До, потрібно впізнати другий. В інтервалах визначте відстань між двома звуками. У ритмі прослухайте чотири удари й відтворіть темп чотирма натисканнями. Почніть із комфортної гучності. Мікрофон не потрібний.",
+      "devices": {
+        "desktop": false,
+        "android": false,
+        "ios": false
+      },
+      "candidateDevices": {
+        "desktop": true,
+        "android": true,
+        "ios": true
+      },
+      "verification": {
+        "desktop": "needs-review",
+        "android": "needs-review",
+        "ios": "needs-review"
+      },
+      "review": "original-awaiting-gameplay-test",
+      "description": "Тренуйте музичний слух та відчуття ритму в коротких вправах.",
+      "rules": "Оберіть вправу й натисніть «Прослухати». У нотах перший звук — До, потрібно впізнати другий. В інтервалах визначте відстань між двома звуками. У ритмі прослухайте чотири удари й відтворіть темп чотирма натисканнями. Почніть із комфортної гучності. Мікрофон не потрібний.",
+      "features": {
+        "touch": true,
+        "keyboard": true,
+        "gamepad": false,
+        "local2p": false,
+        "quick": true,
+        "offline": true,
+        "progress": true,
+        "daily": true
+      },
+      "author": "AuthorChe",
+      "license": "MIT"
     }
   ],
   "excluded": {
