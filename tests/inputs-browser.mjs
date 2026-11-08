@@ -4,7 +4,7 @@ import {chromium,webkit} from 'playwright';
 const device=process.env.GAME_DEVICE||'desktop',mobile=device!=='desktop';
 const browser=await(device==='ios'?webkit:chromium).launch({args:device==='ios'?[]:['--enable-unsafe-swiftshader','--use-gl=angle','--use-angle=swiftshader']});
 const out='reports/browser/'+device;fs.mkdirSync(out,{recursive:true});const results=[];
-for(const id of ['sokoban','klondike','asteroids','snake-retro','adarkroom','coloron',...(mobile?[]:['tube-jumpers'])]){
+for(const id of ['sokoban','klondike','asteroids','snake-retro',...(mobile?[]:['adarkroom']),'coloron',...(mobile?[]:['tube-jumpers'])]){
  const context=await browser.newContext({viewport:mobile?{width:390,height:844}:{width:1280,height:900},isMobile:mobile,hasTouch:mobile,userAgent:device==='android'?'Mozilla/5.0 (Linux; Android 16) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Mobile Safari/537.36':device==='ios'?'Mozilla/5.0 (iPhone; CPU iPhone OS 19_0 like Mac OS X) AppleWebKit/605.1.15 Version/19.0 Mobile/15E148 Safari/604.1':undefined});
  await context.addInitScript(()=>{window.testPad={mapping:'standard',axes:[0,0],buttons:Array.from({length:16},()=>({pressed:false,value:0}))};Object.defineProperty(navigator,'getGamepads',{value:()=>[window.testPad]});});
  const page=await context.newPage(),row={id,device,errors:[],missing:[],external:[],checks:[]};

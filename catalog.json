@@ -211,35 +211,32 @@
       "controls": "touch",
       "instructions": "Торкання або миша; підказки керування — у грі.",
       "devices": {
-        "desktop": false,
+        "desktop": true,
         "android": false,
         "ios": false
       },
-      "review": "smoke-tested",
+      "review": "gameplay-tested",
       "candidateDevices": {
         "desktop": true,
-        "android": true,
-        "ios": true
+        "android": false,
+        "ios": false
       },
       "verification": {
-        "desktop": "needs-review",
-        "android": "needs-review",
-        "ios": "needs-review"
+        "desktop": "smoke-pass",
+        "android": "unsupported",
+        "ios": "unsupported"
       },
       "verificationEvidence": {
         "desktop": {
-          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
-          "workflowRun": 42382014303
-        },
-        "android": {
-          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
-          "workflowRun": 42382014303
-        },
-        "ios": {
-          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
-          "workflowRun": 42382014303
+          "sourceCommit": "c4bef16ba387283a4b3cb14aa731481a8cbc09b6",
+          "workflowRun": 42490538713,
+          "checks": [
+            "lighting the fire advances the room",
+            "audio files load and decode from their correct directory"
+          ]
         }
-      }
+      },
+      "availabilityNote": "Версія гри для браузера підтримується на ПК. На мобільних пристроях оригінальний рушій переходить на сторінку попередження."
     },
     {
       "id": "adofai",
@@ -416,29 +413,62 @@
       "entry": "games/asteroids/index.html",
       "cover": "shared/covers/asteroids.svg",
       "kind": "html5",
-      "controls": "keyboard",
-      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "controls": "touch",
+      "instructions": "Екранні стрілки або клавіші стрілок — рух. A — початок гри та стрільба. Екранні кнопки можна перемкнути у розділі керування. Стандартний геймпад: D-pad або лівий стік — рух; A — дія.",
       "devices": {
         "desktop": true,
-        "android": false,
-        "ios": false
+        "android": true,
+        "ios": true
       },
-      "review": "smoke-tested",
+      "review": "gameplay-tested",
       "candidateDevices": {
         "desktop": true,
-        "android": false,
-        "ios": false
+        "android": true,
+        "ios": true
       },
       "verification": {
         "desktop": "smoke-pass",
-        "android": "unsupported",
-        "ios": "unsupported"
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
       },
       "verificationEvidence": {
         "desktop": {
-          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
-          "workflowRun": 42382014303
+          "sourceCommit": "c4bef16ba387283a4b3cb14aa731481a8cbc09b6",
+          "workflowRun": 42490538713,
+          "checks": [
+            "touch starts the game",
+            "held direction and release reach the engine",
+            "gamepad release clears the engine key"
+          ]
+        },
+        "android": {
+          "sourceCommit": "c4bef16ba387283a4b3cb14aa731481a8cbc09b6",
+          "workflowRun": 42490538713,
+          "checks": [
+            "touch starts the game",
+            "held direction and release reach the engine",
+            "gamepad release clears the engine key"
+          ]
+        },
+        "ios": {
+          "sourceCommit": "c4bef16ba387283a4b3cb14aa731481a8cbc09b6",
+          "workflowRun": 42490538713,
+          "checks": [
+            "touch starts the game",
+            "held direction and release reach the engine",
+            "gamepad release clears the engine key"
+          ]
         }
+      },
+      "features": {
+        "touch": true,
+        "keyboard": true,
+        "gamepad": true,
+        "local2p": false,
+        "quick": true,
+        "offline": false,
+        "progress": false,
+        "daily": false
       }
     },
     {
@@ -1475,27 +1505,31 @@
       "controls": "keyboard",
       "instructions": "Миша й клавіатура. Натисніть на гру для активації керування.",
       "devices": {
-        "desktop": true,
+        "desktop": false,
         "android": false,
         "ios": false
       },
-      "review": "smoke-tested",
+      "review": "external-profile-unavailable",
       "candidateDevices": {
         "desktop": true,
         "android": false,
         "ios": false
       },
       "verification": {
-        "desktop": "smoke-pass",
+        "desktop": "needs-review",
         "android": "unsupported",
         "ios": "unsupported"
       },
       "verificationEvidence": {
         "desktop": {
-          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
-          "workflowRun": 42382014303
+          "sourceCommit": "c4d254c38b6e023998394cd11c643c46dbf09aca",
+          "manualCheckDate": "2026-11-08",
+          "url": "https://authorche.top/games/play?id=btd5",
+          "relatedWorkflowRun": 42488609291,
+          "result": "Profile loader hang reproduced on the live site; the published sandbox also requested a malformed profile URL."
         }
-      }
+      },
+      "availabilityNote": "Гра зависає на завантаженні профілю Ninja Kiwi. Версію приховано: для цієї бібліотеки потрібен запуск без стороннього акаунта й сервера."
     },
     {
       "id": "canvas-untangle-game",
@@ -1763,34 +1797,46 @@
       "controls": "touch",
       "instructions": "Торкання або миша; підказки керування — у грі.",
       "devices": {
-        "desktop": false,
-        "android": false,
-        "ios": false
+        "desktop": true,
+        "android": true,
+        "ios": true
       },
-      "review": "smoke-tested",
+      "review": "gameplay-tested",
       "candidateDevices": {
         "desktop": true,
         "android": true,
         "ios": true
       },
       "verification": {
-        "desktop": "needs-review",
-        "android": "needs-review",
-        "ios": "needs-review"
+        "desktop": "smoke-pass",
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
       },
       "verificationNotes": "Shared external dependencies are still missing; kept unpublished on iOS despite an initial smoke pass.",
       "verificationEvidence": {
         "desktop": {
-          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
-          "workflowRun": 42382014303
+          "sourceCommit": "c4bef16ba387283a4b3cb14aa731481a8cbc09b6",
+          "workflowRun": 42490538713,
+          "checks": [
+            "play starts the ball animation",
+            "local scene creates playable platforms"
+          ]
         },
         "android": {
-          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
-          "workflowRun": 42382014303
+          "sourceCommit": "c4bef16ba387283a4b3cb14aa731481a8cbc09b6",
+          "workflowRun": 42490538713,
+          "checks": [
+            "play starts the ball animation",
+            "local scene creates playable platforms"
+          ]
         },
         "ios": {
-          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
-          "workflowRun": 42382014303
+          "sourceCommit": "c4bef16ba387283a4b3cb14aa731481a8cbc09b6",
+          "workflowRun": 42490538713,
+          "checks": [
+            "play starts the ball animation",
+            "local scene creates playable platforms"
+          ]
         }
       }
     },
@@ -5128,29 +5174,62 @@
       "entry": "games/snake-retro/index.html",
       "cover": "shared/covers/snake-retro.svg",
       "kind": "html5",
-      "controls": "keyboard",
-      "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
+      "controls": "touch",
+      "instructions": "Екранні стрілки або клавіші стрілок — рух. A — початок гри. Збирайте яблука й уникайте стін та власного тіла. На сенсорному екрані також доступні свайпи. Екранні кнопки можна перемкнути у розділі керування. Стандартний геймпад: D-pad або лівий стік — рух; A — дія.",
       "devices": {
         "desktop": true,
-        "android": false,
-        "ios": false
+        "android": true,
+        "ios": true
       },
-      "review": "smoke-tested",
+      "review": "gameplay-tested",
       "candidateDevices": {
         "desktop": true,
-        "android": false,
-        "ios": false
+        "android": true,
+        "ios": true
       },
       "verification": {
         "desktop": "smoke-pass",
-        "android": "unsupported",
-        "ios": "unsupported"
+        "android": "smoke-pass",
+        "ios": "smoke-pass"
       },
       "verificationEvidence": {
         "desktop": {
-          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
-          "workflowRun": 42382014303
+          "sourceCommit": "c4bef16ba387283a4b3cb14aa731481a8cbc09b6",
+          "workflowRun": 42490538713,
+          "checks": [
+            "touch starts the game",
+            "on-screen arrow changes snake direction",
+            "initial four-cell snake body grows correctly"
+          ]
+        },
+        "android": {
+          "sourceCommit": "c4bef16ba387283a4b3cb14aa731481a8cbc09b6",
+          "workflowRun": 42490538713,
+          "checks": [
+            "touch starts the game",
+            "on-screen arrow changes snake direction",
+            "initial four-cell snake body grows correctly"
+          ]
+        },
+        "ios": {
+          "sourceCommit": "c4bef16ba387283a4b3cb14aa731481a8cbc09b6",
+          "workflowRun": 42490538713,
+          "checks": [
+            "touch starts the game",
+            "on-screen arrow changes snake direction",
+            "initial four-cell snake body grows correctly"
+          ]
         }
+      },
+      "features": {
+        "touch": true,
+        "keyboard": true,
+        "gamepad": true,
+        "local2p": false,
+        "quick": true,
+        "offline": false,
+        "progress": false,
+        "daily": false
       }
     },
     {
@@ -6117,26 +6196,40 @@
       "controls": "keyboard",
       "instructions": "Клавіатура й миша. Стрілки або WASD — рух; Space — дія. Деталі — у грі.",
       "devices": {
-        "desktop": false,
+        "desktop": true,
         "android": false,
         "ios": false
       },
-      "review": "smoke-tested",
+      "review": "gameplay-tested",
       "candidateDevices": {
         "desktop": true,
         "android": false,
         "ios": false
       },
       "verification": {
-        "desktop": "needs-review",
+        "desktop": "smoke-pass",
         "android": "unsupported",
         "ios": "unsupported"
       },
       "verificationEvidence": {
         "desktop": {
-          "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
-          "workflowRun": 42382014303
+          "sourceCommit": "c4bef16ba387283a4b3cb14aa731481a8cbc09b6",
+          "workflowRun": 42490538713,
+          "checks": [
+            "Unity canvas loads",
+            "keyboard input is delivered"
+          ]
         }
+      },
+      "features": {
+        "touch": false,
+        "keyboard": true,
+        "gamepad": false,
+        "local2p": true,
+        "quick": true,
+        "offline": false,
+        "progress": false,
+        "daily": false
       }
     },
     {
@@ -6713,7 +6806,7 @@
       "features": {
         "touch": true,
         "keyboard": true,
-        "gamepad": false,
+        "gamepad": true,
         "local2p": false,
         "quick": false,
         "offline": true,
@@ -6724,18 +6817,18 @@
       "license": "MIT",
       "verificationEvidence": {
         "desktop": {
-          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
-          "workflowRun": 42464906934,
+          "sourceCommit": "c4d254c38b6e023998394cd11c643c46dbf09aca",
+          "workflowRun": 42489748407,
           "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
         },
         "ios": {
-          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
-          "workflowRun": 42464906934,
+          "sourceCommit": "c4d254c38b6e023998394cd11c643c46dbf09aca",
+          "workflowRun": 42489748407,
           "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
         },
         "android": {
-          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
-          "workflowRun": 42464906934,
+          "sourceCommit": "c4d254c38b6e023998394cd11c643c46dbf09aca",
+          "workflowRun": 42489748407,
           "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
         }
       }
@@ -6781,18 +6874,18 @@
       "license": "MIT",
       "verificationEvidence": {
         "desktop": {
-          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
-          "workflowRun": 42464906934,
+          "sourceCommit": "c4d254c38b6e023998394cd11c643c46dbf09aca",
+          "workflowRun": 42489748407,
           "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
         },
         "ios": {
-          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
-          "workflowRun": 42464906934,
+          "sourceCommit": "c4d254c38b6e023998394cd11c643c46dbf09aca",
+          "workflowRun": 42489748407,
           "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
         },
         "android": {
-          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
-          "workflowRun": 42464906934,
+          "sourceCommit": "c4d254c38b6e023998394cd11c643c46dbf09aca",
+          "workflowRun": 42489748407,
           "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
         }
       }
@@ -6838,18 +6931,18 @@
       "license": "MIT",
       "verificationEvidence": {
         "desktop": {
-          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
-          "workflowRun": 42464906934,
+          "sourceCommit": "c4d254c38b6e023998394cd11c643c46dbf09aca",
+          "workflowRun": 42489748407,
           "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
         },
         "ios": {
-          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
-          "workflowRun": 42464906934,
+          "sourceCommit": "c4d254c38b6e023998394cd11c643c46dbf09aca",
+          "workflowRun": 42489748407,
           "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
         },
         "android": {
-          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
-          "workflowRun": 42464906934,
+          "sourceCommit": "c4d254c38b6e023998394cd11c643c46dbf09aca",
+          "workflowRun": 42489748407,
           "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
         }
       }
@@ -6884,7 +6977,7 @@
       "features": {
         "touch": true,
         "keyboard": true,
-        "gamepad": false,
+        "gamepad": true,
         "local2p": false,
         "quick": true,
         "offline": true,
@@ -6895,18 +6988,18 @@
       "license": "MIT",
       "verificationEvidence": {
         "desktop": {
-          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
-          "workflowRun": 42464906934,
+          "sourceCommit": "c4d254c38b6e023998394cd11c643c46dbf09aca",
+          "workflowRun": 42489748407,
           "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
         },
         "ios": {
-          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
-          "workflowRun": 42464906934,
+          "sourceCommit": "c4d254c38b6e023998394cd11c643c46dbf09aca",
+          "workflowRun": 42489748407,
           "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
         },
         "android": {
-          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
-          "workflowRun": 42464906934,
+          "sourceCommit": "c4d254c38b6e023998394cd11c643c46dbf09aca",
+          "workflowRun": 42489748407,
           "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
         }
       }
@@ -6952,18 +7045,18 @@
       "license": "MIT",
       "verificationEvidence": {
         "desktop": {
-          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
-          "workflowRun": 42464906934,
+          "sourceCommit": "c4d254c38b6e023998394cd11c643c46dbf09aca",
+          "workflowRun": 42489748407,
           "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
         },
         "ios": {
-          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
-          "workflowRun": 42464906934,
+          "sourceCommit": "c4d254c38b6e023998394cd11c643c46dbf09aca",
+          "workflowRun": 42489748407,
           "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
         },
         "android": {
-          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
-          "workflowRun": 42464906934,
+          "sourceCommit": "c4d254c38b6e023998394cd11c643c46dbf09aca",
+          "workflowRun": 42489748407,
           "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
         }
       }
@@ -7009,18 +7102,18 @@
       "license": "MIT",
       "verificationEvidence": {
         "desktop": {
-          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
-          "workflowRun": 42464906934,
+          "sourceCommit": "c4d254c38b6e023998394cd11c643c46dbf09aca",
+          "workflowRun": 42489748407,
           "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
         },
         "ios": {
-          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
-          "workflowRun": 42464906934,
+          "sourceCommit": "c4d254c38b6e023998394cd11c643c46dbf09aca",
+          "workflowRun": 42489748407,
           "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
         },
         "android": {
-          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
-          "workflowRun": 42464906934,
+          "sourceCommit": "c4d254c38b6e023998394cd11c643c46dbf09aca",
+          "workflowRun": 42489748407,
           "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
         }
       }
@@ -7066,18 +7159,18 @@
       "license": "MIT",
       "verificationEvidence": {
         "desktop": {
-          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
-          "workflowRun": 42464906934,
+          "sourceCommit": "c4d254c38b6e023998394cd11c643c46dbf09aca",
+          "workflowRun": 42489748407,
           "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
         },
         "ios": {
-          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
-          "workflowRun": 42464906934,
+          "sourceCommit": "c4d254c38b6e023998394cd11c643c46dbf09aca",
+          "workflowRun": 42489748407,
           "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
         },
         "android": {
-          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
-          "workflowRun": 42464906934,
+          "sourceCommit": "c4d254c38b6e023998394cd11c643c46dbf09aca",
+          "workflowRun": 42489748407,
           "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
         }
       }
@@ -7123,18 +7216,18 @@
       "license": "MIT",
       "verificationEvidence": {
         "desktop": {
-          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
-          "workflowRun": 42464906934,
+          "sourceCommit": "c4d254c38b6e023998394cd11c643c46dbf09aca",
+          "workflowRun": 42489748407,
           "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
         },
         "ios": {
-          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
-          "workflowRun": 42464906934,
+          "sourceCommit": "c4d254c38b6e023998394cd11c643c46dbf09aca",
+          "workflowRun": 42489748407,
           "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
         },
         "android": {
-          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
-          "workflowRun": 42464906934,
+          "sourceCommit": "c4d254c38b6e023998394cd11c643c46dbf09aca",
+          "workflowRun": 42489748407,
           "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
         }
       }
@@ -7180,18 +7273,18 @@
       "license": "MIT",
       "verificationEvidence": {
         "desktop": {
-          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
-          "workflowRun": 42464906934,
+          "sourceCommit": "c4d254c38b6e023998394cd11c643c46dbf09aca",
+          "workflowRun": 42489748407,
           "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
         },
         "ios": {
-          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
-          "workflowRun": 42464906934,
+          "sourceCommit": "c4d254c38b6e023998394cd11c643c46dbf09aca",
+          "workflowRun": 42489748407,
           "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
         },
         "android": {
-          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
-          "workflowRun": 42464906934,
+          "sourceCommit": "c4d254c38b6e023998394cd11c643c46dbf09aca",
+          "workflowRun": 42489748407,
           "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
         }
       }
@@ -7237,18 +7330,18 @@
       "license": "MIT",
       "verificationEvidence": {
         "desktop": {
-          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
-          "workflowRun": 42464906934,
+          "sourceCommit": "c4d254c38b6e023998394cd11c643c46dbf09aca",
+          "workflowRun": 42489748407,
           "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
         },
         "ios": {
-          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
-          "workflowRun": 42464906934,
+          "sourceCommit": "c4d254c38b6e023998394cd11c643c46dbf09aca",
+          "workflowRun": 42489748407,
           "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
         },
         "android": {
-          "sourceCommit": "a2ded32bc9dc2e0e43f01b187af86e7c4d6dcc33",
-          "workflowRun": 42464906934,
+          "sourceCommit": "c4d254c38b6e023998394cd11c643c46dbf09aca",
+          "workflowRun": 42489748407,
           "checks": "Gameplay interaction, persistence, keyboard focus and viewport; no external requests or missing assets."
         }
       }
@@ -7292,8 +7385,13 @@
     "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
     "workflowRun": 42382014303,
     "additionalRuns": [
-      42384056308
+      42384056308,
+      42488454007,
+      42489748407,
+      42489748423,
+      42490538713
     ],
-    "method": "Full browser load/input smoke plus targeted repair checks; not a complete playthrough. Coloron and Moto X3M are withheld on iOS because shared external dependencies remain missing."
+    "method": "Browser load/input checks with separate gameplay and persistence checks for original games. Device profiles are emulated. BTD5 is withheld after a profile-loader hang; A Dark Room is desktop-only.",
+    "updatedAt": "2026-11-08"
   }
 }

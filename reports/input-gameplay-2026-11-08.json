@@ -1,0 +1,253 @@
+[
+  {
+    "device": "desktop",
+    "sourceCommit": "c4bef16ba387283a4b3cb14aa731481a8cbc09b6",
+    "workflowRun": 42490538713,
+    "results": [
+      {
+        "id": "sokoban",
+        "device": "desktop",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "standard D-pad solves a level",
+          "B undoes the move"
+        ],
+        "passed": true
+      },
+      {
+        "id": "klondike",
+        "device": "desktop",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "A draws a card",
+          "B restores the previous stock"
+        ],
+        "passed": true
+      },
+      {
+        "id": "asteroids",
+        "device": "desktop",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "touch starts the game",
+          "held direction and release reach the engine",
+          "gamepad release clears the engine key"
+        ],
+        "passed": true
+      },
+      {
+        "id": "snake-retro",
+        "device": "desktop",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "touch starts the game",
+          "on-screen arrow changes snake direction",
+          "initial four-cell snake body grows correctly"
+        ],
+        "passed": true
+      },
+      {
+        "id": "adarkroom",
+        "device": "desktop",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "lighting the fire advances the room",
+          "audio files load and decode from their correct directory"
+        ],
+        "passed": true
+      },
+      {
+        "id": "coloron",
+        "device": "desktop",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "play starts the ball animation",
+          "local scene creates playable platforms"
+        ],
+        "passed": true
+      },
+      {
+        "id": "tube-jumpers",
+        "device": "desktop",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "Unity canvas loads",
+          "keyboard input is delivered"
+        ],
+        "passed": true
+      }
+    ]
+  },
+  {
+    "device": "android",
+    "sourceCommit": "c4bef16ba387283a4b3cb14aa731481a8cbc09b6",
+    "workflowRun": 42490538713,
+    "results": [
+      {
+        "id": "sokoban",
+        "device": "android",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "standard D-pad solves a level",
+          "B undoes the move"
+        ],
+        "passed": true
+      },
+      {
+        "id": "klondike",
+        "device": "android",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "A draws a card",
+          "B restores the previous stock"
+        ],
+        "passed": true
+      },
+      {
+        "id": "asteroids",
+        "device": "android",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "touch starts the game",
+          "held direction and release reach the engine",
+          "gamepad release clears the engine key"
+        ],
+        "passed": true
+      },
+      {
+        "id": "snake-retro",
+        "device": "android",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "touch starts the game",
+          "on-screen arrow changes snake direction",
+          "initial four-cell snake body grows correctly"
+        ],
+        "passed": true
+      },
+      {
+        "id": "adarkroom",
+        "device": "android",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [],
+        "passed": false,
+        "failure": "locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('#lightButton')\n\n    at /home/runner/work/acgames/acgames/tests/inputs-browser.mjs:31:39"
+      },
+      {
+        "id": "coloron",
+        "device": "android",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "play starts the ball animation",
+          "local scene creates playable platforms"
+        ],
+        "passed": true
+      }
+    ]
+  },
+  {
+    "device": "ios",
+    "sourceCommit": "c4bef16ba387283a4b3cb14aa731481a8cbc09b6",
+    "workflowRun": 42490538713,
+    "results": [
+      {
+        "id": "sokoban",
+        "device": "ios",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "standard D-pad solves a level",
+          "B undoes the move"
+        ],
+        "passed": true
+      },
+      {
+        "id": "klondike",
+        "device": "ios",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "A draws a card",
+          "B restores the previous stock"
+        ],
+        "passed": true
+      },
+      {
+        "id": "asteroids",
+        "device": "ios",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "touch starts the game",
+          "held direction and release reach the engine",
+          "gamepad release clears the engine key"
+        ],
+        "passed": true
+      },
+      {
+        "id": "snake-retro",
+        "device": "ios",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "touch starts the game",
+          "on-screen arrow changes snake direction",
+          "initial four-cell snake body grows correctly"
+        ],
+        "passed": true
+      },
+      {
+        "id": "adarkroom",
+        "device": "ios",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [],
+        "passed": false,
+        "failure": "locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('#lightButton')\n\n    at /home/runner/work/acgames/acgames/tests/inputs-browser.mjs:31:39"
+      },
+      {
+        "id": "coloron",
+        "device": "ios",
+        "errors": [],
+        "missing": [],
+        "external": [],
+        "checks": [
+          "play starts the ball animation",
+          "local scene creates playable platforms"
+        ],
+        "passed": true
+      }
+    ]
+  }
+]
