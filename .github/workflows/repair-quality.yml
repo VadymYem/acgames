@@ -2,12 +2,7 @@ name: Repaired game verification
 on:
   push:
     branches: [main]
-    paths:
-      - 'games/**'
-      - 'shared/**'
-      - 'tools/**'
-      - 'tests/**'
-      - '.github/workflows/repair-quality.yml'
+    paths: ['games/**','shared/**','tools/**','tests/**','.github/workflows/repair-quality.yml']
 permissions:
   contents: read
 concurrency:
@@ -43,6 +38,7 @@ jobs:
         run: |
           python3 -m http.server 4173 --bind 127.0.0.1 --directory dist >/tmp/games-repair-http.log 2>&1 &
           node tests/browser.mjs
+          node tests/inputs-browser.mjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
