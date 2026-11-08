@@ -13,5 +13,7 @@
  function shuffle(a,random=Math.random){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
  function makeSudoku(easy=false,random=Math.random){const groups=()=>shuffle([0,1,2],random).flatMap(b=>shuffle([0,1,2],random).map(i=>b*3+i));const rows=groups(),cols=groups(),digits=[0,...shuffle([1,2,3,4,5,6,7,8,9],random)];const p=[],s=[];for(let r=0;r<9;r++)for(let c=0;c<9;c++){const i=rows[r]*9+cols[c];p.push(digits[puzzle[i]]);s.push(digits[solution[i]]);}if(easy){const empty=shuffle(p.map((v,i)=>v?null:i).filter(i=>i!==null),random).slice(0,12);for(const i of empty)p[i]=s[i];}return {puzzle:p,solution:s,grid:p.slice(),hints:0};}
  function countSudokuSolutions(input,limit=2){const grid=input.slice();let count=0;function solve(){if(count>=limit)return;let spot=-1,options=[];for(let i=0;i<81;i++){if(grid[i])continue;const used=new Set(),r=Math.floor(i/9),c=i%9;for(let k=0;k<9;k++){used.add(grid[r*9+k]);used.add(grid[k*9+c]);used.add(grid[(Math.floor(r/3)*3+Math.floor(k/3))*9+Math.floor(c/3)*3+k%3]);}const values=[1,2,3,4,5,6,7,8,9].filter(n=>!used.has(n));if(!values.length)return;if(spot<0||values.length<options.length){spot=i;options=values;if(values.length===1)break;}}if(spot<0){count++;return;}for(const n of options){grid[spot]=n;solve();}grid[spot]=0;}solve();return count;}
- return {drop,win,bestDrop,clues,nonogramDone,makeSudoku,countSudokuSolutions};
+ function seeded(seed){let n=2166136261;for(const ch of String(seed))n=Math.imul(n^ch.charCodeAt(0),16777619);return ()=>{n+=0x6D2B79F5;let t=Math.imul(n^n>>>15,n|1);t^=t+Math.imul(t^t>>>7,t|61);return ((t^t>>>14)>>>0)/4294967296;};}
+ return {drop,win,bestDrop,clues,nonogramDone,makeSudoku,countSudokuSolutions,seeded};
 });
+

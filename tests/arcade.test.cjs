@@ -1,5 +1,10 @@
 'use strict';
 const test=require('node:test'),assert=require('node:assert/strict'),C=require('../shared/arcade-core.js');
+test('Daily Sudoku repeats the same unique puzzle without changing normal games',()=>{
+ const P=require('../shared/classics-core.js');
+ for(const date of ['2026-11-08','2026-11-09','2026-11-10']){const a=P.makeSudoku(false,P.seeded('sudoku:'+date));assert.deepEqual(a,P.makeSudoku(false,P.seeded('sudoku:'+date)));assert.equal(P.countSudokuSolutions(a.puzzle),1);}
+ assert.notDeepEqual(P.makeSudoku(false,P.seeded('sudoku:2026-11-08')).puzzle,P.makeSudoku(false,P.seeded('sudoku:2026-11-09')).puzzle);
+});
 test('Reversi flips, legal play, forced passes and complete deterministic games',()=>{
  const b=C.reversiBoard();assert.equal(C.reversiMoves(b,1).length,4);const i=C.reversiMoves(b,1)[0],next=C.reversiPlay(b,i,1);assert.equal(next.filter(v=>v===1).length,4);assert.equal(b.filter(Boolean).length,4);assert.equal(C.reversiPlay(b,27,1),null);
  for(let seed=0;seed<10;seed++){let board=C.reversiBoard(),player=1,passed=false;const rng=C.random(seed);for(let turn=0;turn<125;turn++){const moves=C.reversiMoves(board,player);if(!moves.length){if(passed)break;passed=true;player*=-1;continue;}passed=false;const after=C.reversiPlay(board,moves[Math.floor(rng()*moves.length)],player);assert.equal(after.filter(Boolean).length,board.filter(Boolean).length+1);board=after;player*=-1;}assert(!C.reversiMoves(board,1).length&&!C.reversiMoves(board,-1).length);}

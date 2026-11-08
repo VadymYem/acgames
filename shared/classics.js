@@ -2,6 +2,8 @@
  'use strict';
  const C=window.AuthorCheClassics;
  const game=document.body.dataset.game;
+ const date=new URLSearchParams(location.search).get('daily')||'',daily=/^\d{4}-\d{2}-\d{2}$/.test(date)?date:'';
+ const dailyRandom=()=>daily?C.seeded(game+':'+daily):Math.random;
  const title=document.getElementById('title'),intro=document.getElementById('intro'),area=document.getElementById('play-area'),tools=document.getElementById('tools'),status=document.getElementById('status');
  const safe={get(key){try{return JSON.parse(localStorage.getItem(key));}catch(_){return null;}},set(key,value){try{localStorage.setItem(key,JSON.stringify(value));}catch(_){}}};
  function say(text){status.textContent=text;}
@@ -21,15 +23,16 @@
   render();
  }else if(game==='sudoku'){
   title.textContent='Судоку';intro.textContent='Заповніть поле числами 1–9. У кожному рядку, стовпці та квадраті 3×3 кожне число має траплятися один раз.';
-  let state=safe.get('ac_sudoku_v1'),selected=0,checked=false;
-  if(!state||!['grid','puzzle','solution'].every(k=>Array.isArray(state[k])&&state[k].length===81&&state[k].every(n=>Number.isInteger(n)&&n>=0&&n<=9))||state.solution.some(n=>!n))state=C.makeSudoku();
-  const level=document.createElement('select');level.setAttribute('aria-label','Складність');level.innerHTML='<option value="normal">Класична</option><option value="easy">Легка</option>';
-  tools.append(level,button('Нова гра',()=>{state=C.makeSudoku(level.value==='easy');checked=false;selected=0;save();render();},true),button('Підказка',hint),button('Перевірити',()=>{checked=true;render();}));
+  const sudokuKey='ac_sudoku_v1'+(daily?':'+daily:'');
+  let state=safe.get(sudokuKey),selected=0,checked=false;
+  if(!state||!['grid','puzzle','solution'].every(k=>Array.isArray(state[k])&&state[k].length===81&&state[k].every(n=>Number.isInteger(n)&&n>=0&&n<=9))||state.solution.some(n=>!n))state=C.makeSudoku(false,dailyRandom());
+  const level=document.createElement('select');level.setAttribute('aria-label','Складність');level.innerHTML='<option value="normal">Класична</option><option value="easy">Легка</option>';if(daily){level.disabled=true;intro.textContent+=' Завдання дня: '+daily+'.';}
+  tools.append(level,button('Нова гра',()=>{state=C.makeSudoku(!daily&&level.value==='easy',dailyRandom());checked=false;selected=0;save();render();},true),button('Підказка',hint),button('Перевірити',()=>{checked=true;render();}));
   const grid=document.createElement('div');grid.className='board sudoku';grid.setAttribute('aria-label','Поле судоку 9 на 9');const pad=document.createElement('div');pad.className='number-pad';area.append(grid,pad);const cells=[];
   for(let i=0;i<81;i++){const b=button('',()=>{selected=i;render();});b.addEventListener('focus',()=>{selected=i;render();});grid.append(b);cells.push(b);}keyboardGrid(grid,9);
   for(let n=1;n<=9;n++)pad.append(button(String(n),()=>input(n)));pad.append(button('Стерти',()=>input(0)));
   grid.addEventListener('keydown',e=>{if(/^[1-9]$/.test(e.key)){e.preventDefault();input(Number(e.key));}else if(['Backspace','Delete','0'].includes(e.key)){e.preventDefault();input(0);}});
-  function save(){safe.set('ac_sudoku_v1',state);}
+  function save(){safe.set(sudokuKey,state);}
   function input(n){if(state.puzzle[selected]){say('Це початкове число. Оберіть порожню клітинку.');return;}state.grid[selected]=n;save();render();}
   function hint(){const i=!state.puzzle[selected]&&state.grid[selected]!==state.solution[selected]?selected:state.grid.findIndex((v,i)=>v!==state.solution[i]);if(i<0)return;state.grid[i]=state.solution[i];state.hints=(state.hints||0)+1;selected=i;save();render();}
   function render(){cells.forEach((b,i)=>{b.textContent=state.grid[i]||'';b.classList.toggle('fixed',Boolean(state.puzzle[i]));b.classList.toggle('selected',i===selected);b.classList.toggle('wrong',checked&&Boolean(state.grid[i])&&state.grid[i]!==state.solution[i]);b.setAttribute('aria-label','Ряд '+(Math.floor(i/9)+1)+', стовпець '+(i%9+1)+': '+(state.grid[i]||'порожньо')+(state.puzzle[i]?', початкове число':''));});const left=state.grid.filter(v=>!v).length;if(state.grid.every((v,i)=>v===state.solution[i]))say('Судоку розв’язано! Підказок: '+(state.hints||0));else say('Порожніх клітинок: '+left+' · Підказок: '+(state.hints||0)+(checked?' · Помилки позначено кораловим':''));}
@@ -37,14 +40,17 @@
  }else if(game==='nonogram'){
   title.textContent='Нонограми';intro.textContent='Відновіть малюнок за числами. Вони показують довжини груп зафарбованих клітинок. Між групами має бути хоча б один пропуск.';
   const patterns=[{name:'Серце',data:['01010','11111','11111','01110','00100']},{name:'Ракета',data:['00100','01110','01110','11111','10101']},{name:'Ялинка',data:['00100','01110','00100','11111','00100']}];
-  let index=0,grid=Array(25).fill(0),mark=1;const select=document.createElement('select');select.setAttribute('aria-label','Малюнок');patterns.forEach((p,i)=>{const o=document.createElement('option');o.value=i;o.textContent=p.name;select.append(o);});select.addEventListener('change',()=>{index=Number(select.value);reset();});
+  const nonoKey='ac_nonogram_v1'+(daily?':'+daily:'');
+  const stored=safe.get(nonoKey),dailyIndex=daily?Math.floor(dailyRandom()()*patterns.length):0;
+  let index=daily?dailyIndex:stored&&Number.isInteger(stored.index)&&stored.index>=0&&stored.index<patterns.length?stored.index:0,grid=stored&&stored.index===index&&Array.isArray(stored.grid)&&stored.grid.length===25&&stored.grid.every(v=>[-1,0,1].includes(v))?stored.grid:Array(25).fill(0),mark=1;const select=document.createElement('select');select.setAttribute('aria-label','Малюнок');patterns.forEach((p,i)=>{const o=document.createElement('option');o.value=i;o.textContent=p.name;select.append(o);});select.value=index;if(daily){select.disabled=true;intro.textContent+=' Завдання дня: '+daily+'.';}select.addEventListener('change',()=>{index=Number(select.value);const saved=safe.get(nonoKey+':'+index);grid=saved&&Array.isArray(saved.grid)&&saved.grid.length===25&&saved.grid.every(v=>[-1,0,1].includes(v))?saved.grid:Array(25).fill(0);saveNono();build();render();});
   const fill=button('Зафарбувати',()=>{mark=1;render();}),cross=button('Позначити ×',()=>{mark=-1;render();});tools.append(select,fill,cross,button('Заново',reset));const board=document.createElement('div');board.className='nonogram';area.append(board);let cells=[];
   function pattern(){return patterns[index].data.join('').split('').map(Number);}
-  function reset(){grid=Array(25).fill(0);build();render();}
+  function saveNono(){safe.set(nonoKey,{index,grid});safe.set(nonoKey+':'+index,{index,grid});}
+  function reset(){grid=Array(25).fill(0);saveNono();build();render();}
   function build(){board.replaceChildren();cells=[];board.append(document.createElement('span'));const p=pattern();for(let c=0;c<5;c++){const d=document.createElement('div');d.className='nono-clue column';d.textContent=C.clues([0,1,2,3,4].map(r=>p[r*5+c])).join('\n');board.append(d);}for(let r=0;r<5;r++){const d=document.createElement('div');d.className='nono-clue';d.textContent=C.clues(p.slice(r*5,r*5+5)).join(' ');board.append(d);for(let c=0;c<5;c++){const i=r*5+c,b=button('',()=>paint(i,mark));b.addEventListener('contextmenu',e=>{e.preventDefault();paint(i,-1);});b.setAttribute('aria-label','Ряд '+(r+1)+', стовпець '+(c+1));board.append(b);cells.push(b);}}keyboardGrid(board,5);}
-  function paint(i,value){grid[i]=grid[i]===value?0:value;render();}
+  function paint(i,value){grid[i]=grid[i]===value?0:value;saveNono();render();}
   function render(){cells.forEach((b,i)=>{b.dataset.value=grid[i];b.textContent=grid[i]===-1?'×':'';b.setAttribute('aria-pressed',String(grid[i]===1));});fill.setAttribute('aria-pressed',String(mark===1));cross.setAttribute('aria-pressed',String(mark===-1));say(C.nonogramDone(grid,pattern())?'Малюнок відновлено! Оберіть наступний.':mark===1?'Режим: зафарбовування':'Режим: позначення порожніх клітинок');}
-  reset();
+  saveNono();build();render();
  }else if(game==='simon-memory'){
   title.textContent='Світлова пам’ять';intro.textContent='Дивіться на послідовність світлових сигналів і повторюйте її. Кожен раунд додає один новий сигнал.';
   let sequence=[],position=0,accepting=false,token=0,paused=false,sound=true,context=null,best=Number(safe.get('ac_simon_best'))||0,timers=[];
@@ -63,3 +69,4 @@
   update();say('Натисніть «Почати» · Рекорд: '+best);
  }
 })();
+

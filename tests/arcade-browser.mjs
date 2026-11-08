@@ -45,5 +45,14 @@ for(const id of ids){
  }catch(e){row.passed=false;row.failure=e.stack||e.message;await page.screenshot({path:out+'/'+id+'-failure.jpg',type:'jpeg',quality:75}).catch(()=>{});}
  results.push(row);console.log(JSON.stringify(row));await context.close();
 }
+for(const id of ['sudoku','nonogram']){
+ const context=await browser.newContext({viewport:mobile?{width:390,height:844}:{width:1280,height:900},isMobile:mobile,hasTouch:mobile}),page=await context.newPage();const row={id,device,checks:[],errors:[]};page.on('pageerror',e=>row.errors.push(e.message));
+ try{
+  const url='http://127.0.0.1:4173/games/'+id+'/index.html?daily=2026-11-08';await page.goto(url);
+  if(id==='sudoku'){await page.getByRole('button',{name:'Підказка',exact:true}).click();assert((await page.locator('#status').innerText()).includes('Підказок: 1'));await page.reload();assert((await page.locator('#status').innerText()).includes('Підказок: 1'));assert(await page.getByLabel('Складність').isDisabled());}
+  else{await page.locator('.nonogram button').first().click();await page.reload();assert.equal(await page.locator('.nonogram button').first().getAttribute('data-value'),'1');assert(await page.getByLabel('Малюнок').isDisabled());}
+  row.checks.push('daily progress survives reload','daily settings stay deterministic');assert.deepEqual(row.errors,[]);row.passed=true;
+ }catch(e){row.passed=false;row.failure=e.stack||e.message;}console.log(JSON.stringify(row));results.push(row);await context.close();
+}
 await browser.close();fs.writeFileSync(out+'/results.json',JSON.stringify({sourceCommit:process.env.GITHUB_SHA||'local',workflowRun:process.env.GITHUB_RUN_ID||'local',device,results},null,2)+'\n');
 if(results.some(row=>!row.passed))process.exitCode=1;

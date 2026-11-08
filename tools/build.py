@@ -43,7 +43,7 @@ if archive.exists() and any(g['id']=='slope3' for g in selected):
 # Poker refers to this shared art directory.
 if (ROOT/'games/avatar').exists():shutil.copytree(ROOT/'games/avatar',DEST/'games/avatar')
 shutil.copytree(ROOT/'shared',DEST/'shared',ignore=shutil.ignore_patterns('*.map'))
-for name in ['index.html','LICENSE','README.md','main.min.js']:
+for name in ['index.html','LICENSE','README.md','main.min.js','app.js','app.css','sw.js','manifest.webmanifest']:
  shutil.copyfile(ROOT/name,DEST/name)
 (DEST/'catalog.json').write_text(json.dumps(dict(data,games=selected),ensure_ascii=False,indent=2)+'\n')
 (DEST/'.nojekyll').touch()
@@ -131,3 +131,9 @@ for html in DEST.rglob('*.html'):
  text = re.sub(r"""(<script\b[^>]*\bsrc=["'])([^"']+)(["'])""",version_asset,text,flags=re.I)
  text = re.sub(r"""(<link\b[^>]*\bhref=["'])([^"']+\.css(?:\?[^"']*)?)(["'])""",version_asset,text,flags=re.I)
  html.write_text(text,encoding='utf-8')
+
+# Offline files are an explicit opt-in subset, never an automatic copy of the library.
+(DEST/'sw.js').write_text((DEST/'sw.js').read_text().replace('__AC_BUILD__',revision))
+import subprocess
+subprocess.run([sys.executable,str(ROOT/'tools/offline.py'),str(DEST)],check=True)
+

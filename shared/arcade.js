@@ -18,7 +18,7 @@
   function say(text) {status.textContent=text;}
   function button(text, action, parent=tools) {const b=document.createElement('button');b.type='button';b.textContent=text;b.addEventListener('click',action);parent.append(b);return b;}
   function select(label, options, action, initial) {
-    const l=document.createElement('label'),s=document.createElement('select');l.append(document.createTextNode(label+' '));
+    const l=document.createElement('label'),s=document.createElement('select');s.setAttribute('aria-label',label);l.append(document.createTextNode(label+' '));
     for(const [value,text] of options){const o=document.createElement('option');o.value=value;o.textContent=text;s.append(o);}if(initial!==undefined)s.value=String(initial);
     s.addEventListener('change',()=>action(s.value));l.append(s);tools.append(l);return s;
   }
