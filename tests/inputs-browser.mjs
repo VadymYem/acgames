@@ -28,7 +28,7 @@ for(const id of ['sokoban','klondike','asteroids','snake-retro',...(mobile?[]:['
    }
    assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+2));
   }else if(id==='adarkroom'){
-   await page.locator('#lightButton').click();await page.locator('#stokeButton').waitFor();await page.waitForFunction(()=>Object.keys(AudioEngine.AUDIO_BUFFER_CACHE).length>0);assert(await page.evaluate(()=>Object.keys(AudioEngine.AUDIO_BUFFER_CACHE).every(url=>!url.includes('index.htmlaudio'))));row.checks.push('lighting the fire advances the room','audio files load and decode from their correct directory');
+   assert.equal(await page.locator('#lightButton').getAttribute('role'),'button');await page.locator('#lightButton').focus();await page.keyboard.press('Enter');await page.locator('#stokeButton').waitFor();await page.waitForFunction(()=>Object.keys(AudioEngine.AUDIO_BUFFER_CACHE).length>0);assert(await page.evaluate(()=>Object.keys(AudioEngine.AUDIO_BUFFER_CACHE).every(url=>!url.includes('index.htmlaudio'))));row.checks.push('keyboard activation lights the fire and advances the room','audio files load and decode from their correct directory');
   }else if(id==='coloron'){
    await page.locator('.start-game .play-button').click();await page.locator('.scene #ball').waitFor();const bar=page.locator('.scene .stick').first();await bar.waitFor();row.checks.push('play starts the ball animation','local scene creates playable platforms');
   }else{

@@ -11,6 +11,15 @@ var Button = {
 		var el = $('<div>')
 			.attr('id', typeof(options.id) != 'undefined' ? options.id : "BTN_" + Engine.getGuid())
 			.addClass('button')
+			.attr('role', 'button')
+			.attr('tabindex', '0')
+			.attr('aria-disabled', 'false')
+			.keydown(function(event) {
+				if(event.key === 'Enter' || event.key === ' ' || event.which === 13 || event.which === 32) {
+					event.preventDefault();
+					$(this).click();
+				}
+			})
 			.text(typeof(options.text) != 'undefined' ? options.text : "button")
 			.click(function() {
 				if(!$(this).hasClass('disabled')) {
@@ -51,9 +60,9 @@ var Button = {
 	setDisabled: function(btn, disabled) {
 		if(btn) {
 			if(!disabled && !btn.data('onCooldown')) {
-				btn.removeClass('disabled');
+				btn.removeClass('disabled').attr('aria-disabled', 'false');
 			} else if(disabled) {
-				btn.addClass('disabled');
+				btn.addClass('disabled').attr('aria-disabled', 'true');
 			}
 			btn.data('disabled', disabled);
 		}
@@ -104,7 +113,7 @@ var Button = {
 			$('div.cooldown', btn).width(left * 100 +"%").animate({width: '0%'}, time * 1000, 'linear', function() {
 				Button.clearCooldown(btn, true);
 			});
-			btn.addClass('disabled');
+			btn.addClass('disabled').attr('aria-disabled', 'true');
 			btn.data('onCooldown', true);
 		}
 	},
@@ -121,7 +130,8 @@ var Button = {
 			btn.removeData('countdown');
 		}
 		if(!btn.data('disabled')) {
-			btn.removeClass('disabled');
+			btn.removeClass('disabled').attr('aria-disabled', 'false');
 		}
 	}
 };
+
