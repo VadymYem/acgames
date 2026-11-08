@@ -225,6 +225,8 @@
     if(daily)document.getElementById('daily').textContent='Щоденне завдання · '+daily;
     ({reversi:()=>discs(false),draughts:()=>discs(true),sokoban,wordsearch,klondike:()=>cards(false),spider:()=>cards(true),mahjong,battleship,'fruit-merge':merge,'music-lab':music}[id])();
     save();
+    // The playable board is ready before optional controller styles finish loading.
+    if(parent!==window)parent.postMessage({source:'authorche-game',type:'ac-game-loaded'},'*');
   } catch (error) {
     console.error('Не вдалося відновити партію:',error);say('Збережена партія пошкоджена. Почніть нову, щоб відновити гру.');
     button('Відновити гру',()=>{try{localStorage.removeItem(key);}catch(_){}location.reload();});

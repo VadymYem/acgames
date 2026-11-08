@@ -7,12 +7,19 @@ const ids=['klondike','spider','mahjong','sokoban','wordsearch','draughts','reve
 for(const id of ids){
  const context=await browser.newContext({viewport:mobile?{width:390,height:844}:{width:1280,height:900},isMobile:mobile,hasTouch:mobile,reducedMotion:'reduce',userAgent:device==='android'?'Mozilla/5.0 (Linux; Android 16) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Mobile Safari/537.36':device==='ios'?'Mozilla/5.0 (iPhone; CPU iPhone OS 19_0 like Mac OS X) AppleWebKit/605.1.15 Version/19.0 Mobile/15E148 Safari/604.1':undefined});
  const page=await context.newPage(),row={id,device,errors:[],missing:[],external:[],checks:[]};
+ let releaseStyle;
+ if(id==='sokoban'){
+  const gate=new Promise(resolve=>{releaseStyle=resolve;});
+  await context.route('**/shared/controls.css*',async route=>{await gate;await route.continue();});
+ }
  page.on('pageerror',e=>row.errors.push(e.stack||e.message));page.on('response',r=>{if(r.status()>=400)row.missing.push(r.url());if(!/^http:\/\/(localhost|127\.0\.0\.1):4173\//.test(r.url()))row.external.push(r.url());});
  try{
   const url='http://localhost:4173/tests/arcade-player.html?id='+id;
-  await page.goto(url);let frame=page.frames().find(f=>f.url().includes('/games/'+id+'/'));
+  await page.goto(url,{waitUntil:'domcontentloaded'});let frame=page.frames().find(f=>f.url().includes('/games/'+id+'/'));
   if(!frame){await page.locator('iframe').contentFrame().locator('#tools button').first().waitFor();frame=page.frames().find(f=>f.url().includes('/games/'+id+'/'));}
   await frame.locator('#tools button').first().waitFor();
+  await page.locator('#gameStatus').waitFor({state:'hidden',timeout:5000});row.checks.push('parent player receives the ready signal');
+  if(releaseStyle){row.checks.push('ready signal does not wait for optional styles');releaseStyle();}
   const read=()=>frame.evaluate(id=>JSON.parse(localStorage.getItem('ac_arcade_v1:'+id)).state,id);
   const check=name=>row.checks.push(name);
   if(id==='reversi'){
@@ -42,7 +49,7 @@ for(const id of ids){
   await frame.locator('#tools button').first().focus();await page.keyboard.press('Tab');assert(await frame.evaluate(()=>document.activeElement?.tagName!=='BODY'));check('keyboard focus');
   await page.screenshot({path:out+'/'+id+'.jpg',type:'jpeg',quality:75,fullPage:false});
   assert.deepEqual(row.errors,[]);assert.deepEqual(row.missing,[]);assert.deepEqual(row.external,[]);row.passed=true;
- }catch(e){row.passed=false;row.failure=e.stack||e.message;await page.screenshot({path:out+'/'+id+'-failure.jpg',type:'jpeg',quality:75}).catch(()=>{});}
+ }catch(e){releaseStyle?.();row.passed=false;row.failure=e.stack||e.message;await page.screenshot({path:out+'/'+id+'-failure.jpg',type:'jpeg',quality:75}).catch(()=>{});}
  results.push(row);console.log(JSON.stringify(row));await context.close();
 }
 for(const id of ['sudoku','nonogram']){
