@@ -638,23 +638,31 @@
       "entry": "games/badicecream/index.html",
       "cover": "shared/covers/badicecream.webp",
       "kind": "html5",
-      "controls": "touch",
-      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "controls": "keyboard",
+      "instructions": "Керування клавіатурою: гравець 1 — стрілки для руху та Space (ставити або розбивати лід); гравець 2 — WASD та F.",
       "devices": {
         "desktop": true,
-        "android": true,
-        "ios": true
+        "android": false,
+        "ios": false
       },
       "review": "smoke-tested",
       "candidateDevices": {
-        "desktop": true,
-        "android": true,
-        "ios": true
+        "desktop": {
+          "status": "ready"
+        },
+        "android": {
+          "status": "unsupported",
+          "reason": "Потрібна клавіатура; гра не підтримує керування на сенсорних екранах."
+        },
+        "ios": {
+          "status": "unsupported",
+          "reason": "Потрібна клавіатура; гра не підтримує керування на сенсорних екранах."
+        }
       },
       "verification": {
         "desktop": "smoke-pass",
-        "android": "smoke-pass",
-        "ios": "smoke-pass"
+        "android": "unsupported",
+        "ios": "unsupported"
       },
       "verificationEvidence": {
         "desktop": {
@@ -669,6 +677,16 @@
           "sourceCommit": "1592d8551e163308f1687e93ab8646daade5fab3",
           "workflowRun": 42382014303
         }
+      },
+      "features": {
+        "touch": false,
+        "keyboard": true,
+        "gamepad": false,
+        "local2p": true,
+        "quick": true,
+        "offline": false,
+        "progress": false,
+        "daily": false
       }
     },
     {
@@ -678,23 +696,31 @@
       "entry": "games/badicecream2/index.html",
       "cover": "shared/covers/badicecream2.webp",
       "kind": "html5",
-      "controls": "touch",
-      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "controls": "keyboard",
+      "instructions": "Керування клавіатурою: гравець 1 — стрілки для руху та Space (ставити або розбивати лід); гравець 2 — WASD та F.",
       "devices": {
         "desktop": true,
-        "android": true,
-        "ios": true
+        "android": false,
+        "ios": false
       },
       "review": "smoke-tested",
       "candidateDevices": {
-        "desktop": true,
-        "android": true,
-        "ios": true
+        "desktop": {
+          "status": "ready"
+        },
+        "android": {
+          "status": "unsupported",
+          "reason": "Потрібна клавіатура; гра не підтримує керування на сенсорних екранах."
+        },
+        "ios": {
+          "status": "unsupported",
+          "reason": "Потрібна клавіатура; гра не підтримує керування на сенсорних екранах."
+        }
       },
       "verification": {
         "desktop": "smoke-pass",
-        "android": "smoke-pass",
-        "ios": "smoke-pass"
+        "android": "unsupported",
+        "ios": "unsupported"
       },
       "verificationEvidence": {
         "desktop": {
@@ -709,6 +735,16 @@
           "sourceCommit": "86457661095062549750a90a5ab0c17a396d9ffa",
           "workflowRun": 42384056308
         }
+      },
+      "features": {
+        "touch": false,
+        "keyboard": true,
+        "gamepad": false,
+        "local2p": true,
+        "quick": true,
+        "offline": false,
+        "progress": false,
+        "daily": false
       }
     },
     {
@@ -718,23 +754,31 @@
       "entry": "games/badicecream3/index.html",
       "cover": "shared/covers/badicecream3.webp",
       "kind": "html5",
-      "controls": "touch",
-      "instructions": "Торкання або миша; підказки керування — у грі.",
+      "controls": "keyboard",
+      "instructions": "Керування клавіатурою: гравець 1 — стрілки для руху та Space (ставити або розбивати лід); гравець 2 — WASD та F.",
       "devices": {
         "desktop": true,
-        "android": true,
-        "ios": true
+        "android": false,
+        "ios": false
       },
       "review": "smoke-tested",
       "candidateDevices": {
-        "desktop": true,
-        "android": true,
-        "ios": true
+        "desktop": {
+          "status": "ready"
+        },
+        "android": {
+          "status": "unsupported",
+          "reason": "Потрібна клавіатура; гра не підтримує керування на сенсорних екранах."
+        },
+        "ios": {
+          "status": "unsupported",
+          "reason": "Потрібна клавіатура; гра не підтримує керування на сенсорних екранах."
+        }
       },
       "verification": {
         "desktop": "smoke-pass",
-        "android": "smoke-pass",
-        "ios": "smoke-pass"
+        "android": "unsupported",
+        "ios": "unsupported"
       },
       "verificationEvidence": {
         "desktop": {
@@ -749,6 +793,16 @@
           "sourceCommit": "86457661095062549750a90a5ab0c17a396d9ffa",
           "workflowRun": 42384056308
         }
+      },
+      "features": {
+        "touch": false,
+        "keyboard": true,
+        "gamepad": false,
+        "local2p": true,
+        "quick": true,
+        "offline": false,
+        "progress": false,
+        "daily": false
       }
     },
     {

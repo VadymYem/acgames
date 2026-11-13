@@ -278,6 +278,7 @@ if(!isMobile){
 	}
 	scope.init = function(){
 		document.addEventListener('tOCParsed', function(e){
+			let attempts = 0;
 			const tryToInit = ()=>{
 				try{
 					scope.skinnerObject = e.skinner;
@@ -294,11 +295,10 @@ if(!isMobile){
 						},
 						3000)
 					}
-				}catch(e){
-					console.log(e, "FAILED INIT");
-					setTimeout(() => {
-						tryToInit()
-					}, 100);
+				}catch(err){
+					if(++attempts < 5){
+						setTimeout(tryToInit, 200);
+					}
 				}
 			}
 			tryToInit();
